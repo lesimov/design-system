@@ -1,0 +1,66 @@
+/* ===== Flowbite Spinner – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+/* ---------- Base ---------- */
+
+.flowbite-spinner {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ---------- Arc animation ---------- */
+
+.flowbite-spinner__arc {
+  animation: flowbite-spin 0.75s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes flowbite-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Track ---------- */
+
+.flowbite-spinner__track {
+  opacity: 0.2;
+}
+
+/* ========== Color Variants ========== */
+
+.flowbite-spinner--brand {
+  color: var(--brand-700, #1447E6);
+}
+
+.flowbite-spinner--gray {
+  color: var(--gray-600, #4A5565);
+}
+
+.flowbite-spinner--red {
+  color: var(--red-700, #C10007);
+}
+
+.flowbite-spinner--green {
+  color: var(--green-700, #008236);
+}
+
+.flowbite-spinner--yellow {
+  color: var(--yellow-700, #A65F00);
+}
+
+.flowbite-spinner--purple {
+  color: var(--purple-700, #8200DB);
+}
+
+.flowbite-spinner--blue {
+  color: var(--blue-800, #1E429F);
+}
+
+.flowbite-spinner--white {
+  color: #FFFFFF;
+}

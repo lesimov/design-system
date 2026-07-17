@@ -1,0 +1,455 @@
+/* ===== Flowbite Sidebar – Design System ===== */
+/* Design tokens: src/tokens.css */
+/* Typography: font-size, weight, line-height tokens from tokens.css */
+
+/* ---------- Box-sizing reset ---------- */
+
+.flowbite-sidebar,
+.flowbite-sidebar__header,
+.flowbite-sidebar__logo,
+.flowbite-sidebar__nav,
+.flowbite-sidebar__nav-list,
+.flowbite-sidebar__nav-item,
+.flowbite-sidebar__item,
+.flowbite-sidebar__item-icon,
+.flowbite-sidebar__item-text,
+.flowbite-sidebar__item-badge,
+.flowbite-sidebar__item-chevron,
+.flowbite-sidebar__item-chevron-icon,
+.flowbite-sidebar__subnav,
+.flowbite-sidebar__subnav-list,
+.flowbite-sidebar__user,
+.flowbite-sidebar__user-avatar,
+.flowbite-sidebar__user-info,
+.flowbite-sidebar__user-name,
+.flowbite-sidebar__user-email,
+.flowbite-sidebar__user-chevron,
+.flowbite-sidebar__alert,
+.flowbite-sidebar__alert-header,
+.flowbite-sidebar__alert-icon,
+.flowbite-sidebar__alert-title,
+.flowbite-sidebar__alert-close,
+.flowbite-sidebar__alert-body,
+.flowbite-sidebar__alert-link,
+.flowbite-sidebar__logo-icon,
+.flowbite-sidebar__logo-text {
+  box-sizing: border-box;
+}
+
+/* ========== Sidebar Container ========== */
+
+.flowbite-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  min-height: 100%;
+  background: #FFFFFF;
+  border-right: 1px solid var(--sidebar-border, #E5E7EB);
+  padding: 20px;
+  gap: 20px;
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+}
+
+.flowbite-sidebar--contracted {
+  width: 64px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.flowbite-sidebar--double {
+  width: 320px;
+}
+
+/* ========== Header / Logo ========== */
+
+.flowbite-sidebar__header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--sidebar-border, #E5E7EB);
+}
+
+.flowbite-sidebar__header--logo {
+  gap: 8px;
+}
+
+.flowbite-sidebar__header--user {
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.flowbite-sidebar__logo-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.flowbite-sidebar__logo-text {
+  font-family: var(--font-heading, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ========== Navigation ========== */
+
+.flowbite-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowbite-sidebar__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flowbite-sidebar__nav-item {
+  list-style: none;
+}
+
+/* ========== Nav Item ========== */
+
+.flowbite-sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  gap: 6px;
+  border-radius: var(--sidebar-item-radius, 12px);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.flowbite-sidebar__item:hover,
+.flowbite-sidebar__item--active {
+  background: var(--sidebar-item-bg-hover, #F9FAFB);
+}
+
+.flowbite-sidebar__item--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.flowbite-sidebar__item--disabled:hover {
+  background: transparent;
+}
+
+/* Depth indentation */
+.flowbite-sidebar__item--depth-1 {
+  padding-left: 30px;
+}
+
+.flowbite-sidebar__item--depth-2 {
+  padding-left: 48px;
+}
+
+/* ========== Item left content ========== */
+
+.flowbite-sidebar__item-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.flowbite-sidebar__item-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-sidebar__item-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--sidebar-item-icon-color, #4A5565);
+}
+
+/* ========== Item text — typography: text-base / weight-medium / leading-normal ========== */
+
+.flowbite-sidebar__item-text {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-medium, 500);
+  line-height: var(--leading-normal, 1.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--sidebar-item-text-color, #4A5565);
+}
+
+.flowbite-sidebar__item--active .flowbite-sidebar__item-text {
+  color: var(--sidebar-item-text-active, #101828);
+}
+
+/* ========== Badge — typography: text-xs / weight-medium / leading-6 ========== */
+
+.flowbite-sidebar__item-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  background: var(--sidebar-badge-bg, #FEF0F2);
+  border: 1px solid var(--sidebar-badge-border, #FFCCD3);
+  border-radius: 9999px;
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-medium, 500);
+  line-height: var(--leading-6, 1.6);
+  color: var(--sidebar-badge-text, #8B0836);
+  flex-shrink: 0;
+}
+
+/* ========== Chevron with rotation animation ========== */
+
+.flowbite-sidebar__item-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-sidebar__item-chevron-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--sidebar-item-icon-color, #4A5565);
+  transition: transform 0.2s ease;
+}
+
+.flowbite-sidebar__item-chevron-icon--expanded {
+  transform: rotate(90deg);
+}
+
+/* ========== Sub-navigation (tree view) with smooth expand/collapse ========== */
+
+.flowbite-sidebar__subnav {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.flowbite-sidebar__subnav--open {
+  grid-template-rows: 1fr;
+}
+
+.flowbite-sidebar__subnav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+/* ========== Contracted ========== */
+
+.flowbite-sidebar--contracted .flowbite-sidebar__item {
+  justify-content: center;
+  padding: 6px 0;
+  width: 44px;
+  margin: 0 auto;
+}
+
+.flowbite-sidebar--contracted .flowbite-sidebar__item-text,
+.flowbite-sidebar--contracted .flowbite-sidebar__item-badge,
+.flowbite-sidebar--contracted .flowbite-sidebar__item-chevron {
+  display: none;
+}
+
+/* ========== User Select ========== */
+
+.flowbite-sidebar__user-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flowbite-sidebar__user-avatar {
+  width: var(--sidebar-user-avatar-size, 32px);
+  height: var(--sidebar-user-avatar-size, 32px);
+  border-radius: 100%;
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flowbite-sidebar__user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flowbite-sidebar__user-avatar-initials {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body-subtle, #6A7282);
+}
+
+.flowbite-sidebar__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* User name — typography: text-base / weight-medium / leading-tight */
+.flowbite-sidebar__user-name {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-medium, 500);
+  line-height: var(--leading-tight, 1.1);
+  color: var(--color-text-heading, #101828);
+}
+
+/* User email — typography: text-sm / weight-normal / leading-tight */
+.flowbite-sidebar__user-email {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-tight, 1.1);
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-sidebar__user-chevron {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-sidebar__user-chevron svg {
+  width: 12px;
+  height: 12px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ========== Alert ========== */
+
+.flowbite-sidebar__alert {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: var(--sidebar-alert-bg, #EEF6FF);
+  border: 1px solid var(--sidebar-alert-border, #BEDBFF);
+  border-radius: var(--sidebar-alert-radius, 12px);
+}
+
+.flowbite-sidebar__alert-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.flowbite-sidebar__alert-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-sidebar__alert-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-fg-brand, #1447E6);
+}
+
+/* Alert title — typography: text-sm / weight-semibold / leading-normal */
+.flowbite-sidebar__alert-title {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-normal, 1.2);
+  color: var(--color-text-heading, #101828);
+  flex: 1;
+}
+
+.flowbite-sidebar__alert-close {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--color-text-body, #4A5565);
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.flowbite-sidebar__alert-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Alert body — typography: text-sm / weight-normal / leading-body */
+.flowbite-sidebar__alert-body {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-body, 1.5);
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-sidebar__alert-link {
+  color: var(--color-text-fg-brand, #1447E6);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: var(--weight-medium, 500);
+}
+
+/* ========== Contracted hiding ========== */
+
+.flowbite-sidebar--contracted .flowbite-sidebar__header--logo,
+.flowbite-sidebar--contracted .flowbite-sidebar__user-info,
+.flowbite-sidebar--contracted .flowbite-sidebar__user-email,
+.flowbite-sidebar--contracted .flowbite-sidebar__user-chevron,
+.flowbite-sidebar--contracted .flowbite-sidebar__alert,
+.flowbite-sidebar--contracted .flowbite-sidebar__logo-text,
+.flowbite-sidebar--contracted .flowbite-sidebar__subnav {
+  display: none;
+}
+
+.flowbite-sidebar--contracted .flowbite-sidebar__header {
+  border-bottom: none;
+  padding-bottom: 0;
+  justify-content: center;
+}
+
+.flowbite-sidebar--contracted .flowbite-sidebar__nav-list {
+  align-items: center;
+}

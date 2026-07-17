@@ -1,0 +1,431 @@
+/* ===== Flowbite Card – Design System ===== */
+/* Plain CSS with hardcoded hex values matching Figma specs */
+
+/* ========== Base ========== */
+.flowbite-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #4A5565;
+}
+
+/* ========== Variant: default ========== */
+.flowbite-card--default {
+  padding: 28px;
+}
+
+/* ========== Variant: with image ========== */
+/* (uses base padding 24px) */
+
+/* ========== Variant: ecommerce ========== */
+/* (uses base padding 24px) */
+
+/* ========== Variant: pricing ========== */
+/* (uses base padding 24px) */
+
+/* ========== Variant: cta ========== */
+.flowbite-card--cta {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 640px;
+  height: 220px;
+  padding: 24px;
+}
+
+.flowbite-card__cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ========== Variant: testimonial ========== */
+/* (uses base padding 24px) */
+
+/* ========== Variant: user profile ========== */
+.flowbite-card--user-profile {
+  align-items: center;
+  text-align: center;
+}
+
+/* ========== Variant: login form ========== */
+/* (uses base padding 24px) */
+
+/* ========== Typography ========== */
+.flowbite-card__heading {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #101828;
+}
+
+.flowbite-card__heading--lg {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #101828;
+}
+
+.flowbite-card__heading--sm {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #101828;
+}
+
+.flowbite-card__heading--md {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4A5565;
+}
+
+.flowbite-card__body {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A5565;
+}
+
+/* ========== Button (inside cards) ========== */
+.flowbite-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background-color: #1447E6;
+  border: 1px solid #1447E6;
+  border-radius: 12px;
+  box-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.flowbite-card__btn:hover {
+  background-color: #193CB8;
+  border-color: #193CB8;
+}
+
+.flowbite-card__btn--alt {
+  background-color: #F9FAFB;
+  border-color: #E5E7EB;
+  color: #4A5565;
+  box-shadow: none;
+}
+
+.flowbite-card__btn--alt:hover {
+  background-color: #F3F4F6;
+  border-color: #E5E7EB;
+}
+
+.flowbite-card__btn--block {
+  width: 100%;
+}
+
+.flowbite-card__btn .flowbite-icon {
+  flex-shrink: 0;
+}
+
+/* ========== Image area ========== */
+.flowbite-card__image {
+  height: 192px;
+  background-color: #F3F4F6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flowbite-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== E-commerce: rating ========== */
+.flowbite-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flowbite-card__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #FDC700;
+}
+
+.flowbite-card__rating-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #EEF6FF;
+  border: 1px solid #BEDBFF;
+  border-radius: 6px;
+  color: #1C398E;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.flowbite-card__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flowbite-card__price {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 30px;
+  color: #101828;
+}
+
+/* ========== Pricing ========== */
+.flowbite-card__plan {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4A5565;
+}
+
+.flowbite-card__price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.flowbite-card__price--xl {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #101828;
+}
+
+.flowbite-card__period {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #4A5565;
+}
+
+.flowbite-card__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A5565;
+}
+
+.flowbite-card__feature .flowbite-icon {
+  color: #6A7282;
+  flex-shrink: 0;
+}
+
+.flowbite-card__feature--disabled,
+.flowbite-card__feature--disabled .flowbite-icon {
+  color: #99A1AF;
+}
+
+/* ========== Testimonial ========== */
+.flowbite-card__quote {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4A5565;
+}
+
+.flowbite-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flowbite-card__author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowbite-card__author-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101828;
+}
+
+.flowbite-card__author-role {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6A7282;
+}
+
+/* ========== Avatar (testimonial + user profile) ========== */
+.flowbite-card__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #F3F4F6;
+  color: #6A7282;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.flowbite-card__avatar--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.flowbite-card__avatar--lg {
+  width: 64px;
+  height: 64px;
+}
+
+.flowbite-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== User profile ========== */
+.flowbite-card__profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.flowbite-card__profile-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #101828;
+}
+
+.flowbite-card__profile-role {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6A7282;
+}
+
+.flowbite-card__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.flowbite-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.flowbite-card__stat-value {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101828;
+}
+
+.flowbite-card__stat-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6A7282;
+}
+
+/* ========== Login form ========== */
+.flowbite-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-card__label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4A5565;
+}
+
+.flowbite-card__input {
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.flowbite-card__input:focus {
+  border-color: #1447E6;
+}
+
+.flowbite-card__link {
+  align-self: flex-end;
+  color: #1447E6;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.flowbite-card__link:hover {
+  text-decoration: underline;
+}
+
+.flowbite-card__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4A5565;
+  cursor: pointer;
+}
+
+.flowbite-card__checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1447E6;
+  cursor: pointer;
+}

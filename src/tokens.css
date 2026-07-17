@@ -1,0 +1,2066 @@
+/* ================================================
+   Flowbite Design System — Design Tokens
+   Tailwind CSS v4 + CSS Custom Properties
+   ================================================ */
+
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/*  Theme: 22 color families × 11 shades (050–950)                    */
+/*  plus semantic token groups (text, background, border, spacing, …) */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* ---- Brand ---- */
+  --color-brand-50: #EFF6FF;
+  --color-brand-100: #DBEAFE;
+  --color-brand-200: #BEDBFF;
+  --color-brand-300: #8EC5FF;
+  --color-brand-400: #51A2FF;
+  --color-brand-500: #2B7FFF;
+  --color-brand-600: #155DFC;
+  --color-brand-700: #1447E6;
+  --color-brand-800: #193CB8;
+  --color-brand-900: #1C398E;
+  --color-brand-950: #162455;
+
+  /* ---- Slate ---- */
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CAD5E2;
+  --color-slate-400: #90A1B9;
+  --color-slate-500: #62748E;
+  --color-slate-600: #45556C;
+  --color-slate-700: #314158;
+  --color-slate-800: #1D293D;
+  --color-slate-900: #0F172B;
+  --color-slate-950: #020618;
+
+  /* ---- Gray ---- */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DC;
+  --color-gray-400: #99A1AF;
+  --color-gray-500: #6A7282;
+  --color-gray-600: #4A5565;
+  --color-gray-700: #364153;
+  --color-gray-800: #1E2939;
+  --color-gray-900: #101828;
+  --color-gray-950: #030712;
+
+  /* ---- Zinc ---- */
+  --color-zinc-50: #FAFAFA;
+  --color-zinc-100: #F4F4F5;
+  --color-zinc-200: #E4E4E7;
+  --color-zinc-300: #D4D4D8;
+  --color-zinc-400: #9F9FA9;
+  --color-zinc-500: #71717B;
+  --color-zinc-600: #52525C;
+  --color-zinc-700: #3F3F46;
+  --color-zinc-800: #27272A;
+  --color-zinc-900: #18181B;
+  --color-zinc-950: #09090B;
+
+  /* ---- Neutral ---- */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-300: #D4D4D4;
+  --color-neutral-400: #A1A1A1;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0A0A0A;
+
+  /* ---- Stone ---- */
+  --color-stone-50: #FAFAF9;
+  --color-stone-100: #F5F5F4;
+  --color-stone-200: #E7E5E4;
+  --color-stone-300: #D6D3D1;
+  --color-stone-400: #A6A09B;
+  --color-stone-500: #79716B;
+  --color-stone-600: #57534D;
+  --color-stone-700: #44403B;
+  --color-stone-800: #292524;
+  --color-stone-900: #1C1917;
+  --color-stone-950: #0C0A09;
+
+  /* ---- Red ---- */
+  --color-red-50: #FEF2F2;
+  --color-red-100: #FFE2E2;
+  --color-red-200: #FFC9C9;
+  --color-red-300: #FFA2A2;
+  --color-red-400: #FF6467;
+  --color-red-500: #FB2C36;
+  --color-red-600: #E7000B;
+  --color-red-700: #C10007;
+  --color-red-800: #9F0712;
+  --color-red-900: #82181A;
+  --color-red-950: #460809;
+
+  /* ---- Orange ---- */
+  --color-orange-50: #FFF8F1;
+  --color-orange-100: #FEECDC;
+  --color-orange-200: #FCD9BD;
+  --color-orange-300: #FDBA8C;
+  --color-orange-400: #FF8A4C;
+  --color-orange-500: #FF5A1F;
+  --color-orange-600: #D03801;
+  --color-orange-700: #B43403;
+  --color-orange-800: #8A2C0D;
+  --color-orange-900: #771D1D;
+  --color-orange-950: #441306;
+
+  /* ---- Amber ---- */
+  --color-amber-50: #FFFBEB;
+  --color-amber-100: #FEF3C6;
+  --color-amber-200: #FEE685;
+  --color-amber-300: #FFD230;
+  --color-amber-400: #FFB900;
+  --color-amber-500: #FE9A00;
+  --color-amber-600: #E17100;
+  --color-amber-700: #BB4D00;
+  --color-amber-800: #973C00;
+  --color-amber-900: #7B3306;
+  --color-amber-950: #461901;
+
+  /* ---- Yellow ---- */
+  --color-yellow-50: #FEFCE8;
+  --color-yellow-100: #FEF9C2;
+  --color-yellow-200: #FFF085;
+  --color-yellow-300: #FFDF20;
+  --color-yellow-400: #FDC700;
+  --color-yellow-500: #F0B100;
+  --color-yellow-600: #D08700;
+  --color-yellow-700: #A65F00;
+  --color-yellow-800: #894B00;
+  --color-yellow-900: #733E0A;
+  --color-yellow-950: #432004;
+
+  /* ---- Lime ---- */
+  --color-lime-50: #F7FEE7;
+  --color-lime-100: #ECFCCA;
+  --color-lime-200: #D8F999;
+  --color-lime-300: #BBF451;
+  --color-lime-400: #9AE600;
+  --color-lime-500: #7CCF00;
+  --color-lime-600: #5EA500;
+  --color-lime-700: #497D00;
+  --color-lime-800: #3C6300;
+  --color-lime-900: #35530E;
+  --color-lime-950: #192E03;
+
+  /* ---- Green ---- */
+  --color-green-50: #F0FDF4;
+  --color-green-100: #DCFCE7;
+  --color-green-200: #B9F8CF;
+  --color-green-300: #7BF1A8;
+  --color-green-400: #05DF72;
+  --color-green-500: #00C950;
+  --color-green-600: #00A63E;
+  --color-green-700: #008236;
+  --color-green-800: #016630;
+  --color-green-900: #0D542B;
+  --color-green-950: #032E15;
+
+  /* ---- Emerald ---- */
+  --color-emerald-50: #ECFDF5;
+  --color-emerald-100: #D0FAE5;
+  --color-emerald-200: #A4F4CF;
+  --color-emerald-300: #5EE9B5;
+  --color-emerald-400: #00D492;
+  --color-emerald-500: #00BC7D;
+  --color-emerald-600: #009966;
+  --color-emerald-700: #007A55;
+  --color-emerald-800: #006045;
+  --color-emerald-900: #004F3B;
+  --color-emerald-950: #002C22;
+
+  /* ---- Teal ---- */
+  --color-teal-50: #F0FDFA;
+  --color-teal-100: #CBFBF1;
+  --color-teal-200: #96F7E4;
+  --color-teal-300: #46ECD5;
+  --color-teal-400: #00D5BE;
+  --color-teal-500: #00BBA7;
+  --color-teal-600: #009689;
+  --color-teal-700: #00786F;
+  --color-teal-800: #005F59;
+  --color-teal-900: #0D4E4A;
+  --color-teal-950: #032F2E;
+
+  /* ---- Cyan ---- */
+  --color-cyan-50: #ECFEFF;
+  --color-cyan-100: #CEFAFE;
+  --color-cyan-200: #A2F4FD;
+  --color-cyan-300: #53EAFD;
+  --color-cyan-400: #00D3F2;
+  --color-cyan-500: #00B8DB;
+  --color-cyan-600: #0092B8;
+  --color-cyan-700: #007595;
+  --color-cyan-800: #005F78;
+  --color-cyan-900: #104E64;
+  --color-cyan-950: #053345;
+
+  /* ---- Sky ---- */
+  --color-sky-50: #F0F9FF;
+  --color-sky-100: #DFF2FE;
+  --color-sky-200: #B8E6FE;
+  --color-sky-300: #74D4FF;
+  --color-sky-400: #00BCFF;
+  --color-sky-500: #00A6F4;
+  --color-sky-600: #0084D1;
+  --color-sky-700: #0069A8;
+  --color-sky-800: #00598A;
+  --color-sky-900: #024A70;
+  --color-sky-950: #052F4A;
+
+  /* ---- Indigo ---- */
+  --color-indigo-50: #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-200: #C6D2FF;
+  --color-indigo-300: #A3B3FF;
+  --color-indigo-400: #7C86FF;
+  --color-indigo-500: #615FFF;
+  --color-indigo-600: #4F39F6;
+  --color-indigo-700: #432DD7;
+  --color-indigo-800: #372AAC;
+  --color-indigo-900: #312C85;
+  --color-indigo-950: #1E1A4D;
+
+  /* ---- Violet ---- */
+  --color-violet-50: #F5F3FF;
+  --color-violet-100: #EDE9FE;
+  --color-violet-200: #DDD6FF;
+  --color-violet-300: #C4B4FF;
+  --color-violet-400: #A684FF;
+  --color-violet-500: #8E51FF;
+  --color-violet-600: #7F22FE;
+  --color-violet-700: #7008E7;
+  --color-violet-800: #5D0EC0;
+  --color-violet-900: #4D179A;
+  --color-violet-950: #2F0D68;
+
+  /* ---- Purple ---- */
+  --color-purple-50: #FAF5FF;
+  --color-purple-100: #F3E8FF;
+  --color-purple-200: #E9D4FF;
+  --color-purple-300: #DAB2FF;
+  --color-purple-400: #C27AFF;
+  --color-purple-500: #AD46FF;
+  --color-purple-600: #9810FA;
+  --color-purple-700: #8200DB;
+  --color-purple-800: #6E11B0;
+  --color-purple-900: #59168B;
+  --color-purple-950: #3C0366;
+
+  /* ---- Fuchsia ---- */
+  --color-fuchsia-50: #FDF4FF;
+  --color-fuchsia-100: #FAE8FF;
+  --color-fuchsia-200: #F6CFFF;
+  --color-fuchsia-300: #F4A8FF;
+  --color-fuchsia-400: #ED6AFF;
+  --color-fuchsia-500: #E12AFB;
+  --color-fuchsia-600: #C800DE;
+  --color-fuchsia-700: #A800B7;
+  --color-fuchsia-800: #8A0194;
+  --color-fuchsia-900: #721378;
+  --color-fuchsia-950: #4B004F;
+
+  /* ---- Pink ---- */
+  --color-pink-50: #FDF2F8;
+  --color-pink-100: #FCE7F3;
+  --color-pink-200: #FCCEE8;
+  --color-pink-300: #FDA5D5;
+  --color-pink-400: #FB64B6;
+  --color-pink-500: #F6339A;
+  --color-pink-600: #E60076;
+  --color-pink-700: #C6005C;
+  --color-pink-800: #A3004C;
+  --color-pink-900: #861043;
+  --color-pink-950: #510424;
+
+  /* ---- Rose ---- */
+  --color-rose-50: #FFF1F2;
+  --color-rose-100: #FFE4E6;
+  --color-rose-200: #FFCCD3;
+  --color-rose-300: #FFA1AD;
+  --color-rose-400: #FF637E;
+  --color-rose-500: #FF2056;
+  --color-rose-600: #EC003F;
+  --color-rose-700: #C70036;
+  --color-rose-800: #A50036;
+  --color-rose-900: #8B0836;
+  --color-rose-950: #4D0218;
+
+  /* ================================================================ */
+  /*  Semantic Text Tokens (light mode)                                */
+  /* ================================================================ */
+  --color-text-white: #FFFFFF;
+  --color-text-black: #101828;
+  --color-text-heading: #101828;
+  --color-text-body: #4A5565;
+  --color-text-body-subtle: #6A7282;
+  --color-text-fg-brand-subtle: #BEDBFF;
+  --color-text-fg-brand: #1447E6;
+  --color-text-fg-brand-strong: #1C398E;
+  --color-text-fg-success: #007A55;
+  --color-text-fg-success-strong: #004F3B;
+  --color-text-fg-danger: #C70036;
+  --color-text-fg-danger-strong: #8B0836;
+  --color-text-fg-warning-subtle: #D03801;
+  --color-text-fg-warning: #771D1D;
+  --color-text-fg-yellow: #FDC700;
+  --color-text-fg-info: #1C398E;
+  --color-text-fg-disabled: #99A1AF;
+  --color-text-fg-purple: #9810FA;
+  --color-text-fg-cyan: #0092B8;
+  --color-text-fg-indigo: #4F39F6;
+  --color-text-fg-pink: #E60076;
+  --color-text-fg-lime: #5EA500;
+
+  /* ================================================================ */
+  /*  Semantic Background Tokens (light mode)                          */
+  /* ================================================================ */
+  --color-bg-white: #FFFFFF;
+  --color-bg-neutral-primary-soft: #FFFFFF;
+  --color-bg-neutral-primary: #FFFFFF;
+  --color-bg-neutral-primary-medium: #FFFFFF;
+  --color-bg-neutral-primary-strong: #FFFFFF;
+  --color-bg-neutral-secondary-soft: #F9FAFB;
+  --color-bg-neutral-secondary: #F9FAFB;
+  --color-bg-neutral-secondary-medium: #F9FAFB;
+  --color-bg-neutral-secondary-strong: #F9FAFB;
+  --color-bg-neutral-tertiary-soft: #F3F4F6;
+  --color-bg-neutral-tertiary: #F3F4F6;
+  --color-bg-neutral-tertiary-medium: #F3F4F6;
+  --color-bg-neutral-quaternary: #E5E7EB;
+  --color-bg-neutral-quaternary-medium: #E5E7EB;
+  --color-bg-gray: #D1D5DC;
+  --color-bg-brand-softer: #EEF6FF;
+  --color-bg-brand-soft: #DBEAFE;
+  --color-bg-brand-medium: #BEDBFF;
+  --color-bg-brand: #1447E6;
+  --color-bg-brand-strong: #193CB8;
+  --color-bg-success-soft: #ECFDF5;
+  --color-bg-success-medium: #D0FAE5;
+  --color-bg-success: #007A55;
+  --color-bg-success-strong: #006045;
+  --color-bg-danger-soft: #FEF0F2;
+  --color-bg-danger-medium: #FFE4E6;
+  --color-bg-danger: #C70036;
+  --color-bg-danger-strong: #A50036;
+  --color-bg-warning-soft: #FFF8F1;
+  --color-bg-warning-medium: #FEECDC;
+  --color-bg-warning: #FF5A1F;
+  --color-bg-warning-strong: #B43403;
+  --color-bg-dark-strong: #101828;
+  --color-bg-dark: #1E2939;
+  --color-bg-disabled: #F3F4F6;
+  --color-bg-purple: #AD46FF;
+  --color-bg-sky: #00A6F4;
+  --color-bg-teal: #009689;
+  --color-bg-pink: #E60076;
+  --color-bg-cyan: #00B8DB;
+  --color-bg-fuchsia: #C800DE;
+  --color-bg-indigo: #4F39F6;
+  --color-bg-orange: #FF8A4C;
+
+  /* ================================================================ */
+  /*  Semantic Border Tokens (light mode)                              */
+  /* ================================================================ */
+  --color-border-dark: #4A5565;
+  --color-border-buffer: #FFFFFF;
+  --color-border-buffer-medium: #FFFFFF;
+  --color-border-buffer-strong: #FFFFFF;
+  --color-border-muted: #F9FAFB;
+  --color-border-light-subtle: #F3F4F6;
+  --color-border-light: #F3F4F6;
+  --color-border-light-medium: #F3F4F6;
+  --color-border-base-soft: #E5E7EB;
+  --color-border-base: #E5E7EB;
+  --color-border-base-medium: #E5E7EB;
+  --color-border-base-strong: #E5E7EB;
+  --color-border-success-subtle: #A4F4CF;
+  --color-border-success: #007A55;
+  --color-border-danger-subtle: #FFCCD3;
+  --color-border-danger: #C70036;
+  --color-border-warning-subtle: #FCD9BD;
+  --color-border-warning: #D03801;
+  --color-border-brand-subtle: #BEDBFF;
+  --color-border-brand-light: #155DFC;
+  --color-border-brand: #1447E6;
+  --color-border-purple: #AD46FF;
+  --color-border-orange: #FF8A4C;
+  --color-border-dark-subtle: #1E2939;
+
+  /* ================================================================ */
+  /*  Typography                                                       */
+  /* ================================================================ */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Consolas, 'Liberation Mono', monospace;
+  --font-heading: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xxs: 8px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.15;
+  --leading-normal: 1.2;
+  --leading-relaxed: 1.25;
+  --leading-loose: 1.3;
+  --leading-extra-loose: 1.4;
+  --leading-body: 1.5;
+  --leading-6: 1.6;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.01em;
+  --tracking-wider: 0.02em;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ================================================================ */
+  /*  Border Radius                                                    */
+  /* ================================================================ */
+  --radius-xxs: 2px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-base: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ================================================================ */
+  /*  Box Shadow                                                       */
+  /* ================================================================ */
+  --shadow-xs: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --shadow-sm: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --shadow: 0 1px 3px rgba(29, 41, 61, 0.1), 0 1px 2px rgba(29, 41, 61, 0.1);
+  --shadow-md: 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1);
+  --shadow-lg: 0 10px 15px rgba(29, 41, 61, 0.1), 0 4px 6px rgba(29, 41, 61, 0.1);
+  --shadow-xl: 0 20px 25px rgba(29, 41, 61, 0.1), 0 8px 10px rgba(29, 41, 61, 0.1);
+  --shadow-2xl: 0 25px 50px rgba(29, 41, 61, 0.25);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-top: 0 -1px 14px rgba(19, 28, 52, 0.1);
+
+  /* ================================================================ */
+  /*  Spacing                                                          */
+  /* ================================================================ */
+  --spacing-0\.5: 2px;
+  --spacing-1: 4px;
+  --spacing-1\.5: 6px;
+  --spacing-2: 8px;
+  --spacing-2\.5: 10px;
+  --spacing-3: 12px;
+  --spacing-3\.5: 14px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+
+  /* ================================================================ */
+  /*  Button Group                                                     */
+  /* ================================================================ */
+  --btn-group-gap: -1px;
+  --btn-group-bg-gray: #F9FAFB;
+  --btn-group-bg-white: #FFFFFF;
+  --btn-group-border: #E5E7EB;
+  --btn-group-text: #4A5565;
+  --btn-group-radius-start: 12px;
+  --btn-group-radius-end: 12px;
+  --btn-group-icon-size: 16px;
+  --btn-group-icon-gap: 6px;
+
+  /* Button group sizes */
+  --btn-group-xs-h: 32px;
+  --btn-group-xs-py: 6px;
+  --btn-group-xs-px: 10px;
+  --btn-group-sm-h: 36px;
+  --btn-group-sm-py: 8px;
+  --btn-group-sm-px: 12px;
+  --btn-group-base-h: 40px;
+  --btn-group-base-py: 10px;
+  --btn-group-base-px: 16px;
+  --btn-group-l-h: 48px;
+  --btn-group-l-py: 12px;
+  --btn-group-l-px: 20px;
+
+  /* ================================================================ */
+  /*  Breadcrumbs                                                      */
+  /* ================================================================ */
+  --breadcrumb-gap: 10px;
+  --breadcrumb-gap-tight: 4px;
+  --breadcrumb-item-gap: 6px;
+  --breadcrumb-text-initial: #4A5565;
+  --breadcrumb-text-hover: #1447E6;
+  --breadcrumb-text-active: #6A7282;
+  --breadcrumb-separator-color: #4A5565;
+  --breadcrumb-separator-active-color: #6A7282;
+  --breadcrumb-icon-size: 16px;
+  --breadcrumb-separator-size: 14px;
+  --breadcrumb-bg: #F9FAFB;
+  --breadcrumb-border: #E5E7EB;
+  --breadcrumb-radius: 12px;
+  --breadcrumb-padding: 10px;
+  --breadcrumb-badge-bg: #1447E6;
+  --breadcrumb-badge-text: #FFFFFF;
+  --breadcrumb-badge-radius: 9999px;
+
+  /* ================================================================ */
+  /*  Component: Card                                                  */
+  /* ================================================================ */
+  --color-card-bg: #FFFFFF;
+  --color-card-border: #E5E7EB;
+  --color-card-heading: #101828;
+  --color-card-body: #4A5565;
+  --color-card-image-bg: #F3F4F6;
+  --card-radius: 12px;
+  --card-image-radius: 8px;
+  --card-padding: 24px;
+  --card-padding-lg: 28px;
+  --card-gap: 24px;
+  --card-border-width: 1px;
+  --card-heading-size: 24px;
+  --card-heading-size-sm: 20px;
+  --card-heading-weight: 600;
+  --card-heading-line-height: 32px;
+  --card-heading-tracking: -0.4px;
+  --card-body-size: 16px;
+  --card-body-line-height: 24px;
+  --card-price-size: 30px;
+  --card-price-weight: 800;
+  --card-price-lg-size: 48px;
+  --card-price-lg-weight: 700;
+  --card-price-lg-line-height: 48px;
+
+  /* ================================================================ */
+  /*  Component: Chat Bubble                                           */
+  /* ================================================================ */
+  --color-bubble-bg: #F3F4F6;
+  --color-bubble-name: #101828;
+  --color-bubble-time: #4A5565;
+  --color-bubble-text: #4A5565;
+  --color-bubble-status: #6A7282;
+  --color-bubble-link: #1447E6;
+  --color-bubble-file-icon: #CAD1D8;
+  --color-bubble-preview-bg: #F9FAFB;
+  --bubble-radius: 12px;
+  --bubble-avatar-size: 32px;
+  --bubble-avatar-radius: 9999px;
+  --bubble-padding: 16px;
+  --bubble-gap: 12px;
+  --bubble-text-size: 14px;
+  --bubble-text-line-height: 20px;
+  --bubble-meta-size: 12px;
+  --bubble-meta-line-height: 16px;
+  --bubble-name-weight: 600;
+  --bubble-content-gap: 10px;
+  --bubble-outer-gap: 10px;
+
+  /* ================================================================ */
+  /*  Component: Autocomplete Input                                    */
+  /* ================================================================ */
+  --autocomplete-label-color: #101828;
+  --autocomplete-asterisk-color: #C70036;
+  --autocomplete-input-bg: #F9FAFB;
+  --autocomplete-input-border: #E5E7EB;
+  --autocomplete-input-border-focus: #1447E6;
+  --autocomplete-icon-color: #1447E6;
+  --autocomplete-input-text: #101828;
+  --autocomplete-input-placeholder: #99A1AF;
+  --autocomplete-helper-color: #4A5565;
+  --autocomplete-dropdown-bg: #FFFFFF;
+  --autocomplete-dropdown-border: #E5E7EB;
+  --autocomplete-item-hover-bg: #F3F4F6;
+  --autocomplete-item-selected-bg: #EEF6FF;
+  --autocomplete-item-text: #101828;
+  --autocomplete-item-secondary-text: #6A7282;
+  --autocomplete-category-text: #6A7282;
+  --autocomplete-shortcut-bg: #F3F4F6;
+  --autocomplete-shortcut-text: #4A5565;
+  --autocomplete-action-btn-color: #6A7282;
+  --autocomplete-action-btn-hover: #101828;
+  --autocomplete-avatar-size: 32px;
+  --autocomplete-user-name-weight: 500;
+  --autocomplete-user-email-size: 12px;
+
+  /* ================================================================ */
+  /*  Component: Range Slider                                          */
+  /* ================================================================ */
+  --range-slider-track-height: 8px;
+  --range-slider-track-bg: #E5E7EB;
+  --range-slider-track-radius: 9999px;
+  --range-slider-bar-bg: #1447E6;
+  --range-slider-bar-radius: 4px;
+  --range-slider-thumb-size: 20px;
+  --range-slider-thumb-bg: #FFFFFF;
+  --range-slider-thumb-border: #E5E7EB;
+  --range-slider-thumb-border-active: #1447E6;
+  --range-slider-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
+  --range-slider-thumb-focus-ring: #BEDBFF;
+  --range-slider-tooltip-bg: #1E2939;
+  --range-slider-tooltip-text: #FFFFFF;
+  --range-slider-tooltip-radius: 12px;
+  --range-slider-tooltip-font: 14px;
+  --range-slider-tooltip-weight: 500;
+  --range-slider-tooltip-line-height: 16px;
+  --range-slider-tooltip-padding-y: 8px;
+  --range-slider-tooltip-padding-x: 12px;
+  --range-slider-tooltip-gap: 12px;
+  --range-slider-label-color: #4A5565;
+  --range-slider-label-size: 14px;
+  --range-slider-label-weight: 500;
+  --range-slider-label-line-height: 20px;
+  --range-slider-label-width: 64px;
+  --range-slider-helper-color: #4A5565;
+  --range-slider-helper-size: 14px;
+  --range-slider-helper-weight: 500;
+  --range-slider-helper-line-height: 20px;
+  --range-slider-icon-color: #4A5565;
+  --range-slider-icon-size: 24px;
+  --range-slider-gap: 16px;
+  --range-slider-row-height: 24px;
+  --range-slider-helper-gap: 14px;
+  --range-slider-disabled-opacity: 0.5;
+
+  /* ================================================================ */
+  /*  Component: Toggle Switch                                         */
+  /* ================================================================ */
+  --toggle-base-w: 36px;
+  --toggle-base-h: 20px;
+  --toggle-lg-w: 44px;
+  --toggle-lg-h: 24px;
+  --toggle-bg-off: #F3F4F6;
+  --toggle-bg-on: #1447E6;
+  --toggle-border-off: #E5E7EB;
+  --toggle-border-on: #155DFC;
+  --toggle-thumb-bg: #FFFFFF;
+  --toggle-thumb-base-size: 16px;
+  --toggle-thumb-lg-size: 20px;
+  --toggle-disabled-opacity: 0.5;
+  --toggle-focus-ring: #BEDBFF;
+  --toggle-label-color: #101828;
+  --toggle-label-size: 14px;
+  --toggle-gap: 8px;
+
+  /* ================================================================ */
+  /*  Component: Sidebar                                               */
+  /* ================================================================ */
+  --sidebar-width: 288px;
+  --sidebar-width-contracted: 64px;
+  --sidebar-width-double: 320px;
+  --sidebar-bg: #FFFFFF;
+  --sidebar-border: #E5E7EB;
+  --sidebar-padding: 20px;
+  --sidebar-gap: 20px;
+  --sidebar-header-padding-bottom: 16px;
+  --sidebar-item-height: 36px;
+  --sidebar-item-padding: 6px 8px;
+  --sidebar-item-radius: 12px;
+  --sidebar-item-bg-hover: #F9FAFB;
+  --sidebar-item-icon-color: #4A5565;
+  --sidebar-item-text-color: #4A5565;
+  --sidebar-item-text-active: #101828;
+  --sidebar-item-gap: 8px;
+  --sidebar-badge-bg: #FEF0F2;
+  --sidebar-badge-border: #FFCCD3;
+  --sidebar-badge-text: #8B0836;
+  --sidebar-alert-bg: #EEF6FF;
+  --sidebar-alert-border: #BEDBFF;
+  --sidebar-alert-radius: 12px;
+  --sidebar-user-avatar-size: 32px;
+
+  /* ================================================================ */
+  /*  Component: Checkbox & Radio                                    */
+  /* ================================================================ */
+  --checkbox-size: 16px;
+  --checkbox-radius: 4px;
+  --checkbox-border-width: 1px;
+  --checkbox-bg-unchecked: #F9FAFB;
+  --checkbox-border-unchecked: #E5E7EB;
+  --checkbox-bg-checked: #1447E6;
+  --checkbox-border-checked: #1447E6;
+  --checkbox-border-disabled: #F3F4F6;
+  --radio-radius: 9999px;
+  --radio-border-checked: #1447E6;
+  --radio-dot-checked: #1447E6;
+
+  /* ================================================================ */
+  /*  Component: Icon Shape                                           */
+  /* ================================================================ */
+  --icon-shape-xs: 16px;
+  --icon-shape-sm: 24px;
+  --icon-shape-base: 36px;
+  --icon-shape-lg: 48px;
+  --icon-shape-xl: 64px;
+  --icon-shape-2xl: 96px;
+  --icon-shape-green-bg: #ECFDF5;
+  --icon-shape-red-bg: #FEF0F2;
+  --icon-shape-brand-bg: #EEF6FF;
+  --icon-shape-gray-bg: #F3F4F6;
+  --icon-shape-yellow-bg: #FFFBEB;
+  --icon-shape-purple-bg: #FAF5FF;
+  --icon-shape-teal-bg: #F0FDFA;
+  --icon-shape-pink-bg: #FDF2F8;
+
+  /* ================================================================ */
+  /*  Component: Popover                                              */
+  /* ================================================================ */
+  --popover-width: 255px;
+  --popover-radius: 12px;
+  --popover-bg: #FFFFFF;
+  --popover-border: #E5E7EB;
+  --popover-header-bg: #F3F4F6;
+  --popover-header-height: 32px;
+  --popover-header-padding-y: 6px;
+  --popover-header-padding-x: 12px;
+  --popover-body-padding-y: 8px;
+  --popover-body-padding-x: 12px;
+  --popover-title-font: 14px;
+  --popover-title-weight: 500;
+  --popover-body-font: 14px;
+  --popover-arrow-size: 10px;
+  --popover-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --popover-shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+  /* ================================================================ */
+  /*  Component: Floating Label                                       */
+  /* ================================================================ */
+  --floatinglabel-border-radius: 12px;
+  --floatinglabel-bg: #FFFFFF;
+  --floatinglabel-border: #E5E7EB;
+  --floatinglabel-text: #101828;
+  --floatinglabel-placeholder: #6A7282;
+  --floatinglabel-icon: #6A7282;
+  --floatinglabel-label: #4A5565;
+  --floatinglabel-label-float: #1447E6;
+  --floatinglabel-border-focus: #1447E6;
+  --floatinglabel-border-success: #007A55;
+  --floatinglabel-label-success: #004F3B;
+  --floatinglabel-border-error: #C70036;
+  --floatinglabel-label-error: #8B0836;
+  --floatinglabel-bg-disabled: #F3F4F6;
+  --floatinglabel-text-disabled: #99A1AF;
+  --floatinglabel-sm-h: 36px;
+  --floatinglabel-sm-py: 8px;
+  --floatinglabel-sm-px: 12px;
+  --floatinglabel-sm-font: 14px;
+  --floatinglabel-base-h: 40px;
+  --floatinglabel-base-py: 10px;
+  --floatinglabel-base-px: 14px;
+  --floatinglabel-base-font: 14px;
+  --floatinglabel-lg-h: 48px;
+  --floatinglabel-lg-py: 12px;
+  --floatinglabel-lg-px: 16px;
+  --floatinglabel-lg-font: 16px;
+  --floatinglabel-icon-size: 16px;
+  --floatinglabel-clear-size: 14px;
+
+  /* ================================================================ */
+  /*  Component: Datepicker                                           */
+  /* ================================================================ */
+  --datepicker-cell-size: 36px;
+  --datepicker-cell-radius: 8px;
+  --datepicker-cell-font: 12px;
+  --datepicker-cell-weight: 600;
+  --datepicker-cell-bg-hover: #F3F4F6;
+  --datepicker-cell-text: #4A5565;
+  --datepicker-cell-text-hover: #101828;
+  --datepicker-cell-text-active: #FFFFFF;
+  --datepicker-cell-bg-active: #1447E6;
+  --datepicker-cell-text-disabled: #99A1AF;
+  --datepicker-cell-bg-between: #F9FAFB;
+  --datepicker-header-font: 14px;
+  --datepicker-header-weight: 600;
+  --datepicker-weekday-color: #6A7282;
+  --datepicker-bg: #FFFFFF;
+  --datepicker-border: #E5E7EB;
+  --datepicker-padding: 20px;
+  --datepicker-radius: 12px;
+  --datepicker-width: 300px;
+  --datepicker-footer-btn-radius: 12px;
+
+  /* ================================================================ */
+  /*  Component: Timepicker                                           */
+  /* ================================================================ */
+  --timepicker-border-radius: 12px;
+  --timepicker-bg: #F9FAFB;
+  --timepicker-border: #E5E7EB;
+  --timepicker-text: #101828;
+  --timepicker-placeholder: #6A7282;
+  --timepicker-icon: #6A7282;
+  --timepicker-sm-h: 36px;
+  --timepicker-sm-py: 8px;
+  --timepicker-sm-px: 8px;
+  --timepicker-sm-font: 14px;
+  --timepicker-base-h: 40px;
+  --timepicker-base-py: 10px;
+  --timepicker-base-px: 10px;
+  --timepicker-base-font: 14px;
+  --timepicker-lg-h: 48px;
+  --timepicker-lg-py: 12px;
+  --timepicker-lg-px: 12px;
+  --timepicker-lg-font: 16px;
+  --timepicker-label-font: 14px;
+  --timepicker-label-weight: 500;
+  --timepicker-helper-font: 12px;
+  --timepicker-dropdown-width: 224px;
+  --timepicker-dropdown-padding: 16px;
+  --timepicker-time-font: 20px;
+  --timepicker-time-weight: 600;
+  --timepicker-ampm-radius: 8px;
+
+  /* ================================================================ */
+  /*  Component: Drawer                                               */
+  /* ================================================================ */
+  --drawer-bg: #FFFFFF;
+  --drawer-border: #E5E7EB;
+  --drawer-heading: #101828;
+  --drawer-body: #4A5565;
+  --drawer-radius: 12px;
+  --drawer-padding: 20px;
+  --drawer-gap: 20px;
+  --drawer-item-gap: 8px;
+  --drawer-item-bg: #F9FAFB;
+  --drawer-item-bg-hover: #F3F4F6;
+  --drawer-item-text: #4A5565;
+  --drawer-item-text-hover: #1447E6;
+  --drawer-close-radius: 4px;
+  --drawer-heading-size: 18px;
+  --drawer-heading-weight: 500;
+  --drawer-paragraph-size: 16px;
+  --drawer-list-item-size: 16px;
+
+  /* ================================================================ */
+  /*  Component: Dropdowns                                            */
+  /* ================================================================ */
+  --dropdown-item-radius: 8px;
+  --dropdown-item-padding: 8px;
+  --dropdown-item-gap: 6px;
+  --dropdown-item-bg: #FFFFFF;
+  --dropdown-item-text: #4A5565;
+  --dropdown-item-text-hover: #101828;
+  --dropdown-item-text-disabled: #99A1AF;
+  --dropdown-item-bg-hover: #F3F4F6;
+  --dropdown-item-secondary-text: #6A7282;
+  --dropdown-item-icon: #4A5565;
+  --dropdown-item-icon-disabled: #99A1AF;
+  --dropdown-menu-bg: #FFFFFF;
+  --dropdown-menu-border: #E5E7EB;
+  --dropdown-menu-radius: 12px;
+  --dropdown-menu-shadow: 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1);
+  --dropdown-toggle-width: 36px;
+  --dropdown-toggle-height: 20px;
+  --dropdown-toggle-bg: #F3F4F6;
+  --dropdown-toggle-bg-active: #1447E6;
+  --dropdown-toggle-border: #E5E7EB;
+  --dropdown-toggle-border-active: #155DFC;
+  --dropdown-toggle-thumb: #FFFFFF;
+  --dropdown-divider-color: #E5E7EB;
+
+  /* ================================================================ */
+  /*  Component: Forms                                                */
+  /* ================================================================ */
+  --forms-input-radius: 12px;
+  --forms-input-bg: #F9FAFB;
+  --forms-input-border: #E5E7EB;
+  --forms-input-border-hover: #D1D5DC;
+  --forms-input-border-focus: #1447E6;
+  --forms-input-height: 40px;
+  --forms-input-padding-x: 12px;
+  --forms-input-padding-y: 10px;
+  --forms-input-text: #4A5565;
+  --forms-input-placeholder: #6A7282;
+  --forms-label-color: #101828;
+  --forms-label-weight: 500;
+  --forms-label-size: 14px;
+  --forms-required-color: #C70036;
+  --forms-helper-color: #4A5565;
+  --forms-helper-size: 12px;
+  --forms-gap: 10px;
+  --forms-focus-ring: #BEDBFF;
+  --forms-btn-radius: 12px;
+  --forms-btn-bg: #1447E6;
+  --forms-btn-bg-hover: #193CB8;
+  --forms-btn-text: #FFFFFF;
+  --forms-btn-secondary-bg: #F9FAFB;
+  --forms-btn-secondary-border: #E5E7EB;
+  --forms-btn-secondary-text: #4A5565;
+  --forms-staked-radius: 12px;
+  --forms-staked-btn-bg: #F9FAFB;
+  --forms-staked-btn-border: #E5E7EB;
+  --forms-staked-btn-text: #4A5565;
+  --forms-select-arrow: #4A5565;
+  --forms-file-icon: #4A5565;
+  --forms-affix-bg: #F3F4F6;
+  --forms-affix-text: #101828;
+  --forms-affix-border: #E5E7EB;
+  --forms-phone-select-bg: #F9FAFB;
+  --forms-phone-select-border: #E5E7EB;
+  --forms-phone-btn-radius: 0 12px 12px 0;
+  --forms-textarea-height: 132px;
+
+  /* ================================================================ */
+  /*  Component: Progress Bars                                        */
+  /* ================================================================ */
+  --progress-track-bg: #E5E7EB;
+  --progress-track-radius: 12px;
+  --progress-fill-radius: 12px;
+  --progress-fill-primary: #1447E6;
+  --progress-fill-success: #007A55;
+  --progress-fill-gray: #6A7282;
+  --progress-fill-danger: #C70036;
+  --progress-fill-warning: #FF5A1F;
+  --progress-fill-indigo: #4F39F6;
+  --progress-fill-purple: #AD46FF;
+  --progress-fill-cyan: #00B8DB;
+  --progress-fill-pink: #E60076;
+  --progress-fill-teal: #009689;
+  --progress-fill-lime: #5EA500;
+  --progress-base-height: 6px;
+  --progress-lg-height: 10px;
+  --progress-label-size: 12px;
+  --progress-label-weight: 500;
+  --progress-label-line-height: 16px;
+  --progress-label-color: #4A5565;
+  --progress-gap: 6px;
+
+  /* ================================================================ */
+  /*  Component: List Items                                           */
+  /* ================================================================ */
+  --list-item-gap: 6px;
+  --list-item-radius: 6px;
+  --form-field-gap: 4px;
+
+  /* ================================================================ */
+  /*  Component: Modals                                                */
+  /* ================================================================ */
+  --modal-radius: 12px;
+  --modal-bg: #FFFFFF;
+  --modal-border: #E5E7EB;
+  --modal-padding: 24px;
+  --modal-gap: 24px;
+  --modal-header-gap: 24px;
+  --modal-header-padding-bottom: 20px;
+  --modal-header-title-size: 18px;
+  --modal-header-title-weight: 500;
+  --modal-close-size: 36px;
+  --modal-close-radius: 12px;
+  --modal-body-gap: 16px;
+  --modal-btn-radius: 12px;
+  --modal-btn-padding: 10px 20px;
+  --modal-btn-font-size: 14px;
+  --modal-btn-font-weight: 500;
+  --modal-field-radius: 12px;
+  --modal-field-padding: 10px 14px;
+
+  /* ================================================================ */
+  /*  Component: Navbar / Nav Link                                     */
+  /* ================================================================ */
+  --nav-link-font-size: 14px;
+  --nav-link-font-weight: 500;
+  --nav-link-icon-size: 18px;
+  --nav-link-gap: 6px;
+  --nav-link-bordered-width: 224px;
+  --nav-link-bordered-padding: 6px 8px;
+  --nav-link-bordered-radius: 12px;
+  --nav-link-bordered-border: #E5E7EB;
+  --nav-link-bordered-bg-hover: #F9FAFB;
+  --nav-link-bordered-bg-active: #F9FAFB;
+  --nav-link-text-color: #4A5565;
+  --nav-link-text-color-active: #1447E6;
+  --nav-link-text-color-initial: #101828;
+
+  /* ================================================================ */
+  /*  Component: Nav Tabs                                              */
+  /* ================================================================ */
+  --nav-tabs-gap: 24px;
+  --nav-tabs-item-gap: 6px;
+  --nav-tabs-item-icon-size: 16px;
+  --nav-tabs-item-font-size: 14px;
+  --nav-tabs-item-font-weight: 500;
+  --nav-tabs-item-text-color: #4A5565;
+  --nav-tabs-item-text-color-active: #1447E6;
+  --nav-tabs-pill-radius: 9999px;
+  --nav-tabs-pill-padding: 8px 16px;
+  --nav-tabs-pill-bg: #F3F4F6;
+  --nav-tabs-pill-bg-active: #1447E6;
+  --nav-tabs-pill-text-color-active: #FFFFFF;
+  --nav-tabs-vertical-gap: 12px;
+  --nav-tabs-vertical-width: 160px;
+  --nav-tabs-border-bottom-color: #E5E7EB;
+  --nav-tabs-border-bottom-active-color: #1447E6;
+  --nav-tabs-button-gap: 4px;
+  --nav-tabs-button-radius: 8px;
+  --nav-tabs-button-padding: 10px 16px;
+  --nav-tabs-button-bg-active: #1447E6;
+  --nav-tabs-button-text-color-active: #FFFFFF;
+
+  /* ================================================================ */
+  /*  Component: Skeleton                                              */
+  /* ================================================================ */
+  --skeleton-bg: #E5E7EB;
+  --skeleton-bg-strong: #D1D5DC;
+  --skeleton-radius: 4px;
+  --skeleton-radius-sm: 2px;
+  --skeleton-radius-lg: 12px;
+  --skeleton-radius-full: 9999px;
+  --skeleton-image-icon: #99A1AF;
+
+  /* ================================================================ */
+  /*  Component: Tooltip                                               */
+  /* ================================================================ */
+  --tooltip-bg: #1E2939;
+  --tooltip-text: #FFFFFF;
+  --tooltip-radius: 12px;
+  --tooltip-padding-y: 8px;
+  --tooltip-padding-x: 12px;
+  --tooltip-font-size: 14px;
+  --tooltip-font-weight: 500;
+  --tooltip-line-height: 16px;
+  --tooltip-arrow-size: 8px;
+  --tooltip-arrow-width: 34px;
+
+  /* ================================================================ */
+  /*  Component: Stepper                                               */
+  /* ================================================================ */
+  --stepper-step-size: 20px;
+  --stepper-step-radius: 9999px;
+  --stepper-step-number-size: 12px;
+  --stepper-step-number-weight: 600;
+  --stepper-step-label-size: 16px;
+  --stepper-step-label-weight: 500;
+  --stepper-step-completed-color: #1447E6;
+  --stepper-step-active-color: #1447E6;
+  --stepper-step-upcoming-color: #4A5565;
+  --stepper-step-upcoming-border: #E5E7EB;
+  --stepper-step-gap: 16px;
+  --stepper-separator-color: #E5E7EB;
+  --stepper-separator-width: 37px;
+  --stepper-content-bg: #F9FAFB;
+  --stepper-content-border: #E5E7EB;
+  --stepper-content-radius: 12px;
+  --stepper-btn-radius: 12px;
+  --stepper-btn-secondary-bg: #F9FAFB;
+  --stepper-btn-secondary-border: #E5E7EB;
+  --stepper-btn-secondary-text: #4A5565;
+  --stepper-btn-primary-bg: #1447E6;
+  --stepper-btn-primary-text: #FFFFFF;
+  --stepper-nav-gap: 32px;
+  --stepper-check-icon-size: 14px;
+
+  /* ================================================================ */
+  /*  Component: Table                                                */
+  /* ================================================================ */
+  --table-radius: 12px;
+  --table-bg: #F9FAFB;
+  --table-border: #E5E7EB;
+  --table-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --table-header-bg: #F9FAFB;
+  --table-header-height: 76px;
+  --table-header-padding: 20px;
+  --table-header-gap: 10px;
+  --table-header-text-color: #101828;
+  --table-header-text-weight: 500;
+  --table-header-text-size: 14px;
+  --table-row-height: 64px;
+  --table-row-padding-x: 20px;
+  --table-row-text-color: #4A5565;
+  --table-row-text-size: 14px;
+  --table-row-hover-bg: #F3F4F6;
+  --table-row-divider: #E5E7EB;
+  --table-stripe-bg: #F9FAFB;
+  --table-column-header-height: 48px;
+  --table-column-header-bg: #FFFFFF;
+  --table-column-header-text: #101828;
+  --table-column-header-weight: 500;
+  --table-column-header-size: 14px;
+  --table-column-header-padding-x: 20px;
+  --table-cell-padding-x: 20px;
+  --table-cell-padding-y: 12px;
+  --table-footer-height: 76px;
+  --table-footer-bg: #FFFFFF;
+  --table-footer-text: #4A5565;
+  --table-footer-text-size: 14px;
+  --table-search-width: 256px;
+  --table-search-height: 36px;
+  --table-search-radius: 12px;
+  --table-search-bg: #F9FAFB;
+  --table-search-border: #E5E7EB;
+  --table-search-icon: #6A7282;
+  --table-pagination-btn-radius: 12px;
+  --table-pagination-btn-bg: #FFFFFF;
+  --table-pagination-btn-border: #E5E7EB;
+  --table-pagination-btn-text: #4A5565;
+  --table-pagination-btn-active-bg: #1447E6;
+  --table-pagination-btn-active-text: #FFFFFF;
+
+  /* ================================================================ */
+  /*  Component: Speed Dial                                           */
+  /* ================================================================ */
+  --speed-dial-item-size: 48px;
+  --speed-dial-item-radius: 12px;
+  --speed-dial-item-bg: #FFFFFF;
+  --speed-dial-item-border: #E5E7EB;
+  --speed-dial-item-icon-color: #4A5565;
+  --speed-dial-toggle-size: 48px;
+  --speed-dial-toggle-radius: 12px;
+  --speed-dial-toggle-bg: #193CB8;
+  --speed-dial-toggle-icon-color: #FFFFFF;
+  --speed-dial-tooltip-bg: #1E2939;
+  --speed-dial-tooltip-text: #FFFFFF;
+  --speed-dial-tooltip-radius: 12px;
+  --speed-dial-tooltip-font-size: 14px;
+  --speed-dial-menu-gap: 8px;
+  --speed-dial-container-gap: 12px;
+  --speed-dial-container-padding: 4px;
+  /* ================================================================ */
+  /*  Component: Spinner                                              */
+  /* ================================================================ */
+  --spinner-xs: 12px;
+  --spinner-sm: 24px;
+  --spinner-md: 50px;
+  --spinner-base: 75px;
+  --spinner-lg: 100px;
+  --spinner-color-brand: #1447E6;
+  --spinner-color-gray: #4A5565;
+  --spinner-color-red: #C10007;
+  --spinner-color-green: #008236;
+  --spinner-color-yellow: #A65F00;
+  --spinner-color-purple: #8200DB;
+  --spinner-color-blue: #1E429F;
+  --spinner-color-white: #FFFFFF;
+  --spinner-track-opacity: 0.2;
+  --spinner-animation-duration: 0.75s;
+  /* ================================================================ */
+  /*  Component: KBD (Keyboard key)                                   */
+  /* ================================================================ */
+  --kbd-bg: #F3F4F6;
+  --kbd-border: #E5E7EB;
+  --kbd-text: #101828;
+  --kbd-radius: 12px;
+  --kbd-radius-sm: 8px;
+  --kbd-padding-x: 8px;
+  --kbd-padding-y: 6px;
+  --kbd-font-size: 12px;
+  --kbd-line-height: 16px;
+  --kbd-font-weight: 600;
+  --kbd-min-height: 28px;
+  /* ================================================================ */
+  /*  Component: Toasts                                               */
+  /* ================================================================ */
+  --toast-bg: #FFFFFF;
+  --toast-border: #E5E7EB;
+  --toast-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --toast-warning-bg: #FFF8F1;
+  --toast-warning-border: #FCD9BD;
+  --toast-warning-shadow: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --toast-error-bg: #FEF0F2;
+  --toast-error-border: #FFCCD3;
+  --toast-error-shadow: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --toast-radius: 12px;
+  --toast-padding: 16px;
+  --toast-gap: 12px;
+  --toast-max-width: 400px;
+  --toast-title-color: #101828;
+  --toast-message-color: #4A5565;
+  --toast-content-gap: 2px;
+  --toast-close-color: #6A7282;
+  --toast-close-hover-bg: #F3F4F6;
+  --toast-close-hover-color: #101828;
+  --toast-progress-track: #E5E7EB;
+  --toast-progress-fill: #1447E6;
+}
+
+/* ================================================================ */
+/*  CSS Custom Properties (for use in plain CSS files)              */
+/*  These mirror the @theme values so existing component CSS         */
+/*  files can reference them via var() until migrated.              */
+/* ================================================================ */
+:root {
+  color-scheme: light;
+
+  /* -- Brand palette -- */
+  --brand-50:  #EFF6FF;
+  --brand-100: #DBEAFE;
+  --brand-200: #BEDBFF;
+  --brand-300: #8EC5FF;
+  --brand-400: #51A2FF;
+  --brand-500: #2B7FFF;
+  --brand-600: #155DFC;
+  --brand-700: #1447E6;
+  --brand-800: #193CB8;
+  --brand-900: #1C398E;
+  --brand-950: #162455;
+
+  --gray-50:  #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DC;
+  --gray-400: #99A1AF;
+  --gray-500: #6A7282;
+  --gray-600: #4A5565;
+  --gray-700: #364153;
+  --gray-800: #1E2939;
+  --gray-900: #101828;
+  --gray-950: #030712;
+
+  --red-50:  #FEF2F2;
+  --red-100: #FFE2E2;
+  --red-200: #FFC9C9;
+  --red-300: #FFA2A2;
+  --red-400: #FF6467;
+  --red-500: #FB2C36;
+  --red-600: #E7000B;
+  --red-700: #C10007;
+  --red-800: #9F0712;
+  --red-900: #82181A;
+  --red-950: #460809;
+
+  --green-50:  #F0FDF4;
+  --green-100: #DCFCE7;
+  --green-200: #B9F8CF;
+  --green-300: #7BF1A8;
+  --green-400: #05DF72;
+  --green-500: #00C950;
+  --green-600: #00A63E;
+  --green-700: #008236;
+  --green-800: #016630;
+  --green-900: #0D542B;
+  --green-950: #032E15;
+
+  --yellow-50:  #FEFCE8;
+  --yellow-100: #FEF9C2;
+  --yellow-200: #FFF085;
+  --yellow-300: #FFDF20;
+  --yellow-400: #FDC700;
+  --yellow-500: #F0B100;
+  --yellow-600: #D08700;
+  --yellow-700: #A65F00;
+  --yellow-800: #894B00;
+  --yellow-900: #733E0A;
+  --yellow-950: #432004;
+
+  --purple-50:  #FAF5FF;
+  --purple-100: #F3E8FF;
+  --purple-200: #E9D4FF;
+  --purple-300: #DAB2FF;
+  --purple-400: #C27AFF;
+  --purple-500: #AD46FF;
+  --purple-600: #9810FA;
+  /* Button group */
+  --btn-group-gap: -1px;
+  --btn-group-bg-gray: #F9FAFB;
+  --btn-group-bg-white: #FFFFFF;
+  --btn-group-border: #E5E7EB;
+  --btn-group-text: #4A5565;
+  --btn-group-radius-start: 12px;
+  --btn-group-radius-end: 12px;
+  --btn-group-icon-size: 16px;
+  --btn-group-icon-gap: 6px;
+  --btn-group-xs-h: 32px;
+  --btn-group-xs-py: 6px;
+  --btn-group-xs-px: 10px;
+  --btn-group-sm-h: 36px;
+  --btn-group-sm-py: 8px;
+  --btn-group-sm-px: 12px;
+  --btn-group-base-h: 40px;
+  --btn-group-base-py: 10px;
+  --btn-group-base-px: 16px;
+  --btn-group-l-h: 48px;
+  --btn-group-l-py: 12px;
+  --btn-group-l-px: 20px;
+
+  /* Breadcrumbs */
+  --breadcrumb-gap: 10px;
+  --breadcrumb-gap-tight: 4px;
+  --breadcrumb-item-gap: 6px;
+  --breadcrumb-text-initial: #4A5565;
+  --breadcrumb-text-hover: #1447E6;
+  --breadcrumb-text-active: #6A7282;
+  --breadcrumb-separator-color: #4A5565;
+  --breadcrumb-separator-active-color: #6A7282;
+  --breadcrumb-icon-size: 16px;
+  --breadcrumb-separator-size: 14px;
+  --breadcrumb-bg: #F9FAFB;
+  --breadcrumb-border: #E5E7EB;
+  --breadcrumb-radius: 12px;
+  --breadcrumb-padding: 10px;
+  --breadcrumb-badge-bg: #1447E6;
+  --breadcrumb-badge-text: #FFFFFF;
+  --breadcrumb-badge-radius: 9999px;
+  --purple-700: #8200DB;
+  --purple-800: #6E11B0;
+  --purple-900: #59168B;
+  --purple-950: #3C0366;
+
+  --blue-800: #1E429F;   /* Used in button.css */
+  --orange-400: #FF8A4C;
+  --cyan-500: #00B8DB;
+  --pink-600: #E60076;
+  --teal-600: #009689;
+  --emerald-700: #007A55;
+
+  /* Component-level colors (used across 2+ components) */
+  --dark-text: #1F2A37;
+  --disabled-text: #9CA3AF;
+  --alt-border: #D1D5DB;
+  --dark-hover-bg: #111928;
+
+  /* Focus ring */
+  --focus-ring: #BEDBFF;    /* brand-200 */
+  --focus-outline: #1447E6; /* brand-700 */
+
+  /* Disabled state backgrounds */
+  --disabled-brand-bg: #93B4F5;
+  --disabled-green-bg: #84E1BC;
+  --disabled-red-bg: #F8B4B4;
+  --disabled-yellow-bg: #FDE68A;
+  --disabled-purple-bg: #CABFFD;
+  --disabled-blue-bg: #A4CAFE;
+
+  /* Button base colors (Flowbite-specific, close to palette) */
+  --btn-green-bg: #0E9F6E;
+  --btn-red-bg: #E02424;
+  --btn-yellow-bg: #FACA15;
+  --btn-purple-bg: #7E3AF2;
+  --btn-blue-bg: #1A56DB;
+  --btn-gray-bg: #6B7280;
+  --btn-gray-hover: #4B5563;
+
+  /* Accordion */
+  --accordion-content-text: #4A5565; /* gray-600 */
+  --accordion-focus: #3b82f6;
+
+  /* Alert */
+  --alert-action-hover: #005f41;
+
+  /* Bottom navigation */
+  --bottom-nav-text: #6B7280; /* gray-500 */
+
+  /* ================================================================ */
+  /*  Typography                                                       */
+  /* ================================================================ */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Consolas, 'Liberation Mono', monospace;
+
+  --text-xxs: 8px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.15;
+  --leading-normal: 1.2;
+  --leading-relaxed: 1.25;
+  --leading-loose: 1.3;
+  --leading-body: 1.5;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wider: 0.02em;
+
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --shadow-top: 0 -1px 14px rgba(19, 28, 52, 0.1);
+
+  /* ================================================================ */
+  /*  Spacing                                                          */
+  /* ================================================================ */
+  --spacing-1: 4px;
+  --spacing-1\.5: 6px;
+  --spacing-2: 8px;
+  --spacing-2\.5: 10px;
+  --spacing-3: 12px;
+  --spacing-3\.5: 14px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  /*  Border Radius                                                    */
+  /* ================================================================ */
+  --radius-sm: 6px;
+  --radius-base: 12px;
+  --radius-full: 9999px;
+
+  /* ================================================================ */
+  /*  Box Shadow                                                       */
+  /* ================================================================ */
+  --shadow-xs: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --shadow-sm: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --shadow: 0 1px 3px rgba(29, 41, 61, 0.1), 0 1px 2px rgba(29, 41, 61, 0.1);
+  --shadow-md: 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1);
+  --shadow-lg: 0 10px 15px rgba(29, 41, 61, 0.1), 0 4px 6px rgba(29, 41, 61, 0.1);
+  --shadow-xl: 0 20px 25px rgba(29, 41, 61, 0.1), 0 8px 10px rgba(29, 41, 61, 0.1);
+  --shadow-2xl: 0 25px 50px rgba(29, 41, 61, 0.25);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-top: 0 -1px 14px rgba(19, 28, 52, 0.1);
+
+  /* ================================================================ */
+  /*  Card component                                                   */
+  /* ================================================================ */
+  --card-bg: #FFFFFF;
+  --card-border: #E5E7EB;
+  --card-heading: #101828;
+  --card-body: #4A5565;
+  --card-image-bg: #F3F4F6;
+  --card-radius: 12px;
+  --card-image-radius: 8px;
+  --card-padding: 24px;
+
+  /* Checkbox & Radio */
+  --checkbox-size: 16px;
+  --checkbox-radius: 4px;
+  --checkbox-border-width: 1px;
+  --checkbox-bg-unchecked: #F9FAFB;
+  --checkbox-border-unchecked: #E5E7EB;
+  --checkbox-bg-checked: #1447E6;
+  --checkbox-border-checked: #1447E6;
+  --checkbox-border-disabled: #F3F4F6;
+  --radio-radius: 9999px;
+  --radio-border-checked: #1447E6;
+  --radio-dot-checked: #1447E6;
+
+  /* Icon Shape */
+  --icon-shape-xs: 16px;
+  --icon-shape-sm: 24px;
+  --icon-shape-base: 36px;
+  --icon-shape-lg: 48px;
+  --icon-shape-xl: 64px;
+  --icon-shape-2xl: 96px;
+  --icon-shape-green-bg: #ECFDF5;
+  --icon-shape-red-bg: #FEF0F2;
+  --icon-shape-brand-bg: #EEF6FF;
+  --icon-shape-gray-bg: #F3F4F6;
+  --icon-shape-yellow-bg: #FFFBEB;
+  --icon-shape-purple-bg: #FAF5FF;
+  --icon-shape-teal-bg: #F0FDFA;
+  --icon-shape-pink-bg: #FDF2F8;
+
+  /* List Items */
+  --list-item-gap: 6px;
+  --list-item-radius: 6px;
+
+  /* Popover */
+  --popover-width: 255px;
+  --popover-radius: 12px;
+  --popover-bg: #FFFFFF;
+  --popover-border: #E5E7EB;
+  --popover-header-bg: #F3F4F6;
+  --popover-header-height: 32px;
+  --popover-header-padding-y: 6px;
+  --popover-header-padding-x: 12px;
+  --popover-body-padding-y: 8px;
+  --popover-body-padding-x: 12px;
+  --popover-title-font: 14px;
+  --popover-title-weight: 500;
+  --popover-body-font: 14px;
+  --popover-arrow-size: 10px;
+  --popover-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --popover-shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Floating Label */
+  --floatinglabel-border-radius: 12px;
+  --floatinglabel-bg: #FFFFFF;
+  --floatinglabel-border: #E5E7EB;
+  --floatinglabel-text: #101828;
+  --floatinglabel-placeholder: #6A7282;
+  --floatinglabel-icon: #6A7282;
+  --floatinglabel-label: #4A5565;
+  --floatinglabel-label-float: #1447E6;
+  --floatinglabel-border-focus: #1447E6;
+  --floatinglabel-border-success: #007A55;
+  --floatinglabel-label-success: #004F3B;
+  --floatinglabel-border-error: #C70036;
+  --floatinglabel-label-error: #8B0836;
+  --floatinglabel-bg-disabled: #F3F4F6;
+  --floatinglabel-text-disabled: #99A1AF;
+  --floatinglabel-sm-h: 36px;
+  --floatinglabel-sm-py: 8px;
+  --floatinglabel-sm-px: 12px;
+  --floatinglabel-sm-font: 14px;
+  --floatinglabel-base-h: 40px;
+  --floatinglabel-base-py: 10px;
+  --floatinglabel-base-px: 14px;
+  --floatinglabel-base-font: 14px;
+  --floatinglabel-lg-h: 48px;
+  --floatinglabel-lg-py: 12px;
+  --floatinglabel-lg-px: 16px;
+  --floatinglabel-lg-font: 16px;
+  --floatinglabel-icon-size: 16px;
+  --floatinglabel-clear-size: 14px;
+
+  /* Datepicker */
+  --datepicker-cell-size: 36px;
+  --datepicker-cell-radius: 8px;
+  --datepicker-cell-font: 12px;
+  --datepicker-cell-weight: 600;
+  --datepicker-cell-bg-hover: #F3F4F6;
+  --datepicker-cell-text: #4A5565;
+  --datepicker-cell-text-hover: #101828;
+  --datepicker-cell-text-active: #FFFFFF;
+  --datepicker-cell-bg-active: #1447E6;
+  --datepicker-cell-text-disabled: #99A1AF;
+  --datepicker-cell-bg-between: #F9FAFB;
+  --datepicker-header-font: 14px;
+  --datepicker-header-weight: 600;
+  --datepicker-weekday-color: #6A7282;
+  --datepicker-bg: #FFFFFF;
+  --datepicker-border: #E5E7EB;
+  --datepicker-padding: 20px;
+  --datepicker-radius: 12px;
+  --datepicker-width: 300px;
+  --datepicker-footer-btn-radius: 12px;
+
+  /* Timepicker */
+  --timepicker-border-radius: 12px;
+  --timepicker-bg: #F9FAFB;
+  --timepicker-border: #E5E7EB;
+  --timepicker-text: #101828;
+  --timepicker-placeholder: #6A7282;
+  --timepicker-icon: #6A7282;
+  --timepicker-sm-h: 36px;
+  --timepicker-sm-py: 8px;
+  --timepicker-sm-px: 8px;
+  --timepicker-sm-font: 14px;
+  --timepicker-base-h: 40px;
+  --timepicker-base-py: 10px;
+  --timepicker-base-px: 10px;
+  --timepicker-base-font: 14px;
+  --timepicker-lg-h: 48px;
+  --timepicker-lg-py: 12px;
+  --timepicker-lg-px: 12px;
+  --timepicker-lg-font: 16px;
+  --timepicker-label-font: 14px;
+  --timepicker-label-weight: 500;
+  --timepicker-helper-font: 12px;
+  --timepicker-dropdown-width: 224px;
+  --timepicker-dropdown-padding: 16px;
+  --timepicker-time-font: 20px;
+  --timepicker-time-weight: 600;
+  --timepicker-ampm-radius: 8px;
+  --card-padding-lg: 28px;
+  --card-gap: 24px;
+  --card-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --card-heading-size: 24px;
+  --card-heading-size-sm: 20px;
+  --card-heading-weight: 600;
+  --card-heading-line-height: 32px;
+  --card-heading-tracking: -0.4px;
+  --card-body-size: 16px;
+  --card-body-line-height: 24px;
+  --card-price-size: 30px;
+  --card-price-weight: 800;
+  --card-price-lg-size: 48px;
+  --card-price-lg-weight: 700;
+  --card-price-lg-line-height: 48px;
+
+  /* ================================================================ */
+  /*  Drawer component                                                 */
+  /* ================================================================ */
+  --drawer-bg: #FFFFFF;
+  --drawer-border: #E5E7EB;
+  --drawer-heading: #101828;
+  --drawer-body: #4A5565;
+  --drawer-radius: 12px;
+  --drawer-padding: 20px;
+  --drawer-gap: 20px;
+  --drawer-item-gap: 8px;
+  --drawer-item-bg: #F9FAFB;
+  --drawer-item-bg-hover: #F3F4F6;
+  --drawer-item-text: #4A5565;
+  --drawer-item-text-hover: #1447E6;
+  --drawer-close-radius: 4px;
+  --drawer-heading-size: 18px;
+  --drawer-heading-weight: 500;
+  --drawer-paragraph-size: 16px;
+  --drawer-list-item-size: 16px;
+
+  /* ================================================================ */
+  /*  Dropdowns component                                               */
+  /* ================================================================ */
+  --dropdown-item-radius: 8px;
+  --dropdown-item-padding: 8px;
+  --dropdown-item-gap: 6px;
+  --dropdown-item-bg: #FFFFFF;
+  --dropdown-item-text: #4A5565;
+  --dropdown-item-text-hover: #101828;
+  --dropdown-item-text-disabled: #99A1AF;
+  --dropdown-item-bg-hover: #F3F4F6;
+  --dropdown-item-secondary-text: #6A7282;
+  --dropdown-item-icon: #4A5565;
+  --dropdown-item-icon-disabled: #99A1AF;
+  --dropdown-menu-bg: #FFFFFF;
+  --dropdown-menu-border: #E5E7EB;
+  --dropdown-menu-radius: 12px;
+  --dropdown-menu-shadow: 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1);
+  --dropdown-toggle-width: 36px;
+  --dropdown-toggle-height: 20px;
+  --dropdown-toggle-bg: #F3F4F6;
+  --dropdown-toggle-bg-active: #1447E6;
+  --dropdown-toggle-border: #E5E7EB;
+  --dropdown-toggle-border-active: #155DFC;
+  --dropdown-toggle-thumb: #FFFFFF;
+  --dropdown-divider-color: #E5E7EB;
+
+  /* ================================================================ */
+  /*  Forms component                                                   */
+  /* ================================================================ */
+  --forms-input-radius: 12px;
+  --forms-input-bg: #F9FAFB;
+  --forms-input-border: #E5E7EB;
+  --forms-input-border-hover: #D1D5DC;
+  --forms-input-border-focus: #1447E6;
+  --forms-input-height: 40px;
+  --forms-input-padding-x: 12px;
+  --forms-input-padding-y: 10px;
+  --forms-input-text: #4A5565;
+  --forms-input-placeholder: #6A7282;
+  --forms-label-color: #101828;
+  --forms-label-weight: 500;
+  --forms-label-size: 14px;
+  --forms-required-color: #C70036;
+  --forms-helper-color: #4A5565;
+  --forms-helper-size: 12px;
+  --forms-gap: 10px;
+  --forms-focus-ring: #BEDBFF;
+  --forms-btn-radius: 12px;
+  --forms-btn-bg: #1447E6;
+  --forms-btn-bg-hover: #193CB8;
+  --forms-btn-text: #FFFFFF;
+  --forms-btn-secondary-bg: #F9FAFB;
+  --forms-btn-secondary-border: #E5E7EB;
+  --forms-btn-secondary-text: #4A5565;
+  --forms-staked-radius: 12px;
+  --forms-staked-btn-bg: #F9FAFB;
+  --forms-staked-btn-border: #E5E7EB;
+  --forms-staked-btn-text: #4A5565;
+  --forms-select-arrow: #4A5565;
+  --forms-file-icon: #4A5565;
+  --forms-affix-bg: #F3F4F6;
+  --forms-affix-text: #101828;
+  --forms-affix-border: #E5E7EB;
+  --forms-phone-select-bg: #F9FAFB;
+  --forms-phone-select-border: #E5E7EB;
+  --forms-phone-btn-radius: 0 12px 12px 0;
+  --forms-textarea-height: 132px;
+
+  /* ================================================================ */
+  /*  Chat Bubble component                                            */
+  /* ================================================================ */
+  --bubble-bg: #F3F4F6;
+  --bubble-name: #101828;
+  --bubble-name-weight: 600;
+  --bubble-time: #4A5565;
+  --bubble-text: #4A5565;
+  --bubble-status: #6A7282;
+  --bubble-link: #1447E6;
+  --bubble-file-icon: #CAD1D8;
+  --bubble-preview-bg: #F9FAFB;
+  --bubble-radius: 12px;
+  --bubble-avatar-size: 32px;
+  --bubble-avatar-radius: 9999px;
+  --bubble-padding: 16px;
+  --bubble-gap: 12px;
+  --bubble-text-size: 14px;
+  --bubble-text-line-height: 20px;
+  --bubble-meta-size: 12px;
+  --bubble-meta-line-height: 16px;
+  --bubble-content-gap: 10px;
+  --bubble-outer-gap: 10px;
+
+  /* ================================================================ */
+  /*  Autocomplete Input                                               */
+  /* ================================================================ */
+  --autocomplete-label-color: #101828;
+  --autocomplete-asterisk-color: #C70036;
+  --autocomplete-input-bg: #F9FAFB;
+  --autocomplete-input-border: #E5E7EB;
+  --autocomplete-input-border-focus: #1447E6;
+  --autocomplete-icon-color: #1447E6;
+  --autocomplete-input-text: #101828;
+  --autocomplete-input-placeholder: #99A1AF;
+  --autocomplete-helper-color: #4A5565;
+  --autocomplete-dropdown-bg: #FFFFFF;
+  --autocomplete-dropdown-border: #E5E7EB;
+  --autocomplete-item-hover-bg: #F3F4F6;
+  --autocomplete-item-selected-bg: #EEF6FF;
+  --autocomplete-item-text: #101828;
+  --autocomplete-item-secondary-text: #6A7282;
+  --autocomplete-category-text: #6A7282;
+  --autocomplete-shortcut-bg: #F3F4F6;
+  --autocomplete-shortcut-text: #4A5565;
+  --autocomplete-action-btn-color: #6A7282;
+  --autocomplete-action-btn-hover: #101828;
+  --autocomplete-avatar-size: 32px;
+  --autocomplete-user-name-weight: 500;
+  --autocomplete-user-email-size: 12px;
+
+  /* ================================================================ */
+  /*  Range Slider                                                     */
+  /* ================================================================ */
+  --range-slider-track-height: 8px;
+  --range-slider-track-bg: #E5E7EB;
+  --range-slider-track-radius: 9999px;
+  --range-slider-bar-bg: #1447E6;
+  --range-slider-bar-radius: 4px;
+  --range-slider-thumb-size: 20px;
+  --range-slider-thumb-bg: #FFFFFF;
+  --range-slider-thumb-border: #E5E7EB;
+  --range-slider-thumb-border-active: #1447E6;
+  --range-slider-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
+  --range-slider-thumb-focus-ring: #BEDBFF;
+  --range-slider-tooltip-bg: #1E2939;
+  --range-slider-tooltip-text: #FFFFFF;
+  --range-slider-tooltip-radius: 12px;
+  --range-slider-tooltip-font: 14px;
+  --range-slider-tooltip-weight: 500;
+  --range-slider-tooltip-line-height: 16px;
+  --range-slider-tooltip-padding-y: 8px;
+  --range-slider-tooltip-padding-x: 12px;
+  --range-slider-tooltip-gap: 12px;
+  --range-slider-label-color: #4A5565;
+  --range-slider-label-size: 14px;
+  --range-slider-label-weight: 500;
+  --range-slider-label-line-height: 20px;
+  --range-slider-label-width: 64px;
+  --range-slider-helper-color: #4A5565;
+  --range-slider-helper-size: 14px;
+  --range-slider-helper-weight: 500;
+  --range-slider-helper-line-height: 20px;
+  --range-slider-icon-color: #4A5565;
+  --range-slider-icon-size: 24px;
+  --range-slider-gap: 16px;
+  --range-slider-row-height: 24px;
+  --range-slider-helper-gap: 14px;
+  --range-slider-disabled-opacity: 0.5;
+
+  /* ================================================================ */
+  /*  Toggle Switch                                                    */
+  /* ================================================================ */
+  --toggle-base-w: 36px;
+  --toggle-base-h: 20px;
+  --toggle-lg-w: 44px;
+  --toggle-lg-h: 24px;
+  --toggle-bg-off: #F3F4F6;
+  --toggle-bg-on: #1447E6;
+  --toggle-border-off: #E5E7EB;
+  --toggle-border-on: #155DFC;
+  --toggle-thumb-bg: #FFFFFF;
+  --toggle-thumb-base-size: 16px;
+  --toggle-thumb-lg-size: 20px;
+  --toggle-disabled-opacity: 0.5;
+  --toggle-focus-ring: #BEDBFF;
+  --toggle-label-color: #101828;
+  --toggle-label-size: 14px;
+  --toggle-gap: 8px;
+
+  /* ================================================================ */
+  /*  Progress Bars                                                     */
+  /* ================================================================ */
+  --progress-track-bg: #E5E7EB;
+  --progress-track-radius: 12px;
+  --progress-fill-radius: 12px;
+  --progress-fill-primary: #1447E6;
+  --progress-fill-success: #007A55;
+  --progress-fill-gray: #6A7282;
+  --progress-fill-danger: #C70036;
+  --progress-fill-warning: #FF5A1F;
+  --progress-fill-indigo: #4F39F6;
+  --progress-fill-purple: #AD46FF;
+  --progress-fill-cyan: #00B8DB;
+  --progress-fill-pink: #E60076;
+  --progress-fill-teal: #009689;
+  --progress-fill-lime: #5EA500;
+  --progress-base-height: 6px;
+  --progress-lg-height: 10px;
+  --progress-label-size: 12px;
+  --progress-label-weight: 500;
+  --progress-label-line-height: 16px;
+  --progress-label-color: #4A5565;
+  --progress-gap: 6px;
+
+  /* ================================================================ */
+  /*  Sidebar                                                          */
+  /* ================================================================ */
+  --sidebar-width: 288px;
+  --sidebar-width-contracted: 64px;
+  --sidebar-width-double: 320px;
+  --sidebar-bg: #FFFFFF;
+  --sidebar-border: #E5E7EB;
+  --sidebar-padding: 20px;
+  --sidebar-gap: 20px;
+  --sidebar-header-padding-bottom: 16px;
+  --sidebar-item-height: 36px;
+  --sidebar-item-padding: 6px 8px;
+  --sidebar-item-radius: 12px;
+  --sidebar-item-bg-hover: #F9FAFB;
+  --sidebar-item-icon-color: #4A5565;
+  --sidebar-item-text-color: #4A5565;
+  --sidebar-item-text-active: #101828;
+  --sidebar-item-gap: 8px;
+  --sidebar-badge-bg: #FEF0F2;
+  --sidebar-badge-border: #FFCCD3;
+  --sidebar-badge-text: #8B0836;
+  --sidebar-alert-bg: #EEF6FF;
+  --sidebar-alert-border: #BEDBFF;
+  --sidebar-alert-radius: 12px;
+  --sidebar-user-avatar-size: 32px;
+
+  /* Modals */
+  --modal-radius: 12px;
+  --modal-bg: #FFFFFF;
+  --modal-border: #E5E7EB;
+  --modal-padding: 24px;
+  --modal-gap: 24px;
+  --modal-header-gap: 24px;
+  --modal-header-padding-bottom: 20px;
+  --modal-header-title-size: 18px;
+  --modal-header-title-weight: 500;
+  --modal-close-size: 36px;
+  --modal-close-radius: 12px;
+  --modal-body-gap: 16px;
+  --modal-btn-radius: 12px;
+  --modal-btn-padding: 10px 20px;
+  --modal-btn-font-size: 14px;
+  --modal-btn-font-weight: 500;
+  --modal-field-radius: 12px;
+  --modal-field-padding: 10px 14px;
+
+  /* Navbar / Nav Link */
+  --nav-link-font-size: 14px;
+  --nav-link-font-weight: 500;
+  --nav-link-icon-size: 18px;
+  --nav-link-gap: 6px;
+  --nav-link-bordered-width: 224px;
+  --nav-link-bordered-padding: 6px 8px;
+  --nav-link-bordered-radius: 12px;
+  --nav-link-bordered-border: #E5E7EB;
+  --nav-link-bordered-bg-hover: #F9FAFB;
+  --nav-link-bordered-bg-active: #F9FAFB;
+  --nav-link-text-color: #4A5565;
+  --nav-link-text-color-active: #1447E6;
+  --nav-link-text-color-initial: #101828;
+
+  /* Nav Tabs */
+  --nav-tabs-gap: 24px;
+  --nav-tabs-item-gap: 6px;
+  --nav-tabs-item-icon-size: 16px;
+  --nav-tabs-item-font-weight: 500;
+  --nav-tabs-item-text-color: #4A5565;
+  --nav-tabs-item-text-color-active: #1447E6;
+  --nav-tabs-pill-radius: 9999px;
+  --nav-tabs-pill-padding: 8px 16px;
+  --nav-tabs-pill-bg: #F3F4F6;
+  --nav-tabs-pill-bg-active: #1447E6;
+  --nav-tabs-pill-text-color-active: #FFFFFF;
+  --nav-tabs-vertical-gap: 12px;
+  --nav-tabs-vertical-width: 160px;
+  --nav-tabs-border-bottom-color: #E5E7EB;
+  --nav-tabs-border-bottom-active-color: #1447E6;
+  --nav-tabs-button-gap: 4px;
+  --nav-tabs-button-radius: 8px;
+  --nav-tabs-button-padding: 10px 16px;
+  --nav-tabs-button-bg-active: #1447E6;
+  --nav-tabs-button-text-color-active: #FFFFFF;
+
+  /* ================================================================ */
+  /*  Skeleton                                                         */
+  /* ================================================================ */
+  --skeleton-bg: #E5E7EB;
+  --skeleton-bg-strong: #D1D5DC;
+  --skeleton-radius: 4px;
+  --skeleton-radius-sm: 2px;
+  --skeleton-radius-lg: 12px;
+  --skeleton-radius-full: 9999px;
+  --skeleton-image-icon: #99A1AF;
+
+  /* ================================================================ */
+  /*  Tooltip                                                          */
+  /* ================================================================ */
+  --tooltip-bg: #1E2939;
+  --tooltip-text: #FFFFFF;
+  --tooltip-radius: 12px;
+  --tooltip-padding-y: 8px;
+  --tooltip-padding-x: 12px;
+  --tooltip-font-size: 14px;
+  --tooltip-font-weight: 500;
+  --tooltip-line-height: 16px;
+  --tooltip-arrow-size: 8px;
+  --tooltip-arrow-width: 34px;
+
+  /* ================================================================ */
+  /*  Stepper                                                          */
+  /* ================================================================ */
+  --stepper-step-size: 20px;
+  --stepper-step-radius: 9999px;
+  --stepper-step-number-size: 12px;
+  --stepper-step-number-weight: 600;
+  --stepper-step-label-size: 16px;
+  --stepper-step-label-weight: 500;
+  --stepper-step-completed-color: #1447E6;
+  --stepper-step-active-color: #1447E6;
+  --stepper-step-upcoming-color: #4A5565;
+  --stepper-step-upcoming-border: #E5E7EB;
+  --stepper-step-gap: 16px;
+  --stepper-separator-color: #E5E7EB;
+  --stepper-separator-width: 37px;
+  --stepper-content-bg: #F9FAFB;
+  --stepper-content-border: #E5E7EB;
+  --stepper-content-radius: 12px;
+  --stepper-btn-radius: 12px;
+  --stepper-btn-secondary-bg: #F9FAFB;
+  --stepper-btn-secondary-border: #E5E7EB;
+  --stepper-btn-secondary-text: #4A5565;
+  --stepper-btn-primary-bg: #1447E6;
+  --stepper-btn-primary-text: #FFFFFF;
+  --stepper-nav-gap: 32px;
+  --stepper-check-icon-size: 14px;
+  --speed-dial-toggle-size: 48px;
+  /* ================================================================ */
+  /*  Spinner component                                                */
+  /* ================================================================ */
+  --spinner-xs: 12px;
+  --spinner-sm: 24px;
+  --spinner-md: 50px;
+  --spinner-base: 75px;
+  --spinner-lg: 100px;
+  --spinner-color-brand: #1447E6;
+  --spinner-color-gray: #4A5565;
+  --spinner-color-red: #C10007;
+  --spinner-color-green: #008236;
+  --spinner-color-yellow: #A65F00;
+  --spinner-color-purple: #8200DB;
+  --spinner-color-blue: #1E429F;
+  --spinner-color-white: #FFFFFF;
+  --spinner-track-opacity: 0.2;
+  --spinner-animation-duration: 0.75s;
+  --speed-dial-toggle-radius: 12px;
+  --speed-dial-toggle-bg: #193CB8;
+  --speed-dial-toggle-icon-color: #FFFFFF;
+  --speed-dial-tooltip-bg: #1E2939;
+  --speed-dial-tooltip-text: #FFFFFF;
+  --speed-dial-tooltip-radius: 12px;
+  --speed-dial-tooltip-font-size: 14px;
+  --speed-dial-menu-gap: 8px;
+  --speed-dial-container-gap: 12px;
+  --speed-dial-container-padding: 4px;
+
+  /* ================================================================ */
+  /*  Table                                                            */
+  /* ================================================================ */
+  --table-radius: 12px;
+  --table-bg: #F9FAFB;
+  --table-border: #E5E7EB;
+  --table-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --table-header-bg: #F9FAFB;
+  --table-header-height: 76px;
+  --table-header-padding: 20px;
+  --table-header-gap: 10px;
+  --table-header-text-color: #101828;
+  --table-header-text-weight: 500;
+  --table-header-text-size: 14px;
+  --table-row-height: 64px;
+  --table-row-padding-x: 20px;
+  --table-row-text-color: #4A5565;
+  --table-row-text-size: 14px;
+  --table-row-hover-bg: #F3F4F6;
+  --table-row-divider: #E5E7EB;
+  --table-stripe-bg: #F9FAFB;
+  --table-column-header-height: 48px;
+  --table-column-header-bg: #FFFFFF;
+  --table-column-header-text: #101828;
+  --table-column-header-weight: 500;
+  --table-column-header-size: 14px;
+  --table-column-header-padding-x: 20px;
+  --table-cell-padding-x: 20px;
+  --table-cell-padding-y: 12px;
+  --table-footer-height: 76px;
+  --table-footer-bg: #FFFFFF;
+  --table-footer-text: #4A5565;
+  --table-footer-text-size: 14px;
+  --table-search-width: 256px;
+  --table-search-height: 36px;
+  --table-search-radius: 12px;
+  --table-search-bg: #F9FAFB;
+  --table-search-border: #E5E7EB;
+  --table-search-icon: #6A7282;
+  --table-pagination-btn-radius: 12px;
+  --table-pagination-btn-bg: #FFFFFF;
+  --table-pagination-btn-border: #E5E7EB;
+  --table-pagination-btn-text: #4A5565;
+  --table-pagination-btn-active-bg: #1447E6;
+  --table-pagination-btn-active-text: #FFFFFF;
+  /* ================================================================ */
+  /*  KBD component                                                    */
+  /* ================================================================ */
+  --kbd-bg: #F3F4F6;
+  --kbd-border: #E5E7EB;
+  --kbd-text: #101828;
+  --kbd-radius: 12px;
+  --kbd-radius-sm: 8px;
+  --kbd-padding-x: 8px;
+  --kbd-padding-y: 6px;
+  --kbd-font-size: 12px;
+  --kbd-line-height: 16px;
+  --kbd-font-weight: 600;
+  --kbd-min-height: 28px;
+  /* ================================================================ */
+  /*  Toasts component                                                 */
+  /* ================================================================ */
+  --toast-bg: #FFFFFF;
+  --toast-border: #E5E7EB;
+  --toast-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  --toast-warning-bg: #FFF8F1;
+  --toast-warning-border: #FCD9BD;
+  --toast-warning-shadow: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --toast-error-bg: #FEF0F2;
+  --toast-error-border: #FFCCD3;
+  --toast-error-shadow: 0 1px 2px rgba(29, 41, 61, 0.05);
+  --toast-radius: 12px;
+  --toast-padding: 16px;
+  --toast-gap: 12px;
+  --toast-max-width: 400px;
+  --toast-title-color: #101828;
+  --toast-message-color: #4A5565;
+  --toast-content-gap: 2px;
+  --toast-close-color: #6A7282;
+  --toast-close-hover-bg: #F3F4F6;
+  --toast-close-hover-color: #101828;
+  --toast-progress-track: #E5E7EB;
+  --toast-progress-fill: #1447E6;
+}

@@ -1,0 +1,327 @@
+/* ===== Flowbite Table – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-table,
+.flowbite-table__header,
+.flowbite-table__header-left,
+.flowbite-table__header-actions,
+.flowbite-table__search,
+.flowbite-table__search-icon,
+.flowbite-table__search-input,
+.flowbite-table__content,
+.flowbite-table__column-headers,
+.flowbite-table__column-header,
+.flowbite-table__row,
+.flowbite-table__cell,
+.flowbite-table__footer,
+.flowbite-table__pagination,
+.flowbite-table__page-btn,
+.flowbite-table__status-badge,
+.flowbite-table__status-dot,
+.flowbite-table__empty,
+.flowbite-table__skeleton-bar,
+.flowbite-table__empty-text,
+.flowbite-table__footer-info {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--table-border, #E5E7EB);
+  border-radius: var(--table-radius, 12px);
+  background-color: var(--table-bg, #F9FAFB);
+  box-shadow: var(--table-shadow, 0 1px 0.5px rgba(29, 41, 61, 0.02));
+  overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+
+.flowbite-table__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--table-header-gap, 10px);
+  min-height: var(--table-header-height, 76px);
+  padding: var(--table-header-padding, 20px);
+  background-color: var(--table-header-bg, #F9FAFB);
+  border-bottom: 1px solid var(--table-border, #E5E7EB);
+}
+
+.flowbite-table__header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.flowbite-table__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Search ---------- */
+
+.flowbite-table__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--table-search-width, 256px);
+  height: var(--table-search-height, 36px);
+  padding: 8px 10px;
+  gap: 8px;
+  border: 1px solid var(--table-search-border, #E5E7EB);
+  border-radius: var(--table-search-radius, 12px);
+  background-color: var(--table-search-bg, #F9FAFB);
+  box-shadow: var(--table-shadow, 0 1px 0.5px rgba(29, 41, 61, 0.02));
+}
+
+.flowbite-table__search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--table-search-icon, #6A7282);
+}
+
+.flowbite-table__search-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.flowbite-table__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-black, #101828);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.flowbite-table__search-input::placeholder {
+  color: var(--table-search-icon, #6A7282);
+}
+
+/* ---------- Content (scrollable) ---------- */
+
+.flowbite-table__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ---------- Column Headers ---------- */
+
+.flowbite-table__column-headers {
+  display: flex;
+  align-items: center;
+  min-height: var(--table-column-header-height, 48px);
+  background-color: var(--table-column-header-bg, #FFFFFF);
+  border-bottom: 1px solid var(--table-row-divider, #E5E7EB);
+}
+
+.flowbite-table__column-header {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--table-column-header-padding-x, 20px);
+  font-size: var(--table-column-header-size, 14px);
+  font-weight: var(--table-column-header-weight, 500);
+  color: var(--table-column-header-text, #101828);
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.flowbite-table__column-header--striped {
+  background-color: var(--table-stripe-bg, #F9FAFB);
+}
+
+/* ---------- Row ---------- */
+
+.flowbite-table__row {
+  display: flex;
+  align-items: center;
+  min-height: var(--table-row-height, 64px);
+  border-bottom: 1px solid var(--table-row-divider, #E5E7EB);
+  background-color: #FFFFFF;
+  transition: background-color 0.15s ease;
+}
+
+.flowbite-table__row:last-child {
+  border-bottom: none;
+}
+
+.flowbite-table__row:hover {
+  background-color: var(--table-row-hover-bg, #F3F4F6);
+}
+
+.flowbite-table__row--clickable {
+  cursor: pointer;
+}
+
+.flowbite-table__row--clickable:focus-visible {
+  outline: 2px solid var(--color-border-brand, #1447E6);
+  outline-offset: -2px;
+}
+
+/* ---------- Cell ---------- */
+
+.flowbite-table__cell {
+  display: flex;
+  align-items: center;
+  padding: var(--table-cell-padding-y, 12px) var(--table-cell-padding-x, 20px);
+  font-size: var(--table-row-text-size, 14px);
+  color: var(--table-row-text-color, #4A5565);
+  line-height: 20px;
+  min-height: var(--table-row-height, 64px);
+}
+
+.flowbite-table__cell--striped {
+  background-color: var(--table-stripe-bg, #F9FAFB);
+}
+
+/* ---------- Footer ---------- */
+
+.flowbite-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: var(--table-footer-height, 76px);
+  padding: var(--table-header-padding, 20px);
+  background-color: var(--table-footer-bg, #FFFFFF);
+  border-top: 1px solid var(--table-border, #E5E7EB);
+}
+
+.flowbite-table__footer-info {
+  font-size: var(--table-footer-text-size, 14px);
+  color: var(--table-footer-text, #4A5565);
+  line-height: 20px;
+}
+
+/* ---------- Pagination ---------- */
+
+.flowbite-table__pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flowbite-table__page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--table-pagination-btn-border, #E5E7EB);
+  border-radius: var(--table-pagination-btn-radius, 12px);
+  background-color: var(--table-pagination-btn-bg, #FFFFFF);
+  color: var(--table-pagination-btn-text, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-table__page-btn:hover:not(:disabled) {
+  background-color: var(--table-row-hover-bg, #F3F4F6);
+}
+
+.flowbite-table__page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.flowbite-table__page-btn--active {
+  background-color: var(--table-pagination-btn-active-bg, #1447E6);
+  color: var(--table-pagination-btn-active-text, #FFFFFF);
+  border-color: var(--table-pagination-btn-active-bg, #1447E6);
+}
+
+.flowbite-table__page-btn--active:hover:not(:disabled) {
+  background-color: var(--table-pagination-btn-active-bg, #1447E6);
+}
+
+.flowbite-table__page-btn--last {
+  border-radius: 0 var(--table-pagination-btn-radius, 12px) var(--table-pagination-btn-radius, 12px) 0;
+}
+
+.flowbite-table__page-btn:first-child {
+  border-radius: var(--table-pagination-btn-radius, 12px) 0 0 var(--table-pagination-btn-radius, 12px);
+}
+
+.flowbite-table__page-btn:focus-visible {
+  outline: 2px solid var(--color-border-brand, #1447E6);
+  outline-offset: 2px;
+}
+
+/* ---------- Status Badge ---------- */
+
+.flowbite-table__status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.flowbite-table__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+/* ---------- Empty State ---------- */
+
+.flowbite-table__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.flowbite-table__empty-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--table-row-text-color, #4A5565);
+  line-height: 20px;
+}
+
+/* ---------- Skeleton Loading ---------- */
+
+.flowbite-table__row--skeleton {
+  pointer-events: none;
+}
+
+.flowbite-table__skeleton-bar {
+  width: 60%;
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-neutral-tertiary-soft, #F3F4F6) 25%,
+    var(--color-bg-neutral-quaternary, #E5E7EB) 50%,
+    var(--color-bg-neutral-tertiary-soft, #F3F4F6) 75%
+  );
+  background-size: 200% 100%;
+  animation: flowbite-table-skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes flowbite-table-skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

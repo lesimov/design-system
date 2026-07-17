@@ -1,0 +1,250 @@
+/* ===== Flowbite Speed Dial – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-speed-dial,
+.flowbite-speed-dial__menu,
+.flowbite-speed-dial__item,
+.flowbite-speed-dial__item-wrapper,
+.flowbite-speed-dial__item-icon,
+.flowbite-speed-dial__toggle,
+.flowbite-speed-dial__toggle-icon,
+.flowbite-speed-dial__tooltip {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-speed-dial {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.flowbite-speed-dial--top {
+  flex-direction: column-reverse;
+}
+
+.flowbite-speed-dial--bottom {
+  flex-direction: column;
+}
+
+.flowbite-speed-dial--left {
+  flex-direction: row-reverse;
+}
+
+.flowbite-speed-dial--right {
+  flex-direction: row;
+}
+
+/* ---------- Menu ---------- */
+
+.flowbite-speed-dial__menu {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  gap: var(--speed-dial-menu-gap, 8px);
+  padding: var(--speed-dial-container-padding, 4px);
+  margin: 0;
+  list-style: none;
+}
+
+.flowbite-speed-dial__menu[aria-hidden="true"] {
+  display: none;
+}
+
+/* ---------- Item Wrapper ---------- */
+
+.flowbite-speed-dial__item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.flowbite-speed-dial--left .flowbite-speed-dial__item-wrapper,
+.flowbite-speed-dial--right .flowbite-speed-dial__item-wrapper {
+  flex-direction: column;
+}
+
+/* ---------- Item ---------- */
+
+.flowbite-speed-dial__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--speed-dial-item-size, 48px);
+  height: var(--speed-dial-item-size, 48px);
+  padding: 0;
+  border: 1px solid var(--speed-dial-item-border, #E5E7EB);
+  border-radius: var(--speed-dial-item-radius, 12px);
+  background-color: var(--speed-dial-item-bg, #FFFFFF);
+  color: var(--speed-dial-item-icon-color, #4A5565);
+  cursor: pointer;
+  box-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.flowbite-speed-dial__item:hover {
+  background-color: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+.flowbite-speed-dial__item:focus-visible {
+  outline: 2px solid var(--color-border-brand, #1447E6);
+  outline-offset: 2px;
+}
+
+/* ---------- Item Icon ---------- */
+
+.flowbite-speed-dial__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.flowbite-speed-dial__item-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Toggle Button ---------- */
+
+.flowbite-speed-dial__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--speed-dial-toggle-size, 48px);
+  height: var(--speed-dial-toggle-size, 48px);
+  padding: 0;
+  border: none;
+  border-radius: var(--speed-dial-toggle-radius, 12px);
+  background-color: var(--speed-dial-toggle-bg, #193CB8);
+  color: var(--speed-dial-toggle-icon-color, #FFFFFF);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px var(--color-bg-brand-medium, #BEDBFF);
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.flowbite-speed-dial__toggle:hover {
+  background-color: var(--color-bg-brand-strong, #193CB8);
+}
+
+.flowbite-speed-dial__toggle:focus-visible {
+  outline: 2px solid var(--color-border-brand, #1447E6);
+  outline-offset: 2px;
+}
+
+.flowbite-speed-dial__toggle--active {
+  background-color: var(--color-bg-brand, #1447E6);
+}
+
+/* ---------- Toggle Icon ---------- */
+
+.flowbite-speed-dial__toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.flowbite-speed-dial__toggle-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.flowbite-speed-dial__toggle-icon--rotated {
+  transform: rotate(45deg);
+}
+
+/* ---------- Tooltip ---------- */
+
+.flowbite-speed-dial__tooltip {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--speed-dial-tooltip-radius, 12px);
+  background-color: var(--speed-dial-tooltip-bg, #1E2939);
+  color: var(--speed-dial-tooltip-text, #FFFFFF);
+  font-size: var(--speed-dial-tooltip-font-size, 14px);
+  font-weight: 500;
+  line-height: 16px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.flowbite-speed-dial__item-wrapper:hover .flowbite-speed-dial__tooltip {
+  opacity: 1;
+}
+
+/* Tooltip positioning based on parent direction */
+
+.flowbite-speed-dial--top .flowbite-speed-dial__tooltip {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flowbite-speed-dial--top .flowbite-speed-dial__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--speed-dial-tooltip-bg, #1E2939);
+}
+
+.flowbite-speed-dial--bottom .flowbite-speed-dial__tooltip {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flowbite-speed-dial--bottom .flowbite-speed-dial__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--speed-dial-tooltip-bg, #1E2939);
+}
+
+.flowbite-speed-dial--left .flowbite-speed-dial__tooltip {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flowbite-speed-dial--left .flowbite-speed-dial__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--speed-dial-tooltip-bg, #1E2939);
+}
+
+.flowbite-speed-dial--right .flowbite-speed-dial__tooltip {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flowbite-speed-dial--right .flowbite-speed-dial__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--speed-dial-tooltip-bg, #1E2939);
+}

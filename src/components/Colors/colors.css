@@ -1,0 +1,155 @@
+/* ===== Flowbite Colors – Design System ===== */
+
+.flowbite-colors {
+  font-family: var(--font-sans, Inter, system-ui, -apple-system, 'Segoe UI', sans-serif);
+  color: var(--gray-900, #101828);
+  background-color: #ffffff;
+}
+
+/* ---------- Sections ---------- */
+
+.flowbite-colors__section {
+  padding: 40px;
+}
+
+.flowbite-colors__section + .flowbite-colors__section {
+  border-top: 1px solid var(--gray-200, #e5e7eb);
+}
+
+.flowbite-colors__section-title {
+  margin: 0 0 28px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--gray-900, #101828);
+}
+
+.flowbite-colors__section-hint {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-500, #6a7282);
+}
+
+/* ---------- Color Palette ---------- */
+
+.flowbite-colors__palette {
+  display: flex;
+  gap: 35px;
+  overflow-x: auto;
+}
+
+.flowbite-colors__family {
+  flex: 0 0 auto;
+  width: 100px;
+}
+
+.flowbite-colors__family-name {
+  margin: 0 0 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--brand-700, #1447e6); /* brand-700 token */
+  text-align: left;
+  white-space: nowrap;
+}
+
+.flowbite-colors__swatches {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowbite-colors__swatch {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-colors__swatch--first {
+  border-radius: 12px 12px 0 0;
+}
+
+.flowbite-colors__swatch--last {
+  border-radius: 0 0 12px 12px;
+}
+
+.flowbite-colors__swatch-label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* ---------- Variable grids (text / background / border) ---------- */
+
+.flowbite-colors__vars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.flowbite-colors__var {
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Text variables: name rendered in its own color ---- */
+
+.flowbite-colors__var--text {
+  padding: 16px;
+  gap: 4px;
+}
+
+.flowbite-colors__var-name--text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+/* ---- Background variables: swatch on top, meta below ---- */
+
+.flowbite-colors__var-swatch--bg {
+  height: 64px;
+  border-bottom: 1px solid var(--gray-200, #e5e7eb);
+}
+
+/* ---- Border variables: box with the colored border ---- */
+
+.flowbite-colors__var-box {
+  height: 56px;
+  background-color: var(--gray-100, #f3f4f6);
+}
+
+/* ---- Shared meta block ---- */
+
+.flowbite-colors__var-meta {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: #ffffff;
+}
+
+.flowbite-colors__var-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--gray-900, #101828);
+  word-break: break-all;
+}
+
+.flowbite-colors__var-hex {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.flowbite-colors__var-hex--muted {
+  color: var(--gray-500, #6a7282);
+}

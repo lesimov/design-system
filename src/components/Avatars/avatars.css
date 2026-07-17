@@ -1,0 +1,224 @@
+/* ===== Flowbite Avatars – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-avatar,
+.flowbite-avatar-wrap,
+.flowbite-avatar__status-dot,
+.flowbite-avatar__remove-btn,
+.flowbite-status-dot,
+.flowbite-avatar-group__item {
+  box-sizing: border-box;
+}
+
+/* ---------- Atomic avatar ---------- */
+
+.flowbite-avatar-wrap {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.flowbite-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--gray-200, #e5e7eb);
+  color: #ffffff;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-weight: var(--weight-semibold, 600);
+  line-height: 1;
+  user-select: none;
+}
+
+/* A circle nested in a wrap fills its sized container. */
+.flowbite-avatar-wrap .flowbite-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.flowbite-avatar__initials {
+  display: block;
+  text-transform: uppercase;
+}
+
+/* ---------- Placeholder modifier ---------- */
+
+.flowbite-avatar--placeholder {
+  background-color: var(--gray-100, #f3f4f6);
+  color: var(--gray-500, #6a7282);
+}
+
+.flowbite-avatar--placeholder svg {
+  display: block;
+}
+
+/* ---------- Status dot (on avatar) ---------- */
+
+.flowbite-avatar__status-dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* ---------- Remove button ---------- */
+
+.flowbite-avatar__remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--gray-100, #f3f4f6);
+  color: var(--gray-500, #6a7282);
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: 0 0 0 2px #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.flowbite-avatar__remove-btn:hover {
+  background-color: var(--gray-200, #e5e7eb);
+}
+
+.flowbite-avatar__remove-btn svg {
+  display: block;
+}
+
+/* ---------- Standalone status dot ---------- */
+
+.flowbite-status-dot {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ---------- Showcase layout ---------- */
+
+.flowbite-avatars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8, 32px);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+.flowbite-avatars-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4, 16px);
+}
+
+.flowbite-avatars-section__title {
+  margin: 0;
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--gray-900, #101828);
+}
+
+.flowbite-avatars-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-5, 20px);
+}
+
+.flowbite-avatars-row__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2, 8px);
+}
+
+.flowbite-avatars-row__label {
+  font-size: var(--text-xs, 12px);
+  color: var(--gray-500, #6a7282);
+  white-space: nowrap;
+}
+
+.flowbite-avatars-row__heading {
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  color: var(--gray-600, #4b5563);
+  white-space: nowrap;
+}
+
+/* ---------- Status dots section ---------- */
+
+.flowbite-avatars-status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4, 16px);
+}
+
+.flowbite-avatars-status__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4, 16px);
+}
+
+.flowbite-avatars-status__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600, #4b5563);
+  min-width: 88px;
+}
+
+.flowbite-avatars-dots {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6, 24px);
+}
+
+.flowbite-avatars-dots__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1\.5, 6px);
+}
+
+.flowbite-avatars-dots__label {
+  font-size: 11px;
+  color: var(--gray-500, #6a7282);
+  white-space: nowrap;
+}
+
+/* ---------- Avatar group ---------- */
+
+.flowbite-avatars-group-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4, 16px);
+}
+
+.flowbite-avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.flowbite-avatar-group__item {
+  position: relative;
+  margin-left: -8px;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.flowbite-avatar-group__item:first-child {
+  margin-left: 0;
+}
+
+.flowbite-avatar-group__count {
+  background-color: var(--gray-100, #f3f4f6);
+  color: var(--gray-600, #4b5563);
+}
+
+.flowbite-avatar-group__count-text {
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-semibold, 600);
+}

@@ -1,0 +1,254 @@
+/* ===== Flowbite Dropdowns – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-dropdown-showcase,
+.flowbite-dropdown-section,
+.flowbite-dropdown-row,
+.flowbite-dropdown-row__item,
+.flowbite-dropdown-row__label,
+.flowbite-dropdown-item,
+.flowbite-dropdown-item__icon,
+.flowbite-dropdown-item__text,
+.flowbite-dropdown-item__secondary-text,
+.flowbite-dropdown-item__end-icon,
+.flowbite-dropdown-item__checkbox,
+.flowbite-dropdown-item__radio,
+.flowbite-dropdown-item__toggle,
+.flowbite-dropdown-divider {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 208px;
+  padding: 8px;
+  border: 1px solid #E5E7EB; /* gray-200 */
+  border-radius: var(--radius, 8px);
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1));
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+.flowbite-dropdown--wide {
+  width: 304px;
+}
+
+/* ---------- Item ---------- */
+
+.flowbite-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: var(--radius, 8px);
+  color: #4A5565; /* gray-600 */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-dropdown-item--space-between {
+  justify-content: space-between;
+}
+
+.flowbite-dropdown-item:hover {
+  background-color: #F3F4F6; /* gray-100 */
+  color: #101828; /* gray-900 */
+}
+
+.flowbite-dropdown-item--hover {
+  background-color: #F3F4F6; /* gray-100 */
+  color: #101828; /* gray-900 */
+}
+
+.flowbite-dropdown-item--disabled {
+  color: #99A1AF; /* gray-400 */
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---------- Icon ---------- */
+
+.flowbite-dropdown-item__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.flowbite-dropdown-item__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Text ---------- */
+
+.flowbite-dropdown-item__text {
+  flex: 0 0 auto;
+  line-height: 20px;
+}
+
+.flowbite-dropdown-item__text--grow {
+  flex: 1 1 auto;
+}
+
+/* ---------- Secondary text ---------- */
+
+.flowbite-dropdown-item__secondary-text {
+  color: #99A1AF; /* gray-400 */
+  font-size: 14px;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---------- End icon (angle-right, etc.) ---------- */
+
+.flowbite-dropdown-item__end-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #99A1AF; /* gray-400 */
+  margin-left: auto;
+}
+
+.flowbite-dropdown-item__end-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Checkbox ---------- */
+
+.flowbite-dropdown-item__checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #1447E6; /* brand-700 */
+}
+
+.flowbite-dropdown-item__checkbox svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Radio ---------- */
+
+.flowbite-dropdown-item__radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #1447E6; /* brand-700 */
+}
+
+.flowbite-dropdown-item__radio svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Toggle switch ---------- */
+
+.flowbite-dropdown-item__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.flowbite-dropdown-item__toggle svg {
+  width: 32px;
+  height: 20px;
+}
+
+/* ---------- Toggle active ---------- */
+
+.flowbite-dropdown-item__toggle--active svg {
+  color: #1447E6; /* brand-700 */
+}
+
+/* ---------- Wrapper for toggle + text block ---------- */
+
+.flowbite-dropdown-item__content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
+}
+
+.flowbite-dropdown-item__helper-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #99A1AF; /* gray-400 */
+}
+
+/* ---------- Divider ---------- */
+
+.flowbite-dropdown-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #E5E7EB; /* gray-200 */
+  margin: 4px 0;
+}
+
+/* ---------- Showcase sections ---------- */
+
+.flowbite-dropdown-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flowbite-dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-dropdown-section__title {
+  margin: 0;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #101828; /* gray-900 */
+}
+
+.flowbite-dropdown-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.flowbite-dropdown-row__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-dropdown-row__label {
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #6A7282; /* gray-500 */
+}

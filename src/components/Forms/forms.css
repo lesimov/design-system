@@ -1,0 +1,723 @@
+/* ===== Flowbite Forms – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-forms,
+.flowbite-forms *,
+.flowbite-forms *::before,
+.flowbite-forms *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-gray-600, #4A5565);
+}
+
+/* ---------- Showcase ---------- */
+
+.flowbite-forms-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.flowbite-forms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-forms-section__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--color-gray-900, #101828);
+  margin: 0 0 8px;
+}
+
+.flowbite-forms-section__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-gray-600, #4A5565);
+  margin: 0 0 4px;
+  width: 100%;
+}
+
+/* ---------- Form Group ---------- */
+
+.flowbite-forms__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 384px;
+}
+
+.flowbite-forms__group--wide {
+  width: 448px;
+}
+
+.flowbite-forms__group--full {
+  width: 100%;
+}
+
+/* ---------- Label ---------- */
+
+.flowbite-forms__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-gray-900, #101828);
+}
+
+.flowbite-forms__label--required::after {
+  content: ' *';
+  color: var(--color-rose-700, #C70036);
+}
+
+/* ---------- Input ---------- */
+
+.flowbite-forms__input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 12px;
+  gap: 10px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 12px;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__input::placeholder {
+  color: var(--color-gray-500, #6A7282);
+}
+
+.flowbite-forms__input:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+}
+
+.flowbite-forms__input:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+/* ---------- Input with icon wrapper ---------- */
+
+.flowbite-forms__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flowbite-forms__input--with-icon {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.flowbite-forms__input-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-gray-500, #6A7282);
+  pointer-events: none;
+}
+
+.flowbite-forms__input-icon--left {
+  left: 12px;
+}
+
+.flowbite-forms__input-icon--right {
+  right: 12px;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.flowbite-forms__input-icon--right:hover {
+  background: var(--color-gray-100, #F3F4F6);
+}
+
+.flowbite-forms__input-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Textarea ---------- */
+
+.flowbite-forms__textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flowbite-forms__textarea-field {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 12px;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__textarea-field::placeholder {
+  color: var(--color-gray-500, #6A7282);
+}
+
+.flowbite-forms__textarea-field:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+}
+
+.flowbite-forms__textarea-field:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+.flowbite-forms__textarea-helper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-gray-500, #6A7282);
+}
+
+/* ---------- Select ---------- */
+
+.flowbite-forms__select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.flowbite-forms__select {
+  width: 100%;
+  height: 40px;
+  padding: 10px 36px 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 12px;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__select:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+}
+
+.flowbite-forms__select:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+.flowbite-forms__select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-gray-500, #6A7282);
+  pointer-events: none;
+}
+
+.flowbite-forms__select-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- File Input ---------- */
+
+.flowbite-forms__file-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 12px;
+  gap: 10px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 12px;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-500, #6A7282);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__file-input:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+  background: var(--color-gray-100, #F3F4F6);
+}
+
+.flowbite-forms__file-input input[type="file"] {
+  display: none;
+}
+
+.flowbite-forms__file-input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-gray-500, #6A7282);
+  flex-shrink: 0;
+}
+
+.flowbite-forms__file-input-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.flowbite-forms__file-input-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- Prefix / Suffix ---------- */
+
+.flowbite-forms__affix {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flowbite-forms__affix-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 12px;
+  background: var(--color-gray-100, #F3F4F6);
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.flowbite-forms__affix-addon--prefix {
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+}
+
+.flowbite-forms__affix-addon--suffix {
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+
+.flowbite-forms__affix-input {
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__affix-input--prefix {
+  border-radius: 0 12px 12px 0;
+  border-left: none;
+}
+
+.flowbite-forms__affix-input--suffix {
+  border-radius: 12px 0 0 12px;
+  border-right: none;
+}
+
+.flowbite-forms__affix-input::placeholder {
+  color: var(--color-gray-500, #6A7282);
+}
+
+.flowbite-forms__affix-input:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__affix-input:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+/* ---------- Staked ---------- */
+
+.flowbite-forms__staked {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flowbite-forms__staked-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.flowbite-forms__staked-btn:hover {
+  background: var(--color-gray-100, #F3F4F6);
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+.flowbite-forms__staked-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.flowbite-forms__staked-btn--left {
+  border-radius: 12px 0 0 12px;
+  border-right: none;
+}
+
+.flowbite-forms__staked-btn--right {
+  border-radius: 0 12px 12px 0;
+  border-left: none;
+}
+
+.flowbite-forms__staked-input {
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  border-left: none;
+  border-right: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__staked-input:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__staked-input:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+/* ---------- Helper ---------- */
+
+.flowbite-forms__helper {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-gray-500, #6A7282);
+}
+
+/* ---------- Button ---------- */
+
+.flowbite-forms__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-brand-700, #1447E6);
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.flowbite-forms__btn:hover {
+  background: var(--color-brand-800, #193CB8);
+}
+
+.flowbite-forms__btn--secondary {
+  background: transparent;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  color: var(--color-gray-600, #4A5565);
+}
+
+.flowbite-forms__btn--secondary:hover {
+  background: var(--color-gray-100, #F3F4F6);
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+/* ---------- Row: side-by-side inputs ---------- */
+
+.flowbite-forms__row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.flowbite-forms__row-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ---------- Row: input + button ---------- */
+
+.flowbite-forms__input-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+
+.flowbite-forms__input-row .flowbite-forms__input {
+  border-radius: 12px 0 0 12px;
+  border-right: none;
+}
+
+.flowbite-forms__input-row .flowbite-forms__input:focus {
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__input-row .flowbite-forms__btn {
+  border-radius: 0 12px 12px 0;
+}
+
+/* ---------- Phone input ---------- */
+
+.flowbite-forms__phone {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.flowbite-forms__phone-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 10px 8px 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  flex-shrink: 0;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__phone-select:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__phone-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.flowbite-forms__phone-flag svg {
+  width: 20px;
+  height: 14px;
+}
+
+.flowbite-forms__phone-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  color: var(--color-gray-500, #6A7282);
+  flex-shrink: 0;
+}
+
+.flowbite-forms__phone-arrow svg {
+  width: 12px;
+  height: 12px;
+}
+
+.flowbite-forms__phone-input {
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-right: none;
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4A5565);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flowbite-forms__phone-input::placeholder {
+  color: var(--color-gray-500, #6A7282);
+}
+
+.flowbite-forms__phone-input:focus {
+  border-color: var(--color-brand-700, #1447E6);
+  box-shadow: 0 0 0 3px var(--color-brand-200, #BEDBFF);
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__phone-input:hover {
+  border-color: var(--color-gray-300, #D1D5DC);
+}
+
+.flowbite-forms__phone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background: var(--color-brand-700, #1447E6);
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.flowbite-forms__phone-btn:hover {
+  background: var(--color-brand-800, #193CB8);
+}
+
+/* ---------- 2 buttons variant ---------- */
+
+.flowbite-forms__row-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.flowbite-forms__row-group .flowbite-forms__row {
+  gap: 0;
+}
+
+.flowbite-forms__row-group .flowbite-forms__row-item:first-child .flowbite-forms__input {
+  border-radius: 12px 0 0 0;
+}
+
+.flowbite-forms__row-group .flowbite-forms__row-item:last-child .flowbite-forms__input {
+  border-radius: 0 12px 0 0;
+}
+
+.flowbite-forms__row-group .flowbite-forms__row-item .flowbite-forms__input {
+  border-right: none;
+}
+
+.flowbite-forms__row-group .flowbite-forms__row-item:last-child .flowbite-forms__input {
+  border-right: 1px solid var(--color-gray-200, #E5E7EB);
+}
+
+.flowbite-forms__row-group .flowbite-forms__row-item .flowbite-forms__input:focus {
+  position: relative;
+  z-index: 1;
+}
+
+.flowbite-forms__row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Staked full ---------- */
+
+.flowbite-forms__staked-full {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flowbite-forms__staked-full .flowbite-forms__staked-btn {
+  border-radius: 0;
+}
+
+.flowbite-forms__staked-full .flowbite-forms__staked-btn:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.flowbite-forms__staked-full .flowbite-forms__staked-btn:last-child {
+  border-radius: 0 12px 12px 0;
+}

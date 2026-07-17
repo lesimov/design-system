@@ -1,0 +1,162 @@
+/* ===== Flowbite Tooltip – Design System ===== */
+/* Design tokens: src/tokens.css               */
+
+/* ---------- Box Sizing ---------- */
+
+.flowbite-tooltip,
+.flowbite-tooltip *,
+.flowbite-tooltip *::before,
+.flowbite-tooltip *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Trigger wrapper ---------- */
+
+.flowbite-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+/* ---------- Tooltip popup ---------- */
+
+.flowbite-tooltip__popup {
+  position: absolute;
+  z-index: 50;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.flowbite-tooltip:hover .flowbite-tooltip__popup,
+.flowbite-tooltip:focus-within .flowbite-tooltip__popup,
+.flowbite-tooltip__popup--visible {
+  opacity: 1;
+}
+
+/* ---------- Text bubble ---------- */
+
+.flowbite-tooltip__bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:
+    var(--tooltip-padding-y, 8px)
+    var(--tooltip-padding-x, 12px);
+  border-radius: var(--tooltip-radius, 12px);
+  background: var(--tooltip-bg, #1E2939);
+  color: var(--tooltip-text, #FFFFFF);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: var(--tooltip-font-size, 14px);
+  font-weight: var(--tooltip-font-weight, 500);
+  line-height: var(--tooltip-line-height, 16px);
+  text-align: center;
+  box-shadow:
+    0 4px 6px rgba(29, 41, 61, 0.1),
+    0 2px 4px rgba(29, 41, 61, 0.1);
+  position: relative;
+}
+
+/* ---------- Arrow (pure CSS triangle via clip-path) ---------- */
+
+.flowbite-tooltip__arrow {
+  position: absolute;
+  background: var(--tooltip-bg, #1E2939);
+  flex-shrink: 0;
+}
+
+/* ===== Position: Top ===== */
+
+.flowbite-tooltip--top .flowbite-tooltip__popup {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -1px;
+}
+
+
+.flowbite-tooltip--top .flowbite-tooltip__bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 8px;
+  background: var(--tooltip-bg, #1E2939);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* ===== Position: Bottom ===== */
+
+.flowbite-tooltip--bottom .flowbite-tooltip__popup {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.flowbite-tooltip--bottom .flowbite-tooltip__bubble::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 8px;
+  background: var(--tooltip-bg, #1E2939);
+  clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+/* ===== Position: Left ===== */
+
+.flowbite-tooltip--left .flowbite-tooltip__popup {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+
+.flowbite-tooltip--left .flowbite-tooltip__bubble::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background: var(--tooltip-bg, #1E2939);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+/* ===== Position: Right ===== */
+
+.flowbite-tooltip--right .flowbite-tooltip__popup {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flowbite-tooltip--right .flowbite-tooltip__bubble::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background: var(--tooltip-bg, #1E2939);
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}

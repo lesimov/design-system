@@ -1,0 +1,257 @@
+/* ===== Flowbite Bottom Navigation – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4, 16px);
+  padding: var(--spacing-3\.5, 14px) var(--spacing-8, 32px);
+  background-color: #ffffff;
+  border-top: 1px solid var(--gray-200, #E5E7EB);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 64px;
+}
+
+/* ---------- Sections ---------- */
+
+.flowbite-bottom-nav__section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3, 12px);
+  flex-shrink: 0;
+}
+
+.flowbite-bottom-nav__section--center {
+  flex: 1;
+  justify-content: center;
+}
+
+/* ========== Call Style ========== */
+
+.flowbite-bottom-nav__call-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1\.5, 6px);
+  color: var(--gray-600, #4A5565);
+  font-size: var(--text-sm, 14px);
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.flowbite-bottom-nav__call-duration {
+  white-space: nowrap;
+}
+
+/* ---------- Action buttons (icon toggles) ---------- */
+
+.flowbite-bottom-nav__action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--gray-200, #E5E7EB);
+  border-radius: var(--radius-full, 9999px);
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0.5px 0.5px rgba(29, 41, 61, 0.02);
+  transition: background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.flowbite-bottom-nav__action-btn:hover {
+  background-color: var(--gray-100, #F3F4F6);
+}
+
+.flowbite-bottom-nav__action-btn svg {
+  display: block;
+}
+
+/* ---------- End call button ---------- */
+
+.flowbite-bottom-nav__end-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--btn-red-bg, #E02424);
+  cursor: pointer;
+  transition: background-color 0.15s;
+  box-shadow: 0 0.5px 0.5px rgba(29, 41, 61, 0.02);
+  flex-shrink: 0;
+}
+
+.flowbite-bottom-nav__end-call:hover {
+  background-color: var(--red-700, #C10007);
+}
+
+/* ========== Media Player Style ========== */
+
+/* ---------- Track info ---------- */
+
+.flowbite-bottom-nav__track-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3, 12px);
+}
+
+.flowbite-bottom-nav__album-art {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius, 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.flowbite-bottom-nav__album-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flowbite-bottom-nav__track-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0\.5, 2px);
+}
+
+.flowbite-bottom-nav__song-title {
+  font-size: var(--text-sm, 14px);
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--dark-text, #1F2A37);
+  white-space: nowrap;
+}
+
+.flowbite-bottom-nav__artist {
+  font-size: var(--text-xs, 12px);
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--bottom-nav-text, #6B7280);
+  white-space: nowrap;
+}
+
+/* ---------- Play button ---------- */
+
+.flowbite-bottom-nav__play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--brand-700, #1447E6);
+  cursor: pointer;
+  box-shadow: 0 0.5px 0.5px rgba(29, 41, 61, 0.02);
+  transition: background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.flowbite-bottom-nav__play-btn:hover {
+  background-color: var(--brand-800, #193CB8);
+}
+
+.flowbite-bottom-nav__play-btn svg {
+  display: block;
+}
+
+/* ---------- Progress bar ---------- */
+
+.flowbite-bottom-nav__progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1\.5, 6px);
+}
+
+.flowbite-bottom-nav__time {
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--gray-600, #4A5565);
+  white-space: nowrap;
+  min-width: 27px;
+}
+
+.flowbite-bottom-nav__time:last-child {
+  text-align: right;
+}
+
+.flowbite-bottom-nav__progress-bar {
+  position: relative;
+  width: 274px;
+  height: 6px;
+  border-radius: var(--radius-base, 12px);
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.flowbite-bottom-nav__progress-track {
+  position: absolute;
+  inset: 0;
+  background-color: var(--gray-200, #E5E7EB);
+  border-radius: var(--radius-base, 12px);
+}
+
+.flowbite-bottom-nav__progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--brand-700, #1447E6);
+  border-radius: var(--radius-base, 12px);
+  transition: width 0.3s ease;
+}
+
+/* ========== Mobile Variant ========== */
+
+.flowbite-bottom-nav--mobile {
+  flex-direction: column;
+  padding: var(--spacing-3, 12px) var(--spacing-5, 20px);
+  gap: var(--spacing-3, 12px);
+  align-items: center;
+  min-height: 84px;
+}
+
+.flowbite-bottom-nav--mobile .flowbite-bottom-nav__section {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---------- Mobile Media Player ---------- */
+
+.flowbite-bottom-nav__mobile-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3, 12px);
+  width: 100%;
+}
+
+.flowbite-bottom-nav__mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6, 24px);
+  justify-content: center;
+}
+
+.flowbite-bottom-nav--mobile .flowbite-bottom-nav__progress-wrapper {
+  width: 100%;
+  max-width: 340px;
+  justify-content: center;
+}
+
+.flowbite-bottom-nav--mobile .flowbite-bottom-nav__progress-bar {
+  flex: 1;
+  max-width: 274px;
+}

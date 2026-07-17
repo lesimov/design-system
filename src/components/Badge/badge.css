@@ -1,0 +1,122 @@
+/* ===== Flowbite Badge – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1\.5, 6px);
+  padding: var(--spacing-1, 4px) var(--spacing-2, 8px);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  line-height: 16px;
+  background-color: var(--badge-bg, var(--gray-50, #f9fafb));
+  border: 1px solid var(--badge-border, var(--gray-200, #e5e7eb));
+  color: var(--badge-text, var(--gray-900, #101828));
+  white-space: nowrap;
+}
+
+/* ---------- Icon ---------- */
+
+.flowbite-badge__icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.flowbite-badge__icon-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Text ---------- */
+
+.flowbite-badge__text {
+  line-height: 1;
+}
+
+/* ---------- Close button ---------- */
+
+.flowbite-badge__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.flowbite-badge__close:hover {
+  opacity: 1;
+}
+
+/* ========== Size Variants ========== */
+
+.flowbite-badge--sm {
+  padding: var(--spacing-0\.5, 2px) var(--spacing-1\.5, 6px);
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.flowbite-badge--lg {
+  padding: var(--spacing-1, 4px) var(--spacing-3, 12px);
+  font-size: var(--text-sm, 14px);
+  line-height: 20px;
+}
+
+/* ========== Type Variants ========== */
+
+.flowbite-badge--default {
+  border-radius: var(--radius-sm, 6px);
+}
+
+.flowbite-badge--pill {
+  border-radius: var(--radius-full, 9999px);
+}
+
+/* ========== Color Variants ========== */
+
+.flowbite-badge--gray {
+  --badge-bg: var(--gray-50, #f9fafb);
+  --badge-border: var(--gray-200, #e5e7eb);
+  --badge-text: var(--gray-900, #101828);
+}
+
+.flowbite-badge--brand {
+  --badge-bg: var(--brand-50, #eef6ff);
+  --badge-border: var(--brand-200, #bedbff);
+  --badge-text: var(--brand-900, #1c398e);
+}
+
+.flowbite-badge--danger {
+  --badge-bg: var(--red-50, #fef0f2);
+  --badge-border: var(--rose-200, #ffccd3);
+  --badge-text: var(--red-900, #82181a);
+}
+
+.flowbite-badge--warning {
+  --badge-bg: var(--orange-50, #fff8f1);
+  --badge-border: var(--orange-200, #fcd9bd);
+  --badge-text: var(--orange-900, #771d1d);
+}
+
+.flowbite-badge--success {
+  --badge-bg: var(--green-50, #ecfdf5);
+  --badge-border: var(--green-200, #a4f4cf);
+  --badge-text: var(--emerald-700, #006045);
+}
+
+.flowbite-badge--white {
+  --badge-bg: #ffffff;
+  --badge-border: var(--gray-200, #e5e7eb);
+  --badge-text: var(--gray-900, #101828);
+}

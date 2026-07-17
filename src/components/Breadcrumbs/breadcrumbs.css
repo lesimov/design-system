@@ -1,0 +1,236 @@
+/* ===== Flowbite Breadcrumbs – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-breadcrumbs,
+.flowbite-breadcrumbs__item,
+.flowbite-breadcrumbs__text,
+.flowbite-breadcrumbs__icon,
+.flowbite-breadcrumbs__separator,
+.flowbite-breadcrumbs__badge,
+.flowbite-breadcrumbs__dropdown,
+.flowbite-breadcrumbs__group,
+.flowbite-breadcrumbs__group-btn,
+.flowbite-breadcrumbs-showcase,
+.flowbite-breadcrumbs-section,
+.flowbite-breadcrumbs-row,
+.flowbite-breadcrumbs-row__item,
+.flowbite-breadcrumbs-row__label {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+/* ---------- Item ---------- */
+
+.flowbite-breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4a5565; /* gray-600 — initial */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.flowbite-breadcrumbs__item--initial {
+  color: #4a5565; /* gray-600 */
+}
+
+.flowbite-breadcrumbs__item--hover {
+  color: #1447e6; /* brand-700 */
+}
+
+.flowbite-breadcrumbs__item--active {
+  color: #6a7282; /* gray-500 */
+}
+
+/* ---------- Text ---------- */
+
+.flowbite-breadcrumbs__text {
+  line-height: 20px;
+}
+
+/* ---------- Home icon ---------- */
+
+.flowbite-breadcrumbs__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.flowbite-breadcrumbs__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Angle-right separator ---------- */
+
+.flowbite-breadcrumbs__separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #4a5565; /* gray-600 */
+}
+
+.flowbite-breadcrumbs__separator svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Separator inherits the item state color for the states showcase */
+.flowbite-breadcrumbs__item--hover .flowbite-breadcrumbs__separator {
+  color: #1447e6; /* brand-700 */
+}
+
+.flowbite-breadcrumbs__item--active .flowbite-breadcrumbs__separator {
+  color: #6a7282; /* gray-500 */
+}
+
+/* ---------- Badge suffix ---------- */
+
+.flowbite-breadcrumbs__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #1447e6; /* brand-700 */
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 9999px;
+}
+
+/* ---------- Dropdown suffix ---------- */
+
+.flowbite-breadcrumbs__dropdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.flowbite-breadcrumbs__dropdown svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Group buttons suffix ---------- */
+
+.flowbite-breadcrumbs__group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flowbite-breadcrumbs__group-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  background-color: #ffffff;
+  color: #4a5565; /* gray-600 */
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.flowbite-breadcrumbs__group-btn:hover {
+  background-color: #f9fafb; /* gray-50 */
+  color: #1447e6; /* brand-700 */
+}
+
+/* ---------- Variant: only-buttons ---------- */
+
+.flowbite-breadcrumbs--only-buttons {
+  gap: 4px;
+}
+
+.flowbite-breadcrumbs__item--button {
+  padding: 4px 10px;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  background-color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.flowbite-breadcrumbs__item--button:hover {
+  background-color: #f9fafb; /* gray-50 */
+  color: #1447e6; /* brand-700 */
+}
+
+/* ---------- Variant: background ---------- */
+
+.flowbite-breadcrumbs--background {
+  background-color: #f9fafb; /* gray-50 */
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* ---------- Showcase sections ---------- */
+
+.flowbite-breadcrumbs-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flowbite-breadcrumbs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-breadcrumbs-section__title {
+  margin: 0;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #101828; /* gray-900 */
+}
+
+.flowbite-breadcrumbs-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-breadcrumbs-row__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-breadcrumbs-row__label {
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #6a7282; /* gray-500 */
+}

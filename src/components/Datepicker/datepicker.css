@@ -1,0 +1,236 @@
+/* ===== Flowbite Datepicker – Design System ===== */
+
+/* ========== Root Card ========== */
+.flowbite-datepicker {
+  width: 300px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  padding: 20px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ========== Header – Month / Year Navigation ========== */
+.flowbite-datepicker__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.flowbite-datepicker__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #4A5565;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.flowbite-datepicker__nav-btn:hover {
+  background: #F3F4F6;
+  color: #101828;
+}
+
+.flowbite-datepicker__month-year {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+  user-select: none;
+}
+
+/* ========== Weekday Header Row ========== */
+.flowbite-datepicker__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 4px;
+}
+
+.flowbite-datepicker__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6A7282;
+  user-select: none;
+}
+
+/* ========== Day Cells Grid ========== */
+.flowbite-datepicker__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+
+/* ========== Individual Cell ========== */
+.flowbite-datepicker__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #4A5565;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  line-height: 1;
+  user-select: none;
+}
+
+.flowbite-datepicker__cell--empty {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* ---- Hover ---- */
+.flowbite-datepicker__cell--hover,
+.flowbite-datepicker__cell:hover {
+  background: #F3F4F6;
+  color: #101828;
+  border-radius: 8px;
+}
+
+/* ---- Active (selected day) ---- */
+.flowbite-datepicker__cell--active {
+  background: #1447E6;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+/* ---- Active Start ---- */
+.flowbite-datepicker__cell--active-start {
+  background: #1447E6;
+  color: #FFFFFF;
+  border-radius: 8px 0 0 8px;
+}
+
+/* ---- Active Between ---- */
+.flowbite-datepicker__cell--active-between {
+  background: #F9FAFB;
+  color: #101828;
+  border-radius: 0;
+}
+
+/* ---- Active End ---- */
+.flowbite-datepicker__cell--active-end {
+  background: #1447E6;
+  color: #FFFFFF;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ---- Disabled ---- */
+.flowbite-datepicker__cell--disabled {
+  color: #99A1AF;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- Outlined ---- */
+.flowbite-datepicker__cell--outlined {
+  border: 1px solid #1447E6;
+  border-radius: 8px;
+  color: #4A5565;
+}
+
+.flowbite-datepicker__cell--outlined:hover {
+  background: #F3F4F6;
+  color: #101828;
+}
+
+/* ---- Today ---- */
+.flowbite-datepicker__cell--today {
+  background: #1447E6;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+/* ---- Selected (alias for active) ---- */
+.flowbite-datepicker__cell--selected {
+  background: #1447E6;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+/* ========== Footer ========== */
+.flowbite-datepicker__footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.flowbite-datepicker__footer-btn {
+  flex: 1;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.flowbite-datepicker__footer-btn--clear {
+  background: #F9FAFB;
+  color: #4A5565;
+}
+
+.flowbite-datepicker__footer-btn--clear:hover {
+  background: #F3F4F6;
+}
+
+.flowbite-datepicker__footer-btn--today {
+  background: #1447E6;
+  color: #FFFFFF;
+}
+
+.flowbite-datepicker__footer-btn--today:hover {
+  opacity: 0.9;
+}
+
+/* ========== Showcase ========== */
+.flowbite-datepicker-showcase__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0 0 16px 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.flowbite-datepicker-showcase__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.flowbite-datepicker-showcase__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.flowbite-datepicker-showcase__label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6A7282;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

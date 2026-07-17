@@ -1,0 +1,274 @@
+/* ===== Flowbite Typography – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-typography {
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif);
+  color: var(--gray-900, #101828);
+  max-width: 960px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Page header ---------- */
+
+.flowbite-typography__title {
+  margin: 0 0 8px;
+  font-size: var(--text-3xl, 30px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-tight, 1.2);
+  letter-spacing: var(--tracking-tight, -0.025em);
+}
+
+.flowbite-typography__lede {
+  margin: 0 0 40px;
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-body, 1.5);
+  color: var(--gray-500, #4b5563);
+}
+
+/* ---------- Section ---------- */
+
+.flowbite-typography__section {
+  margin-bottom: 48px;
+}
+
+.flowbite-typography__section:last-child {
+  margin-bottom: 0;
+}
+
+.flowbite-typography__section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray-200, #e5e7eb);
+}
+
+.flowbite-typography__section-title {
+  margin: 0;
+  font-size: var(--text-xl, 20px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-loose, 1.3);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__section-hint {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--gray-500, #6b7280);
+  white-space: nowrap;
+}
+
+/* ---------- Row (weights & sizes) ---------- */
+
+.flowbite-typography__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowbite-typography__row {
+  display: grid;
+  grid-template-columns: 170px 96px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-100, #f3f4f6);
+}
+
+.flowbite-typography__row:last-child {
+  border-bottom: none;
+}
+
+.flowbite-typography__row-label {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--dark-text, #1f2937);
+  font-family: var(--font-mono, ui-monospace, 'SF Mono', Consolas, monospace);
+}
+
+.flowbite-typography__row-value {
+  font-size: 13px;
+  color: var(--gray-500, #6b7280);
+  font-family: var(--font-mono, ui-monospace, 'SF Mono', Consolas, monospace);
+}
+
+.flowbite-typography__row-sample {
+  display: block;
+  color: var(--gray-900, #111827);
+}
+
+/* ---------- Font family ---------- */
+
+.flowbite-typography__family {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flowbite-typography__family-name {
+  font-size: var(--text-2xl, 24px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--gray-900, #111827);
+  letter-spacing: var(--tracking-tight, -0.01em);
+}
+
+.flowbite-typography__family-sample {
+  font-size: var(--text-5xl, 40px);
+  font-weight: var(--weight-bold, 700);
+  line-height: var(--leading-snug, 1.15);
+  color: var(--gray-900, #111827);
+  letter-spacing: var(--tracking-wider, -0.02em);
+}
+
+.flowbite-typography__family-desc {
+  margin: 4px 0 0;
+  max-width: 60ch;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-6, 1.6);
+  color: var(--gray-500, #4b5563);
+}
+
+/* ---------- Weight modifiers ---------- */
+
+.flowbite-typography__sample--w-normal    { font-weight: var(--weight-normal, 400); }
+.flowbite-typography__sample--w-medium   { font-weight: var(--weight-medium, 500); }
+.flowbite-typography__sample--w-semibold { font-weight: var(--weight-semibold, 600); }
+.flowbite-typography__sample--w-bold     { font-weight: var(--weight-bold, 700); }
+.flowbite-typography__sample--w-extrabold { font-weight: 800; }
+
+/* ---------- Size modifiers ---------- */
+
+.flowbite-typography__sample--s-xxs  { font-size: var(--text-xxs, 8px); }
+.flowbite-typography__sample--s-xs   { font-size: var(--text-xs, 12px); }
+.flowbite-typography__sample--s-sm   { font-size: var(--text-sm, 14px); }
+.flowbite-typography__sample--s-base { font-size: var(--text-base, 16px); }
+.flowbite-typography__sample--s-lg   { font-size: var(--text-lg, 18px); }
+.flowbite-typography__sample--s-xl   { font-size: var(--text-xl, 20px); }
+.flowbite-typography__sample--s-2xl  { font-size: var(--text-2xl, 24px); }
+.flowbite-typography__sample--s-3xl  { font-size: var(--text-3xl, 30px); }
+.flowbite-typography__sample--s-4xl  { font-size: var(--text-4xl, 36px); }
+.flowbite-typography__sample--s-5xl  { font-size: var(--text-5xl, 48px); }
+.flowbite-typography__sample--s-6xl  { font-size: var(--text-6xl, 60px); }
+
+/* ---------- Headings ---------- */
+
+.flowbite-typography__headings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.flowbite-typography__heading-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-typography__heading-meta {
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--gray-500, #6b7280);
+  font-family: var(--font-mono, ui-monospace, 'SF Mono', Consolas, monospace);
+}
+
+.flowbite-typography__heading--h1 {
+  margin: 0;
+  font-size: var(--text-5xl, 48px);
+  font-weight: var(--weight-bold, 700);
+  line-height: var(--leading-tight, 1.1);
+  letter-spacing: var(--tracking-tight, -0.025em);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__heading--h2 {
+  margin: 0;
+  font-size: var(--text-4xl, 36px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-snug, 1.15);
+  letter-spacing: var(--tracking-tight, -0.025em);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__heading--h3 {
+  margin: 0;
+  font-size: var(--text-3xl, 30px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-normal, 1.2);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__heading--h4 {
+  margin: 0;
+  font-size: var(--text-2xl, 24px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-relaxed, 1.25);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__heading--h5 {
+  margin: 0;
+  font-size: var(--text-xl, 20px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-loose, 1.3);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-typography__heading--h6 {
+  margin: 0;
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-medium, 500);
+  line-height: var(--leading-extra-loose, 1.4);
+  color: var(--gray-900, #111827);
+}
+
+/* ---------- Body text ---------- */
+
+.flowbite-typography__body-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flowbite-typography__body-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-typography__body-meta {
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--gray-500, #6b7280);
+  font-family: var(--font-mono, ui-monospace, 'SF Mono', Consolas, monospace);
+}
+
+.flowbite-typography__body--base {
+  margin: 0;
+  max-width: 70ch;
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-body, 1.5);
+  color: var(--dark-text, #1f2937);
+}
+
+.flowbite-typography__body--small {
+  margin: 0;
+  max-width: 70ch;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-body, 1.5);
+  color: var(--dark-text, #1f2937);
+}
+
+.flowbite-typography__body--caption {
+  margin: 0;
+  max-width: 70ch;
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-extra-loose, 1.4);
+  color: var(--gray-500, #6b7280);
+}

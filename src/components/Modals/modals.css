@@ -1,0 +1,268 @@
+/* ===== Flowbite Modals – Design System ===== */
+
+.flowbite-modals-showcase,
+.flowbite-modal,
+.flowbite-modal__header,
+.flowbite-modal__header-title,
+.flowbite-modal__close,
+.flowbite-modal__body,
+.flowbite-modal__actions,
+.flowbite-modal__btn,
+.flowbite-modal__btn--primary,
+.flowbite-modal__btn--secondary,
+.flowbite-modal__link {
+  box-sizing: border-box;
+}
+
+.flowbite-modals-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: var(--color-bg-neutral-secondary, #F9FAFB);
+}
+
+.flowbite-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg, 0 10px 15px rgba(29, 41, 61, 0.1));
+  font-family: var(--font-sans);
+  width: 100%;
+}
+
+.flowbite-modal--info {
+  max-width: 576px;
+}
+
+.flowbite-modal--sign-in {
+  max-width: 384px;
+}
+
+.flowbite-modal--share {
+  max-width: 448px;
+}
+
+.flowbite-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+  gap: 24px;
+}
+
+.flowbite-modal__header-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-heading, #101828);
+  line-height: var(--leading-relaxed, 1.25);
+  margin: 0;
+  flex: 1;
+}
+
+.flowbite-modal__close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  color: var(--color-text-body, #4A5565);
+  flex-shrink: 0;
+}
+
+.flowbite-modal__close:hover {
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+.flowbite-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-modal__body-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--color-bg-brand-soft, #DBEAFE);
+  color: var(--color-text-fg-brand, #1447E6);
+}
+
+.flowbite-modal__body-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.flowbite-modal__body-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  line-height: var(--leading-relaxed, 1.25);
+  margin: 0;
+}
+
+.flowbite-modal__body-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-body, #4A5565);
+  line-height: var(--leading-body, 1.5);
+  margin: 0;
+}
+
+.flowbite-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.flowbite-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  line-height: var(--leading-body, 1.5);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.flowbite-modal__btn--primary {
+  background: var(--color-bg-brand, #1447E6);
+  color: #FFFFFF;
+  border-color: var(--color-bg-brand, #1447E6);
+}
+
+.flowbite-modal__btn--primary:hover {
+  background: var(--color-bg-brand-strong, #193CB8);
+}
+
+.flowbite-modal__btn--secondary {
+  background: #FFFFFF;
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-modal__btn--secondary:hover {
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+.flowbite-modal__link {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-fg-brand, #1447E6);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flowbite-modal__link:hover {
+  text-decoration: underline;
+}
+
+.flowbite-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-modal__field-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-modal__field-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--modal-field-padding, 10px 14px);
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--modal-field-radius, 12px);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  color: var(--color-text-heading, #101828);
+  background: #FFFFFF;
+}
+
+.flowbite-modal__field-input:focus-within {
+  border-color: var(--color-border-brand-light, #155DFC);
+  box-shadow: 0 0 0 3px var(--color-border-brand-subtle, #BEDBFF);
+}
+
+.flowbite-modal__field-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  color: var(--color-text-heading, #101828);
+  background: transparent;
+}
+
+.flowbite-modal__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-modal__checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1447E6;
+}
+
+.flowbite-modal__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flowbite-modal__social {
+  display: flex;
+  gap: 12px;
+}
+
+.flowbite-modal__social-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-modal__social-btn:hover {
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}

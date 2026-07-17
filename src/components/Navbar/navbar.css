@@ -1,0 +1,113 @@
+/* ===== Flowbite Navbar – Design System ===== */
+
+.flowbite-navbar-showcase,
+.flowbite-navbar-section,
+.flowbite-navbar-row,
+.flowbite-navbar-link,
+.flowbite-navbar-link__icon,
+.flowbite-navbar-link__text,
+.flowbite-navbar-link__chevron {
+  box-sizing: border-box;
+}
+
+.flowbite-navbar-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  max-width: 900px;
+}
+
+.flowbite-navbar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-navbar-section__title {
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+}
+
+.flowbite-navbar-state-label {
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body-subtle, #6A7282);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.flowbite-navbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.flowbite-navbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.flowbite-navbar-link__text {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body, #4A5565);
+  line-height: var(--leading-body, 1.5);
+  white-space: nowrap;
+}
+
+.flowbite-navbar-link__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-navbar-link__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flowbite-navbar-link--bordered {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 224px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: 12px;
+  gap: 6px;
+  background: transparent;
+}
+
+.flowbite-navbar-link--hover {
+  background: var(--color-bg-neutral-secondary, #F9FAFB);
+  border-color: var(--color-border-base, #E5E7EB);
+}
+
+.flowbite-navbar-link--active .flowbite-navbar-link__text {
+  color: var(--color-text-fg-brand, #1447E6);
+}
+
+.flowbite-navbar-link--active {
+  background: var(--color-bg-neutral-secondary, #F9FAFB);
+  border-color: var(--color-border-base, #E5E7EB);
+}

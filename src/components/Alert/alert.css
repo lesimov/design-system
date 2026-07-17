@@ -1,0 +1,198 @@
+/* ===== Flowbite Alert – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3, 12px);
+  padding: var(--spacing-4, 16px);
+  border-radius: var(--radius-base, 12px);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-size: var(--text-sm, 14px);
+  line-height: 20px;
+  background-color: var(--alert-bg, var(--gray-50, #f9fafb));
+  border: 1px solid var(--alert-border, var(--gray-200, #e5e7eb));
+  color: var(--alert-text, var(--gray-900, #101828));
+}
+
+/* ---------- Typography ---------- */
+
+.flowbite-alert__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1, 4px);
+  min-width: 0;
+}
+
+.flowbite-alert__heading {
+  margin: 0;
+  font-size: var(--text-sm, 14px);
+  font-weight: 600;
+  line-height: 20px;
+  color: inherit;
+}
+
+.flowbite-alert__body {
+  margin: 0;
+  font-size: var(--text-sm, 14px);
+  line-height: 20px;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* ---------- Icon ---------- */
+
+.flowbite-alert__icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.flowbite-alert__icon-wrapper svg {
+  display: block;
+}
+
+/* ---------- Close button ---------- */
+
+.flowbite-alert__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.flowbite-alert__close:hover {
+  opacity: 1;
+}
+
+/* ---------- Title row (complex) ---------- */
+
+.flowbite-alert__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- Description (complex) ---------- */
+
+.flowbite-alert__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Action button container (complex) ---------- */
+
+.flowbite-alert__action {
+  flex-shrink: 0;
+}
+
+/* ========== Type Variants ========== */
+
+.flowbite-alert--default {
+  align-items: center;
+}
+
+.flowbite-alert--complex {
+  flex-direction: column;
+  gap: var(--spacing-3, 12px);
+}
+
+.flowbite-alert--small {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2, 8px);
+  padding: var(--spacing-2, 8px) var(--spacing-3, 12px);
+  border-radius: var(--radius-full, 9999px);
+  font-size: var(--text-xs, 12px);
+  line-height: 16px;
+}
+
+.flowbite-alert--border-top {
+  border-top: 3px solid var(--alert-border, var(--gray-200, #e5e7eb));
+  border-radius: 0;
+  padding: var(--spacing-4, 16px);
+}
+
+/* ========== Color Variants ========== */
+
+.flowbite-alert--success {
+  --alert-bg: var(--green-50, #ecfdf5);
+  --alert-border: var(--green-200, #a4f4cf);
+  --alert-text: var(--text-fg-success-strong, #004f3b);
+}
+
+.flowbite-alert--danger {
+  --alert-bg: var(--red-50, #fef0f2);
+  --alert-border: var(--rose-200, #ffccd3);
+  --alert-text: var(--text-fg-danger-strong, #8b0836);
+}
+
+.flowbite-alert--warning {
+  --alert-bg: var(--orange-50, #fff8f1);
+  --alert-border: var(--orange-200, #fcd9bd);
+  --alert-text: var(--text-fg-warning, #771d1d);
+}
+
+.flowbite-alert--info {
+  --alert-bg: var(--brand-50, #eef6ff);
+  --alert-border: var(--brand-200, #bedbff);
+  --alert-text: var(--text-fg-brand-strong, #1c398e);
+}
+
+.flowbite-alert--default-color {
+  --alert-bg: var(--gray-50, #f9fafb);
+  --alert-border: var(--gray-200, #e5e7eb);
+  --alert-text: var(--gray-900, #101828);
+}
+
+/* ---------- Badge (small variant) ---------- */
+
+.flowbite-alert__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-0\.5, 2px) var(--spacing-2, 8px);
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--green-100, #d0fae5);
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--text-fg-success-strong, #004f3b);
+  flex-shrink: 0;
+}
+
+/* ---------- Action button (complex variant) ---------- */
+
+.flowbite-alert__action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1\.5, 6px);
+  padding: var(--spacing-2, 8px) var(--spacing-4, 16px);
+  border-radius: var(--radius, 8px);
+  background-color: var(--emerald-700, #007a55);
+  color: #fff;
+  font-family: inherit;
+  font-size: var(--text-sm, 14px);
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.flowbite-alert__action-btn:hover {
+  background-color: var(--alert-action-hover, #005f41);
+}

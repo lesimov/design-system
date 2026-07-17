@@ -1,0 +1,352 @@
+/* ===== Flowbite Popover - Design System ===== */
+/* Design tokens: src/tokens.css */
+
+/* ========== Root ========== */
+
+.flowbite-popover {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 200px;
+  width: var(--popover-width, 255px);
+  background: var(--color-bg-white, #FFFFFF);
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--popover-radius, 12px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+}
+
+/* ========== Header ========== */
+
+.flowbite-popover__header {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  min-height: 32px;
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--popover-radius, 12px) var(--popover-radius, 12px) 0 0;
+}
+
+.flowbite-popover__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-heading, #101828);
+  line-height: 20px;
+}
+
+/* ========== Body ========== */
+
+.flowbite-popover__body {
+  padding: 8px 12px;
+  color: var(--color-text-body, #4A5565);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.flowbite-popover--has-header .flowbite-popover__body {
+  border-radius: 0 0 var(--popover-radius, 12px) var(--popover-radius, 12px);
+}
+
+/* ========== Text content ========== */
+
+.flowbite-popover__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ========== User Profile ========== */
+
+.flowbite-popover__profile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flowbite-popover__profile-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flowbite-popover__profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flowbite-popover__profile-names {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.flowbite-popover__profile-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-popover__profile-username {
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-popover__profile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: var(--color-bg-brand, #1447E6);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs, 0 1px 0.5px rgba(29, 41, 61, 0.02));
+  transition: opacity 0.15s;
+}
+
+.flowbite-popover__profile-btn:hover {
+  opacity: 0.9;
+}
+
+.flowbite-popover__profile-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-popover__profile-stats strong {
+  font-weight: 600;
+  color: var(--color-text-heading, #101828);
+}
+
+/* ========== Paragraphs ========== */
+
+.flowbite-popover__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-popover__para {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flowbite-popover__para-heading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-popover__para-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-popover__para-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: var(--color-text-fg-brand, #1447E6);
+  text-decoration: none;
+}
+
+.flowbite-popover__para-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== Password Checklist ========== */
+
+.flowbite-popover__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flowbite-popover__checklist-label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-popover__checklist-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-popover__checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ========== List (generic) ========== */
+
+.flowbite-popover__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-popover__list-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ========== Notifications ========== */
+
+.flowbite-popover__notifications {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flowbite-popover__notification-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ========== Share ========== */
+
+.flowbite-popover__share {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.flowbite-popover__share-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--color-text-body, #4A5565);
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+  cursor: pointer;
+}
+
+.flowbite-popover__share-item:last-child {
+  border-bottom: none;
+}
+
+.flowbite-popover__share-item:hover {
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+/* ========== Arrow ========== */
+
+.flowbite-popover__arrow {
+  position: absolute;
+  background: var(--color-bg-white, #FFFFFF);
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* --- Arrow positions --- */
+
+.flowbite-popover__arrow--top {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-top: none;
+  border-left: none;
+}
+
+.flowbite-popover__arrow--bottom {
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom: none;
+  border-right: none;
+}
+
+.flowbite-popover__arrow--left {
+  right: -5px;
+  top: 50%;
+  margin-top: -5px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.flowbite-popover__arrow--right {
+  left: -5px;
+  top: 50%;
+  margin-top: -5px;
+  border-right: none;
+  border-top: none;
+}
+
+/* ========== Showcase ========== */
+
+.flowbite-popover-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.flowbite-popover-showcase__group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flowbite-popover-showcase__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-heading, #101828);
+  margin: 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+}

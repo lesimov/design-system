@@ -1,0 +1,213 @@
+/* ===== Flowbite InputGroup (Button Group) – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-input-group {
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif);
+  color: var(--gray-900, #101828);
+  max-width: 960px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Page header ---------- */
+
+.flowbite-input-group__title {
+  margin: 0 0 8px;
+  font-size: var(--text-3xl, 30px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-tight, 1.2);
+  letter-spacing: var(--tracking-tight, -0.025em);
+}
+
+.flowbite-input-group__lede {
+  margin: 0 0 40px;
+  max-width: 70ch;
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-normal, 400);
+  line-height: var(--leading-body, 1.5);
+  color: var(--gray-500, #4b5563);
+}
+
+/* ---------- Section ---------- */
+
+.flowbite-input-group__section {
+  margin-bottom: 48px;
+}
+
+.flowbite-input-group__section:last-child {
+  margin-bottom: 0;
+}
+
+.flowbite-input-group__section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray-200, #e5e7eb);
+}
+
+.flowbite-input-group__section-title {
+  margin: 0;
+  font-size: var(--text-xl, 20px);
+  font-weight: var(--weight-semibold, 600);
+  line-height: var(--leading-loose, 1.3);
+  color: var(--gray-900, #111827);
+}
+
+.flowbite-input-group__section-hint {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--gray-500, #6b7280);
+  white-space: nowrap;
+}
+
+/* ---------- Showcase rows (sizes & types) ---------- */
+
+.flowbite-input-group__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-input-group__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flowbite-input-group__row-label {
+  width: 56px;
+  flex-shrink: 0;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--gray-500, #6b7280);
+  text-transform: lowercase;
+}
+
+/* ---------- Colors pair ---------- */
+
+.flowbite-input-group__pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.flowbite-input-group__pair-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ---------- Matrix (kitchen sink) ---------- */
+
+.flowbite-input-group__matrix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.flowbite-input-group__matrix-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-input-group__matrix-col-title {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--gray-500, #6b7280);
+}
+
+/* ---------- Button group ---------- */
+
+.flowbite-input-group__group {
+  display: inline-flex;
+  align-items: stretch;
+  box-shadow: 0 1px 0.5px rgba(29, 41, 61, 0.02);
+}
+
+.flowbite-input-group__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-left: -1px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-600, #4a5565);
+  background-color: var(--ig-bg, var(--gray-50, #f9fafb));
+  border: 1px solid var(--gray-200, #e5e7eb);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.flowbite-input-group__button:first-child {
+  margin-left: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+.flowbite-input-group__button:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.flowbite-input-group__button:only-child {
+  border-radius: 12px;
+}
+
+.flowbite-input-group__button--icon-only {
+  gap: 0;
+}
+
+/* ---------- Icon & text ---------- */
+
+.flowbite-input-group__button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowbite-input-group__button-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--gray-600, #4a5565);
+}
+
+.flowbite-input-group__button-text {
+  line-height: 1;
+}
+
+/* ---------- Size variants ---------- */
+
+.flowbite-input-group__button--xs {
+  padding: 6px 10px;
+}
+
+.flowbite-input-group__button--sm {
+  padding: 8px 12px;
+}
+
+.flowbite-input-group__button--base {
+  padding: 10px 16px;
+}
+
+.flowbite-input-group__button--l {
+  padding: 12px 20px;
+}
+
+/* ---------- Color variants ---------- */
+
+.flowbite-input-group__group--gray {
+  --ig-bg: var(--gray-50, #f9fafb);
+}
+
+.flowbite-input-group__group--white {
+  --ig-bg: #ffffff;
+}

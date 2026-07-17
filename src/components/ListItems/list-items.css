@@ -1,0 +1,209 @@
+/* ===== Flowbite List Items – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-list-items-showcase,
+.flowbite-list-items-section,
+.flowbite-list-items-variant,
+.flowbite-list-item,
+.flowbite-list-item__icon,
+.flowbite-list-item__text,
+.flowbite-list-item__primary,
+.flowbite-list-item__secondary,
+.flowbite-list-item__end,
+.flowbite-list-item__badge,
+.flowbite-list-item__avatar {
+  box-sizing: border-box;
+}
+
+/* ---------- Showcase container ---------- */
+
+.flowbite-list-items-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  max-width: 500px;
+}
+
+/* ---------- Section ---------- */
+
+.flowbite-list-items-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flowbite-list-items-section__title {
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+}
+
+/* ---------- State label ---------- */
+
+.flowbite-list-items-state-label {
+  font-size: var(--text-xs, 12px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body-subtle, #6A7282);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* ---------- List item row ---------- */
+
+.flowbite-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--list-item-gap, 6px);
+  padding: 6px 8px;
+  border-radius: var(--list-item-radius, 6px);
+  cursor: default;
+  transition: background 0.15s ease;
+}
+
+.flowbite-list-item--hover {
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+.flowbite-list-item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.flowbite-list-item--space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ---------- Icon ---------- */
+
+.flowbite-list-item__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-list-item__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Icon shape (larger, inside transaction) ---------- */
+
+.flowbite-list-item__icon-shape {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+}
+
+.flowbite-list-item__icon-shape svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-body, #4A5565);
+}
+
+/* ---------- Text block ---------- */
+
+.flowbite-list-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.flowbite-list-item__primary {
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-heading, #101828);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flowbite-list-item__primary--medium {
+  font-weight: var(--weight-medium, 500);
+}
+
+.flowbite-list-item__secondary {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-body, #4A5565);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- End content ---------- */
+
+.flowbite-list-item__end {
+  font-size: var(--text-base, 16px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body, #4A5565);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Badge ---------- */
+
+.flowbite-list-item__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 9999px;
+  background: var(--color-bg-brand, #1447E6);
+  color: var(--color-text-white, #FFFFFF);
+  font-size: 11px;
+  font-weight: var(--weight-semibold, 600);
+  line-height: 1;
+}
+
+/* ---------- Avatar ---------- */
+
+.flowbite-list-item__avatar {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--color-bg-neutral-tertiary, #F3F4F6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-text-body, #4A5565);
+  font-size: 12px;
+  font-weight: var(--weight-medium, 500);
+}
+
+/* ---------- Transaction status ---------- */
+
+.flowbite-list-item__status {
+  font-size: 12px;
+  color: var(--color-text-fg-success, #007A55);
+  font-weight: var(--weight-medium, 500);
+  text-align: right;
+}
+
+.flowbite-list-item__status--danger {
+  color: var(--color-text-fg-danger, #C70036);
+}

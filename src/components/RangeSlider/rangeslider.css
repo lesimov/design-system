@@ -1,0 +1,180 @@
+/* ===== Flowbite Range Slider – Design System ===== */
+/* Design tokens: src/tokens.css — `--range-slider-*` */
+
+/* ========== Root ========== */
+
+.flowbite-rangeslider {
+  position: relative;
+  width: 100%;
+}
+
+.flowbite-rangeslider--disabled {
+  opacity: var(--range-slider-disabled-opacity, 0.5);
+  cursor: not-allowed;
+}
+
+/* ========== Row (icons + labels + track) ========== */
+
+.flowbite-rangeslider__row {
+  display: flex;
+  align-items: center;
+  gap: var(--range-slider-gap, 16px);
+  width: 100%;
+}
+
+/* ========== Icons ========== */
+
+.flowbite-rangeslider__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--range-slider-icon-size, 24px);
+  height: var(--range-slider-icon-size, 24px);
+  color: var(--range-slider-icon-color, #4A5565);
+}
+
+.flowbite-rangeslider__icon svg {
+  display: block;
+}
+
+/* ========== Inline Labels (0%, 100%) ========== */
+
+.flowbite-rangeslider__label-inline {
+  flex-shrink: 0;
+  min-width: var(--range-slider-label-width, 64px);
+  text-align: center;
+  white-space: nowrap;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: var(--range-slider-label-size, 14px);
+  font-weight: var(--range-slider-label-weight, 500);
+  line-height: var(--range-slider-label-line-height, 20px);
+  color: var(--range-slider-label-color, #4A5565);
+}
+
+/* ========== Track Wrapper ========== */
+
+.flowbite-rangeslider__track-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: var(--range-slider-row-height, 24px);
+  display: flex;
+  align-items: center;
+  /* keep the 20px thumb fully inside the wrapper at the extremes */
+  padding: 0 calc(var(--range-slider-thumb-size, 20px) / 2);
+  cursor: pointer;
+}
+
+.flowbite-rangeslider--disabled .flowbite-rangeslider__track-wrapper {
+  cursor: not-allowed;
+}
+
+/* ========== Track ========== */
+
+.flowbite-rangeslider__track {
+  position: relative;
+  width: 100%;
+  height: var(--range-slider-track-height, 8px);
+  background: var(--range-slider-track-bg, #E5E7EB);
+  border-radius: var(--range-slider-track-radius, 9999px);
+}
+
+/* ========== Active Bar (filled portion) ========== */
+
+.flowbite-rangeslider__bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: var(--range-slider-bar-bg, #1447E6);
+  border-radius: var(--range-slider-bar-radius, 4px);
+  pointer-events: none;
+}
+
+/* ========== Thumb ========== */
+
+.flowbite-rangeslider__thumb {
+  position: absolute;
+  top: 50%;
+  width: var(--range-slider-thumb-size, 20px);
+  height: var(--range-slider-thumb-size, 20px);
+  background: var(--range-slider-thumb-bg, #FFFFFF);
+  border: 1px solid var(--range-slider-thumb-border, #E5E7EB);
+  border-radius: var(--radius-full, 9999px);
+  box-shadow: var(--range-slider-thumb-shadow, 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1));
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  z-index: 2;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.flowbite-rangeslider__thumb:hover {
+  border-color: var(--range-slider-thumb-border-active, #1447E6);
+}
+
+.flowbite-rangeslider__thumb--active {
+  cursor: grabbing;
+  border-color: var(--range-slider-thumb-border-active, #1447E6);
+}
+
+.flowbite-rangeslider__thumb:focus-visible {
+  border-color: var(--range-slider-thumb-border-active, #1447E6);
+  box-shadow:
+    var(--range-slider-thumb-shadow, 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1)),
+    0 0 0 3px var(--range-slider-thumb-focus-ring, #BEDBFF);
+}
+
+.flowbite-rangeslider--disabled .flowbite-rangeslider__thumb {
+  cursor: not-allowed;
+}
+
+/* ========== Tooltip ========== */
+
+.flowbite-rangeslider__tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--range-slider-tooltip-gap, 12px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: var(--range-slider-tooltip-padding-y, 8px) var(--range-slider-tooltip-padding-x, 12px);
+  background: var(--range-slider-tooltip-bg, #1E2939);
+  color: var(--range-slider-tooltip-text, #FFFFFF);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: var(--range-slider-tooltip-font, 14px);
+  font-weight: var(--range-slider-tooltip-weight, 500);
+  line-height: var(--range-slider-tooltip-line-height, 16px);
+  border-radius: var(--range-slider-tooltip-radius, 12px);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(29, 41, 61, 0.1), 0 2px 4px rgba(29, 41, 61, 0.1));
+  pointer-events: none;
+}
+
+/* Tooltip arrow — points down toward the thumb */
+.flowbite-rangeslider__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--range-slider-tooltip-bg, #1E2939);
+}
+
+/* ========== Helper Labels ========== */
+
+.flowbite-rangeslider__helper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: var(--range-slider-helper-gap, 14px);
+  padding: 0;
+}
+
+.flowbite-rangeslider__helper-item {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: var(--range-slider-helper-size, 14px);
+  font-weight: var(--range-slider-helper-weight, 500);
+  line-height: var(--range-slider-helper-line-height, 20px);
+  color: var(--range-slider-helper-color, #4A5565);
+}

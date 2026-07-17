@@ -1,0 +1,397 @@
+/* ===== Flowbite Drawer – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-drawer,
+.flowbite-drawer-panel,
+.flowbite-drawer__header,
+.flowbite-drawer__header-left,
+.flowbite-drawer__heading,
+.flowbite-drawer__icon,
+.flowbite-drawer__close,
+.flowbite-drawer__content,
+.flowbite-drawer__paragraph,
+.flowbite-drawer__actions,
+.flowbite-drawer__btn,
+.flowbite-drawer__list,
+.flowbite-drawer__list-item,
+.flowbite-drawer__list-icon,
+.flowbite-drawer__list-text,
+.flowbite-drawer__list-arrow,
+.flowbite-drawer__sublist,
+.flowbite-drawer__sublist-item,
+.flowbite-drawer__form,
+.flowbite-drawer__form-group,
+.flowbite-drawer__form-label,
+.flowbite-drawer__form-input,
+.flowbite-drawer__form-textarea,
+.flowbite-drawer__image-placeholder,
+.flowbite-drawer__image-text,
+.flowbite-drawer__logo,
+.flowbite-drawer-showcase,
+.flowbite-drawer-section,
+.flowbite-drawer-section__title {
+  box-sizing: border-box;
+}
+
+/* ---------- Container ---------- */
+
+.flowbite-drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+/* ---------- Drawer Panel ---------- */
+
+.flowbite-drawer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--radius-base, 12px);
+  box-shadow: var(--shadow-xs, 0 1px 0.5px rgba(29, 41, 61, 0.02));
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+/* ---------- Header ---------- */
+
+.flowbite-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flowbite-drawer__header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flowbite-drawer__heading {
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  line-height: var(--leading-relaxed, 1.25);
+}
+
+.flowbite-drawer__icon {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-fg-brand, #1447E6);
+}
+
+.flowbite-drawer__icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Logo ---------- */
+
+.flowbite-drawer__logo {
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-bold, 700);
+  color: var(--color-text-heading, #101828);
+}
+
+/* ---------- Close Button ---------- */
+
+.flowbite-drawer__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-xs, 4px);
+  background: transparent;
+  color: var(--color-text-body, #4A5565);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-drawer__close:hover {
+  background-color: var(--color-bg-neutral-tertiary, #F3F4F6);
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-drawer__close svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Content ---------- */
+
+.flowbite-drawer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flowbite-drawer__paragraph {
+  margin: 0;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-body, #4A5565);
+  line-height: var(--leading-body, 1.5);
+}
+
+/* ---------- Image Placeholder ---------- */
+
+.flowbite-drawer__image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  background-color: var(--color-bg-neutral-tertiary, #F3F4F6);
+  border: 1px dashed var(--color-border-base, #E5E7EB);
+  border-radius: var(--radius-sm, 6px);
+}
+
+.flowbite-drawer__image-text {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-body-subtle, #6A7282);
+}
+
+/* ---------- Actions ---------- */
+
+.flowbite-drawer__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Button ---------- */
+
+.flowbite-drawer__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius, 8px);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  line-height: 20px;
+  cursor: pointer;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-drawer__btn--primary {
+  background-color: var(--color-bg-brand, #1447E6);
+  color: #FFFFFF;
+  border-color: var(--color-bg-brand, #1447E6);
+}
+
+.flowbite-drawer__btn--primary:hover {
+  background-color: var(--color-bg-brand-strong, #193CB8);
+  border-color: var(--color-bg-brand-strong, #193CB8);
+}
+
+.flowbite-drawer__btn--secondary {
+  background-color: #FFFFFF;
+  color: var(--color-text-heading, #101828);
+  border-color: var(--color-border-base, #E5E7EB);
+}
+
+.flowbite-drawer__btn--secondary:hover {
+  background-color: var(--color-bg-neutral-secondary, #F9FAFB);
+  border-color: var(--color-border-base-medium, #E5E7EB);
+}
+
+.flowbite-drawer__btn--full {
+  width: 100%;
+}
+
+/* ---------- List ---------- */
+
+.flowbite-drawer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flowbite-drawer__list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius, 8px);
+  color: var(--color-text-body, #4A5565);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-drawer__list-item:hover {
+  background-color: var(--color-bg-neutral-tertiary, #F3F4F6);
+  color: var(--color-text-heading, #101828);
+}
+
+.flowbite-drawer__list-item--nested {
+  flex-wrap: wrap;
+  cursor: default;
+}
+
+.flowbite-drawer__list-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--color-text-body, #4A5565);
+}
+
+.flowbite-drawer__list-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.flowbite-drawer__list-text {
+  flex: 1;
+}
+
+.flowbite-drawer__list-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-body-subtle, #6A7282);
+}
+
+.flowbite-drawer__list-arrow svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Sublist ---------- */
+
+.flowbite-drawer__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  margin: 4px 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.flowbite-drawer__sublist-item {
+  padding: 6px 8px;
+  border-radius: var(--radius-sm, 6px);
+  color: var(--color-text-body, #4A5565);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.flowbite-drawer__sublist-item:hover {
+  background-color: var(--color-bg-neutral-tertiary, #F3F4F6);
+  color: var(--color-text-heading, #101828);
+}
+
+/* ---------- Form ---------- */
+
+.flowbite-drawer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-drawer__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flowbite-drawer__form-label {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+  color: var(--color-text-heading, #101828);
+  line-height: 20px;
+}
+
+.flowbite-drawer__form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--radius, 8px);
+  background-color: #FFFFFF;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-heading, #101828);
+  line-height: 20px;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.flowbite-drawer__form-input::placeholder {
+  color: var(--color-text-fg-disabled, #99A1AF);
+}
+
+.flowbite-drawer__form-input:focus {
+  border-color: var(--color-border-brand, #1447E6);
+}
+
+.flowbite-drawer__form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-radius: var(--radius, 8px);
+  background-color: #FFFFFF;
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-heading, #101828);
+  line-height: 20px;
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.flowbite-drawer__form-textarea::placeholder {
+  color: var(--color-text-fg-disabled, #99A1AF);
+}
+
+.flowbite-drawer__form-textarea:focus {
+  border-color: var(--color-border-brand, #1447E6);
+}
+
+/* ---------- Showcase sections ---------- */
+
+.flowbite-drawer-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flowbite-drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowbite-drawer-section__title {
+  margin: 0;
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  line-height: var(--leading-relaxed, 1.25);
+}

@@ -1,0 +1,333 @@
+/* ===== Flowbite Autocomplete – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-autocomplete,
+.flowbite-autocomplete__wrapper,
+.flowbite-autocomplete__input-container,
+.flowbite-autocomplete__label,
+.flowbite-autocomplete__input,
+.flowbite-autocomplete__icon,
+.flowbite-autocomplete__helper,
+.flowbite-autocomplete__dropdown,
+.flowbite-autocomplete__item,
+.flowbite-autocomplete__item-icon,
+.flowbite-autocomplete__item-text,
+.flowbite-autocomplete__item-secondary,
+.flowbite-autocomplete__item-shortcut,
+.flowbite-autocomplete__item-actions,
+.flowbite-autocomplete__category-header,
+.flowbite-autocomplete__divider,
+.flowbite-autocomplete__no-results {
+  box-sizing: border-box;
+}
+
+/* ---------- Wrapper ---------- */
+
+.flowbite-autocomplete {
+  position: relative;
+  width: 100%;
+  font-family: var(--font-sans);
+}
+
+.flowbite-autocomplete--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---------- Label ---------- */
+
+.flowbite-autocomplete__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  line-height: 20px;
+}
+
+.flowbite-autocomplete__label--required::after {
+  content: ' *';
+  color: var(--red-500);
+}
+
+/* ---------- Input container ---------- */
+
+.flowbite-autocomplete__input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Input ---------- */
+
+.flowbite-autocomplete__input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 36px 8px 12px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--gray-800);
+  background: var(--color-bg-white, #FFFFFF);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.flowbite-autocomplete__input::placeholder {
+  color: var(--gray-400);
+}
+
+.flowbite-autocomplete__input:focus {
+  border-color: var(--brand-700);
+  box-shadow: 0 0 0 3px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-autocomplete__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ---------- Input icon (chevron/search) ---------- */
+
+.flowbite-autocomplete__icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--gray-400);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.flowbite-autocomplete__icon--open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* ---------- Helper text ---------- */
+
+.flowbite-autocomplete__helper {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 16px;
+}
+
+/* ---------- Dropdown panel ---------- */
+
+.flowbite-autocomplete__dropdown {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--color-bg-white, #FFFFFF);
+  border: 1px solid var(--gray-200);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 10px 15px rgba(29, 41, 61, 0.1), 0 4px 6px rgba(29, 41, 61, 0.1);
+  padding: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.flowbite-autocomplete__dropdown--wide {
+  width: 400px;
+}
+
+/* ---------- Dropdown item ---------- */
+
+.flowbite-autocomplete__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s ease;
+}
+
+.flowbite-autocomplete__item:hover,
+.flowbite-autocomplete__item--highlighted {
+  background: var(--gray-100);
+}
+
+.flowbite-autocomplete__item--selected {
+  background: var(--color-bg-brand-softer, #EEF6FF);
+}
+
+.flowbite-autocomplete__item--space-between {
+  justify-content: space-between;
+}
+
+/* ---------- Item icon ---------- */
+
+.flowbite-autocomplete__item-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--gray-400);
+}
+
+.flowbite-autocomplete__item-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Item text ---------- */
+
+.flowbite-autocomplete__item-text {
+  flex: 1 1 auto;
+  font-size: 14px;
+  color: var(--gray-800);
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flowbite-autocomplete__item-text mark {
+  background: transparent;
+  color: var(--brand-700);
+  font-weight: 600;
+}
+
+/* ---------- Item secondary text ---------- */
+
+.flowbite-autocomplete__item-secondary {
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+/* ---------- Keyboard shortcut ---------- */
+
+.flowbite-autocomplete__item-shortcut {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--gray-400);
+  background: var(--gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  line-height: 16px;
+}
+
+/* ---------- Item actions (save/close/remove) ---------- */
+
+.flowbite-autocomplete__item-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.flowbite-autocomplete__item-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--gray-400);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.flowbite-autocomplete__item-actions button:hover {
+  color: var(--brand-700);
+  background: var(--gray-100);
+}
+
+.flowbite-autocomplete__item-actions button svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Category header ---------- */
+
+.flowbite-autocomplete__category-header {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  padding: 6px 8px 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Divider ---------- */
+
+.flowbite-autocomplete__divider {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 4px 0;
+}
+
+/* ---------- No results ---------- */
+
+.flowbite-autocomplete__no-results {
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-400);
+}
+
+/* ---------- Avatar (user variant) ---------- */
+
+.flowbite-autocomplete__avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: var(--gray-200);
+  overflow: hidden;
+}
+
+.flowbite-autocomplete__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flowbite-autocomplete__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flowbite-autocomplete__user-name {
+  font-size: 14px;
+  color: var(--gray-800);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.flowbite-autocomplete__user-email {
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 16px;
+}
+
+/* ---------- Save indicator ---------- */
+
+.flowbite-autocomplete__save-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--brand-700);
+  flex-shrink: 0;
+}
+
+.flowbite-autocomplete__save-icon svg {
+  width: 14px;
+  height: 14px;
+}

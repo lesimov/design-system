@@ -1,0 +1,185 @@
+/* ===== Flowbite Checkbox & Radio – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-checkbox-radio-showcase,
+.flowbite-checkbox-radio-section,
+.flowbite-checkbox-radio-row,
+.flowbite-checkbox-radio-item,
+.flowbite-checkbox-radio-item__label,
+.flowbite-checkbox-radio-input {
+  box-sizing: border-box;
+}
+
+/* ---------- Showcase container ---------- */
+
+.flowbite-checkbox-radio-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  max-width: 900px;
+}
+
+/* ---------- Section ---------- */
+
+.flowbite-checkbox-radio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flowbite-checkbox-radio-section__title {
+  font-size: var(--text-lg, 18px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--color-text-heading, #101828);
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-base, #E5E7EB);
+}
+
+/* ---------- Row of checkboxes/radios ---------- */
+
+.flowbite-checkbox-radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ---------- Individual item ---------- */
+
+.flowbite-checkbox-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.flowbite-checkbox-radio-item--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ---------- Label ---------- */
+
+.flowbite-checkbox-radio-item__label {
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-normal, 400);
+  color: var(--color-text-body, #4A5565);
+  user-select: none;
+}
+
+/* ========== Checkbox input (custom) ========== */
+
+.flowbite-checkbox-radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: var(--checkbox-size, 16px);
+  height: var(--checkbox-size, 16px);
+  border: var(--checkbox-border-width, 1px) solid var(--checkbox-border-unchecked, #E5E7EB);
+  border-radius: var(--checkbox-radius, 4px);
+  background: var(--checkbox-bg-unchecked, #F9FAFB);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.flowbite-checkbox-radio-input:hover {
+  border-color: var(--color-border-brand-light, #155DFC);
+}
+
+.flowbite-checkbox-radio-input:focus-visible {
+  outline: 2px solid var(--color-border-brand-subtle, #BEDBFF);
+  outline-offset: 0;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+/* Checked state */
+.flowbite-checkbox-radio-input:checked {
+  background: var(--checkbox-bg-checked, #1447E6);
+  border-color: var(--checkbox-border-checked, #1447E6);
+}
+
+/* Checked + focus */
+.flowbite-checkbox-radio-input:checked:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-border-brand-subtle, #BEDBFF);
+}
+
+/* Checkmark icon */
+.flowbite-checkbox-radio-input:checked::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+  position: absolute;
+  top: 1px;
+  left: 3px;
+}
+
+/* Disabled states */
+.flowbite-checkbox-radio-input:disabled {
+  border-color: var(--checkbox-border-disabled, #F3F4F6);
+  background: var(--checkbox-bg-unchecked, #F9FAFB);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.flowbite-checkbox-radio-input:disabled:checked {
+  background: var(--checkbox-bg-unchecked, #F9FAFB);
+  border-color: var(--checkbox-border-disabled, #F3F4F6);
+}
+
+.flowbite-checkbox-radio-input:disabled:checked::after {
+  opacity: 0.3;
+}
+
+/* ========== Radio input (custom) ========== */
+
+.flowbite-checkbox-radio-input--radio {
+  border-radius: var(--radio-radius, 9999px);
+}
+
+.flowbite-checkbox-radio-input--radio:checked {
+  background: var(--color-bg-white, #FFFFFF);
+  border-color: var(--radio-border-checked, #1447E6);
+}
+
+.flowbite-checkbox-radio-input--radio:checked::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--radio-dot-checked, #1447E6);
+  border: none;
+  border-radius: 9999px;
+  transform: none;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.flowbite-checkbox-radio-input--radio:checked:focus-visible::after {
+  background: var(--radio-dot-checked, #1447E6);
+}
+
+/* Disabled radio */
+.flowbite-checkbox-radio-input--radio:disabled:checked {
+  background: var(--color-bg-white, #FFFFFF);
+  border-color: var(--checkbox-border-disabled, #F3F4F6);
+}
+
+.flowbite-checkbox-radio-input--radio:disabled:checked::after {
+  background: var(--color-bg-gray, #D1D5DC);
+  opacity: 0.3;
+}

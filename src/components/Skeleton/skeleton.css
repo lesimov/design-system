@@ -1,0 +1,254 @@
+/* ===== Flowbite Skeleton – Design System ===== */
+/* Design tokens: src/tokens.css                 */
+
+/* ---------- Box Sizing ---------- */
+
+.flowbite-skeleton,
+.flowbite-skeleton *,
+.flowbite-skeleton *::before,
+.flowbite-skeleton *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes flowbite-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ---------- Root skeleton block ---------- */
+
+.flowbite-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--skeleton-card-gap, 16px);
+  width: 100%;
+}
+
+/* ---------- Image placeholder ---------- */
+
+.flowbite-skeleton__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 95px;
+  border-radius: var(--skeleton-image-radius, 8px);
+  background: var(--skeleton-bg-strong, #D1D5DC);
+  overflow: hidden;
+  position: relative;
+}
+
+.flowbite-skeleton__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: flowbite-skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.flowbite-skeleton__image-icon {
+  width: 45px;
+  height: 31px;
+  color: var(--skeleton-image-icon, #99A1AF);
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Body ---------- */
+
+.flowbite-skeleton__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* ---------- Text block ---------- */
+
+.flowbite-skeleton__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ---------- Individual shape (line) ---------- */
+
+.flowbite-skeleton__shape {
+  height: 8px;
+  border-radius: var(--skeleton-radius-full, 9999px);
+  background: var(--skeleton-bg, #E5E7EB);
+  position: relative;
+  overflow: hidden;
+}
+
+.flowbite-skeleton__shape::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: flowbite-skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+/* ---------- Shape sizes ---------- */
+
+.flowbite-skeleton__shape--sm {
+  height: 6px;
+}
+
+.flowbite-skeleton__shape--md {
+  height: 8px;
+}
+
+.flowbite-skeleton__shape--lg {
+  height: 10px;
+}
+
+/* ---------- Shape widths ---------- */
+
+.flowbite-skeleton__shape--w-full {
+  width: 100%;
+}
+
+.flowbite-skeleton__shape--w-75 {
+  width: 75%;
+}
+
+.flowbite-skeleton__shape--w-60 {
+  width: 60%;
+}
+
+.flowbite-skeleton__shape--w-50 {
+  width: 50%;
+}
+
+.flowbite-skeleton__shape--w-40 {
+  width: 40%;
+}
+
+.flowbite-skeleton__shape--w-25 {
+  width: 25%;
+}
+
+/* ---------- Author row ---------- */
+
+.flowbite-skeleton__author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Avatar circle ---------- */
+
+.flowbite-skeleton__avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--skeleton-radius-full, 9999px);
+  background: var(--skeleton-bg, #E5E7EB);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.flowbite-skeleton__avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: flowbite-skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.flowbite-skeleton__avatar--lg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ---------- Widget variant ---------- */
+
+.flowbite-skeleton--widget {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  border-radius: var(--skeleton-radius, 4px);
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-bars {
+  display: flex;
+  gap: 24px;
+  height: 231px;
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-bar {
+  width: 18px;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: flowbite-skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-bar--light {
+  background: var(--skeleton-bg, #E5E7EB);
+}
+
+.flowbite-skeleton--widget .flowbite-skeleton__widget-bar--strong {
+  background: var(--skeleton-bg-strong, #D1D5DC);
+}
+
+/* ---------- Card variant ---------- */
+
+.flowbite-skeleton--card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--skeleton-card-radius, 12px);
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-base, #E5E7EB);
+}

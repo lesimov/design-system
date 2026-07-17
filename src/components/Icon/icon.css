@@ -1,0 +1,11 @@
+/* ===== Flowbite Icon – Design System ===== */
+
+.flowbite-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.flowbite-icon[aria-hidden='true'] {
+  pointer-events: none;
+}

@@ -1,0 +1,465 @@
+/* ===== Flowbite Button – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1\.5, 6px);
+  border: 1px solid transparent;
+  border-radius: var(--radius-base, 12px);
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.15s, box-shadow 0.15s, border-color 0.15s;
+  box-shadow: 0 0.5px 0.5px rgba(29, 41, 61, 0.02);
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.flowbite-btn:focus-visible {
+  outline: 2px solid var(--focus-outline, #1447E6);
+  outline-offset: 2px;
+}
+
+.flowbite-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- Text ---------- */
+
+.flowbite-btn__text {
+  display: inline-flex;
+  align-items: center;
+  line-height: inherit;
+}
+
+/* ---------- Icon ---------- */
+
+.flowbite-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowbite-btn__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Loading spinner ---------- */
+
+.flowbite-btn__spinner {
+  animation: flowbite-btn-spin 0.75s linear infinite;
+}
+
+@keyframes flowbite-btn-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ========== Color Variants ========== */
+
+.flowbite-btn--brand {
+  background-color: var(--brand-700, #1447E6);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--brand:hover:not(:disabled) {
+  background-color: var(--brand-800, #193CB8);
+}
+
+.flowbite-btn--brand.flowbite-btn--focused {
+  background-color: var(--brand-800, #193CB8);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--brand.flowbite-btn--active:not(:disabled) {
+  background-color: var(--brand-800, #193CB8);
+}
+
+.flowbite-btn--brand:disabled {
+  background-color: var(--disabled-brand-bg, #93B4F5);
+  cursor: not-allowed;
+}
+
+/* --- Alternative --- */
+
+.flowbite-btn--alternative {
+  background-color: #ffffff;
+  color: var(--dark-text, #1F2A37);
+  border-color: var(--alt-border, #D1D5DB);
+}
+
+.flowbite-btn--alternative:hover:not(:disabled) {
+  background-color: var(--gray-50, #f9fafb);
+}
+
+.flowbite-btn--alternative.flowbite-btn--focused {
+  background-color: var(--gray-50, #f9fafb);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--alternative:disabled {
+  background-color: var(--gray-100, #F3F4F6);
+  color: var(--disabled-text, #9CA3AF);
+  cursor: not-allowed;
+}
+
+/* --- Dark --- */
+
+.flowbite-btn--dark {
+  background-color: var(--dark-text, #1F2A37);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--dark:hover:not(:disabled) {
+  background-color: var(--dark-hover-bg, #111928);
+}
+
+.flowbite-btn--dark.flowbite-btn--focused {
+  background-color: var(--dark-hover-bg, #111928);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--dark:disabled {
+  background-color: var(--disabled-text, #9CA3AF);
+  cursor: not-allowed;
+}
+
+/* --- Light --- */
+
+.flowbite-btn--light {
+  background-color: var(--gray-100, #F3F4F6);
+  color: var(--dark-text, #1F2A37);
+  border-color: transparent;
+}
+
+.flowbite-btn--light:hover:not(:disabled) {
+  background-color: var(--gray-200, #E5E7EB);
+}
+
+.flowbite-btn--light.flowbite-btn--focused {
+  background-color: var(--gray-200, #E5E7EB);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--light:disabled {
+  background-color: var(--gray-50, #F9FAFB);
+  color: var(--disabled-text, #9CA3AF);
+  cursor: not-allowed;
+}
+
+/* --- Green --- */
+
+.flowbite-btn--green {
+  background-color: var(--btn-green-bg, #0E9F6E);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--green:hover:not(:disabled) {
+  background-color: var(--green-700, #008236);
+}
+
+.flowbite-btn--green.flowbite-btn--focused {
+  background-color: var(--green-700, #008236);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--green:disabled {
+  background-color: var(--disabled-green-bg, #84E1BC);
+  cursor: not-allowed;
+}
+
+/* --- Red --- */
+
+.flowbite-btn--red {
+  background-color: var(--btn-red-bg, #E02424);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--red:hover:not(:disabled) {
+  background-color: var(--red-700, #C10007);
+}
+
+.flowbite-btn--red.flowbite-btn--focused {
+  background-color: var(--red-700, #C10007);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--red:disabled {
+  background-color: var(--disabled-red-bg, #F8B4B4);
+  cursor: not-allowed;
+}
+
+/* --- Yellow --- */
+
+.flowbite-btn--yellow {
+  background-color: var(--btn-yellow-bg, #FACA15);
+  color: var(--dark-text, #1F2A37);
+  border-color: transparent;
+}
+
+.flowbite-btn--yellow:hover:not(:disabled) {
+  background-color: var(--yellow-700, #A65F00);
+}
+
+.flowbite-btn--yellow.flowbite-btn--focused {
+  background-color: var(--yellow-700, #A65F00);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--yellow:disabled {
+  background-color: var(--disabled-yellow-bg, #FDE68A);
+  cursor: not-allowed;
+}
+
+/* --- Purple --- */
+
+.flowbite-btn--purple {
+  background-color: var(--btn-purple-bg, #7E3AF2);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--purple:hover:not(:disabled) {
+  background-color: var(--purple-700, #8200DB);
+}
+
+.flowbite-btn--purple.flowbite-btn--focused {
+  background-color: var(--purple-700, #8200DB);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--purple:disabled {
+  background-color: var(--disabled-purple-bg, #CABFFD);
+  cursor: not-allowed;
+}
+
+/* --- Blue --- */
+
+.flowbite-btn--blue {
+  background-color: var(--btn-blue-bg, #1A56DB);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--blue:hover:not(:disabled) {
+  background-color: var(--blue-800, #1E429F);
+}
+
+.flowbite-btn--blue.flowbite-btn--focused {
+  background-color: var(--blue-800, #1E429F);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--blue:disabled {
+  background-color: var(--disabled-blue-bg, #A4CAFE);
+  cursor: not-allowed;
+}
+
+/* --- Gray --- */
+
+.flowbite-btn--gray {
+  background-color: var(--btn-gray-bg, #6B7280);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.flowbite-btn--gray:hover:not(:disabled) {
+  background-color: var(--btn-gray-hover, #4B5563);
+}
+
+.flowbite-btn--gray.flowbite-btn--focused {
+  background-color: var(--btn-gray-hover, #4B5563);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--gray:disabled {
+  background-color: var(--gray-300, #D1D5DB);
+  cursor: not-allowed;
+}
+
+/* --- Ghost --- */
+
+.flowbite-btn--ghost {
+  background-color: transparent;
+  color: var(--gray-600, #4A5565);
+  border-color: transparent;
+}
+
+.flowbite-btn--ghost:hover:not(:disabled) {
+  background-color: var(--gray-100, #F3F4F6);
+}
+
+.flowbite-btn--ghost.flowbite-btn--focused {
+  background-color: var(--gray-100, #F3F4F6);
+  box-shadow: 0 0 0 4px var(--focus-ring, #BEDBFF);
+}
+
+.flowbite-btn--ghost:disabled {
+  background-color: transparent;
+  color: var(--disabled-text, #9CA3AF);
+  cursor: not-allowed;
+}
+
+/* ========== Outline Variant ========== */
+
+.flowbite-btn--outline {
+  background-color: transparent;
+  border-width: 2px;
+}
+
+.flowbite-btn--outline.flowbite-btn--brand {
+  background-color: transparent;
+  color: var(--brand-700, #1447E6);
+  border-color: var(--brand-600, #155DFC);
+}
+
+.flowbite-btn--outline.flowbite-btn--brand:hover:not(:disabled) {
+  background-color: var(--brand-700, #1447E6);
+  color: #ffffff;
+  border-color: var(--brand-700, #1447E6);
+}
+
+.flowbite-btn--outline.flowbite-btn--alternative {
+  background-color: transparent;
+  color: var(--dark-text, #1F2A37);
+  border-color: var(--gray-300, #D1D5DC);
+}
+
+.flowbite-btn--outline.flowbite-btn--alternative:hover:not(:disabled) {
+  background-color: var(--gray-50, #f9fafb);
+}
+
+.flowbite-btn--outline.flowbite-btn--dark {
+  background-color: transparent;
+  color: var(--dark-text, #1F2A37);
+  border-color: var(--dark-text, #1F2A37);
+}
+
+.flowbite-btn--outline.flowbite-btn--dark:hover:not(:disabled) {
+  background-color: var(--dark-text, #1F2A37);
+  color: #ffffff;
+}
+
+.flowbite-btn--outline.flowbite-btn--green {
+  background-color: transparent;
+  color: var(--green-600, #00A63E);
+  border-color: var(--green-600, #00A63E);
+}
+
+.flowbite-btn--outline.flowbite-btn--green:hover:not(:disabled) {
+  background-color: var(--green-600, #00A63E);
+  color: #ffffff;
+}
+
+.flowbite-btn--outline.flowbite-btn--red {
+  background-color: transparent;
+  color: var(--red-600, #E7000B);
+  border-color: var(--red-600, #E7000B);
+}
+
+.flowbite-btn--outline.flowbite-btn--red:hover:not(:disabled) {
+  background-color: var(--red-600, #E7000B);
+  color: #ffffff;
+}
+
+/* ========== Size Variants ========== */
+
+.flowbite-btn--xs {
+  padding: var(--spacing-1\.5, 6px) var(--spacing-3, 12px);
+  font-size: var(--text-xs, 12px);
+}
+
+.flowbite-btn--sm {
+  padding: var(--spacing-2, 8px) var(--spacing-4, 16px);
+  font-size: 13px;
+}
+
+.flowbite-btn--base {
+  padding: var(--spacing-2\.5, 10px) var(--spacing-4, 16px);
+  font-size: var(--text-sm, 14px);
+}
+
+.flowbite-btn--l {
+  padding: var(--spacing-3, 12px) var(--spacing-5, 20px);
+  font-size: var(--text-sm, 14px);
+}
+
+.flowbite-btn--xl {
+  padding: var(--spacing-4, 16px) var(--spacing-6, 24px);
+  font-size: var(--text-base, 16px);
+}
+
+.flowbite-btn--2xl {
+  padding: var(--spacing-5, 20px) var(--spacing-7, 28px);
+  font-size: var(--text-xl, 20px);
+}
+
+/* ========== Icon-only ========== */
+
+.flowbite-btn--icon-only {
+  padding: 0;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--xs {
+  width: 32px;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--sm {
+  width: 36px;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--base {
+  width: 40px;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--l {
+  width: 44px;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--xl {
+  width: 52px;
+}
+
+.flowbite-btn--icon-only.flowbite-btn--2xl {
+  width: 60px;
+}
+
+/* ========== Loading ========== */
+
+.flowbite-btn--loading {
+  cursor: wait;
+}
+
+.flowbite-btn--loading .flowbite-btn__text {
+  opacity: 0.7;
+}
+
+/* ========== Disabled ========== */
+
+.flowbite-btn--disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ========== Active ========== */
+
+.flowbite-btn--active {
+  transform: translateY(0);
+}

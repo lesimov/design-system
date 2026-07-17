@@ -1,0 +1,197 @@
+/* ===== Flowbite Toasts – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+.flowbite-toast {
+  display: flex;
+  gap: var(--toast-gap, 12px);
+  align-items: flex-start;
+  width: 100%;
+  max-width: var(--toast-max-width, 400px);
+
+  padding: var(--toast-padding, 16px);
+  border: 1px solid;
+  border-radius: var(--toast-radius, 12px);
+
+  font-family: var(--font-sans, 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif);
+}
+
+/* ---------- Type variants ---------- */
+
+.flowbite-toast--default {
+  background-color: var(--toast-bg, #FFFFFF);
+  border-color: var(--toast-border, #E5E7EB);
+  box-shadow: var(--toast-shadow, 0 1px 0.5px rgba(29, 41, 61, 0.02));
+}
+
+.flowbite-toast--warning {
+  background-color: var(--toast-warning-bg, #FFF8F1);
+  border-color: var(--toast-warning-border, #FCD9BD);
+  box-shadow: var(--toast-warning-shadow, 0 1px 2px rgba(29, 41, 61, 0.05));
+}
+
+.flowbite-toast--error {
+  background-color: var(--toast-error-bg, #FEF0F2);
+  border-color: var(--toast-error-border, #FFCCD3);
+  box-shadow: var(--toast-error-shadow, 0 1px 2px rgba(29, 41, 61, 0.05));
+}
+
+/* ---------- Icon / Avatar column ---------- */
+
+.flowbite-toast__icon-col {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.flowbite-toast__icon,
+.flowbite-toast__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowbite-toast__icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.flowbite-toast__avatar img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+/* ---------- Content area ---------- */
+
+.flowbite-toast__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--toast-content-gap, 2px);
+}
+
+/* ---------- Header row ---------- */
+
+.flowbite-toast__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flowbite-toast__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--toast-title-color, #101828);
+}
+
+/* ---------- Message ---------- */
+
+.flowbite-toast__message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--toast-message-color, #4A5565);
+}
+
+/* ---------- Action ---------- */
+
+.flowbite-toast__action {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ---------- Progress bar ---------- */
+
+.flowbite-toast__progress-track {
+  width: 100%;
+  height: 6px;
+  background-color: var(--toast-progress-track, #E5E7EB);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.flowbite-toast__progress-fill {
+  height: 100%;
+  background-color: var(--toast-progress-fill, #1447E6);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+}
+
+/* ---------- Close button ---------- */
+
+.flowbite-toast__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--toast-close-color, #6A7282);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.flowbite-toast__close:hover {
+  background-color: var(--toast-close-hover-bg, #F3F4F6);
+  color: var(--toast-close-hover-color, #101828);
+}
+
+.flowbite-toast__close--inline {
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+/* ================================================================ */
+/*  Toast Container (notification stack)                            */
+/* ================================================================ */
+
+.flowbite-toast-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 100vh;
+  padding: 16px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flowbite-toast-container > * {
+  pointer-events: auto;
+}
+
+/* ---------- Wrapper for enter/exit animations ---------- */
+
+.flowbite-toast-wrapper {
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.flowbite-toast-wrapper--entering {
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+}
+
+.flowbite-toast-wrapper--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.flowbite-toast-wrapper--exiting {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}

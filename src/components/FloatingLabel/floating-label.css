@@ -1,0 +1,354 @@
+/* ===== Flowbite Floating Label – Design System ===== */
+/* Design tokens: src/tokens.css */
+
+/* ---------- Root Container ---------- */
+
+.flowbite-floating-label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+}
+
+/* ---------- Input Wrapper ---------- */
+
+.flowbite-floating-label__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-white, #FFFFFF);
+  border: 1px solid var(--color-border-base, #E5E7EB);
+  border-bottom: 2px solid var(--color-border-base, #E5E7EB);
+  border-radius: 12px 12px 0 0;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+
+/* ---------- Input Element ---------- */
+
+.flowbite-floating-label__input {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-body, #4A5565);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 1.25;
+  z-index: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.flowbite-floating-label__input::placeholder {
+  color: transparent;
+}
+
+.flowbite-floating-label__input:focus::placeholder {
+  color: var(--color-text-body-subtle, #6A7282);
+}
+
+.flowbite-floating-label__input:disabled {
+  color: var(--color-text-fg-disabled, #99A1AF);
+  cursor: not-allowed;
+}
+
+/* ---------- Floating Label ---------- */
+
+.flowbite-floating-label__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-body-subtle, #6A7282);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  transition: all 0.15s ease;
+  z-index: 2;
+  transform-origin: left center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 24px);
+}
+
+.flowbite-floating-label--float .flowbite-floating-label__label {
+  top: 0;
+  transform: translateY(0);
+  font-size: 11px;
+  max-width: calc(100% - 24px);
+}
+
+/* ---------- Left Icon ---------- */
+
+.flowbite-floating-label__icon {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-500, #6A7282);
+  z-index: 3;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.flowbite-floating-label__icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Actions (state icon + clear button) ---------- */
+
+.flowbite-floating-label__actions {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 3;
+}
+
+/* ---------- State Icon (success/error) ---------- */
+
+.flowbite-floating-label__state-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowbite-floating-label__state-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Clear Button ---------- */
+
+.flowbite-floating-label__clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-gray-500, #6A7282);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.flowbite-floating-label__clear:hover {
+  background-color: var(--color-gray-200, #E5E7EB);
+  color: var(--color-gray-700, #364153);
+}
+
+.flowbite-floating-label__clear:focus-visible {
+  outline: 2px solid var(--color-border-brand, #1447E6);
+  outline-offset: 1px;
+}
+
+.flowbite-floating-label__clear svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Helper Text ---------- */
+
+.flowbite-floating-label__helper {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-body-subtle, #6A7282);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+}
+
+.flowbite-floating-label__helper--error {
+  color: var(--color-text-fg-danger, #C70036);
+}
+
+.flowbite-floating-label__helper--success {
+  color: var(--color-text-fg-success, #007A55);
+}
+
+/* ================================================================== */
+/*  STATE MODIFIERS                                                    */
+/* ================================================================== */
+
+/* ---- Focus ---- */
+
+.flowbite-floating-label--focus .flowbite-floating-label__wrapper {
+  border-color: var(--color-border-brand, #1447E6);
+  border-bottom-color: var(--color-border-brand, #1447E6);
+  box-shadow: 0 0 0 3px rgba(20, 71, 230, 0.1);
+}
+
+.flowbite-floating-label--focus .flowbite-floating-label__label {
+  color: var(--color-text-fg-brand, #1447E6);
+}
+
+.flowbite-floating-label--focus .flowbite-floating-label__icon {
+  color: var(--color-brand-700, #1447E6);
+}
+
+/* ---- Filled ---- */
+
+.flowbite-floating-label--filled .flowbite-floating-label__wrapper {
+  border-color: var(--color-border-base, #E5E7EB);
+  border-bottom-color: var(--color-border-base, #E5E7EB);
+}
+
+/* ---- Success ---- */
+
+.flowbite-floating-label--success .flowbite-floating-label__wrapper {
+  border-color: var(--color-border-success, #007A55);
+  border-bottom-color: var(--color-border-success, #007A55);
+}
+
+.flowbite-floating-label--success .flowbite-floating-label__label {
+  color: var(--color-text-fg-success, #007A55);
+}
+
+.flowbite-floating-label--success .flowbite-floating-label__icon {
+  color: var(--color-text-fg-success, #007A55);
+}
+
+.flowbite-floating-label--success .flowbite-floating-label__state-icon {
+  color: var(--color-text-fg-success, #007A55);
+}
+
+/* ---- Error ---- */
+
+.flowbite-floating-label--error .flowbite-floating-label__wrapper {
+  border-color: var(--color-border-danger, #C70036);
+  border-bottom-color: var(--color-border-danger, #C70036);
+}
+
+.flowbite-floating-label--error .flowbite-floating-label__label {
+  color: var(--color-text-fg-danger, #C70036);
+}
+
+.flowbite-floating-label--error .flowbite-floating-label__icon {
+  color: var(--color-text-fg-danger, #C70036);
+}
+
+.flowbite-floating-label--error .flowbite-floating-label__state-icon {
+  color: var(--color-text-fg-danger, #C70036);
+}
+
+/* ---- Disabled ---- */
+
+.flowbite-floating-label--disabled .flowbite-floating-label__wrapper {
+  background-color: var(--color-bg-disabled, #F3F4F6);
+  border-color: var(--color-border-base, #E5E7EB);
+  border-bottom-color: var(--color-border-base, #E5E7EB);
+}
+
+.flowbite-floating-label--disabled .flowbite-floating-label__label {
+  color: var(--color-text-fg-disabled, #99A1AF);
+}
+
+.flowbite-floating-label--disabled .flowbite-floating-label__icon {
+  color: var(--color-text-fg-disabled, #99A1AF);
+}
+
+/* ================================================================== */
+/*  SIZE MODIFIERS                                                    */
+/* ================================================================== */
+
+/* ---- sm ---- */
+
+.flowbite-floating-label--sm .flowbite-floating-label__input {
+  font-size: 14px;
+}
+
+.flowbite-floating-label--sm .flowbite-floating-label__label {
+  font-size: 14px;
+}
+
+.flowbite-floating-label--sm.flowbite-floating-label--float .flowbite-floating-label__label {
+  font-size: 10px;
+}
+
+.flowbite-floating-label--sm .flowbite-floating-label__icon {
+  left: 8px;
+}
+
+.flowbite-floating-label--sm.flowbite-floating-label--has-icon .flowbite-floating-label__input {
+  padding-left: 32px;
+}
+
+/* ---- base ---- */
+
+.flowbite-floating-label--base .flowbite-floating-label__input {
+  font-size: 14px;
+}
+
+.flowbite-floating-label--base .flowbite-floating-label__label {
+  font-size: 14px;
+}
+
+.flowbite-floating-label--base.flowbite-floating-label--float .flowbite-floating-label__label {
+  font-size: 11px;
+}
+
+.flowbite-floating-label--base .flowbite-floating-label__icon {
+  left: 10px;
+}
+
+/* ---- lg ---- */
+
+.flowbite-floating-label--lg .flowbite-floating-label__input {
+  font-size: 16px;
+}
+
+.flowbite-floating-label--lg .flowbite-floating-label__label {
+  font-size: 16px;
+}
+
+.flowbite-floating-label--lg.flowbite-floating-label--float .flowbite-floating-label__label {
+  font-size: 12px;
+}
+
+.flowbite-floating-label--lg .flowbite-floating-label__icon {
+  left: 12px;
+}
+
+.flowbite-floating-label--lg.flowbite-floating-label--has-icon .flowbite-floating-label__input {
+  padding-left: 40px;
+}
+
+/* ================================================================== */
+/*  SHOWCASE STYLES (for the All / Kitchen Sink stories)              */
+/* ================================================================== */
+
+.flowbite-floating-label-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.flowbite-floating-label-showcase__group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flowbite-floating-label-showcase__title {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-heading, #101828);
+  margin: 0 0 4px;
+}
